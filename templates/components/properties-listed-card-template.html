@@ -1,0 +1,75 @@
+<style>
+	.main-section-search-hyd__card {
+		width: 100%;
+		height: 148px;
+		border: 1px solid rgba(255, 199, 44, 0.4);
+		background-color: rgba(255, 247, 225, 0.4);
+		position: relative;
+		overflow: hidden;
+		border-radius: 8px;
+		background-clip: padding-box;
+		display: grid;
+		grid-template-rows: 0.5fr 0.1fr;
+	}
+
+	.main-section-search-hyd__card::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 64px;
+		height: 60px;
+		right: 0;
+		bottom: 0;
+		background: url("assets/mb-home-sprite-web.svg") no-repeat -14px -30px;
+	}
+
+	.main-section-search-hyd__card__text-top {
+		color: var(--text-primary);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 24px;
+		padding: 24px 28px;
+	}
+
+	.main-section-search-hyd__card__text-bottom {
+		color: var(--primary);
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+		position: relative;
+		padding: 0 28px;
+	}
+
+	.main-section-search-hyd__card__text-bottom::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 12px;
+		height: 11px;
+		right: 90px;
+		top: 5px;
+		background: url("./assets/mb-home-sprite-web.svg") no-repeat;
+		background-position: -46px -668px;
+		transition: all 0.6s ease;
+	}
+	.main-section-search-hyd__card__text-top-count {
+		font-size: 32px;
+		font-weight: 600;
+		background: -webkit-linear-gradient(#d8232a, #ffc72c);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.plc-arrow-right {
+		margin-left: 28px;
+	}
+</style>
+<div part="" class="main-section-search-hyd__card">
+	<div class="main-section-search-hyd__card__text-top">
+		<span class="main-section-search-hyd__card__text-top-count">22K+</span>
+		<span class="main-section-search-hyd__card__text-top-info"></span>
+	</div>
+	<arrow-right
+		><span class="plc-arrow-right" slot="arrow-text"></span
+	></arrow-right>
+</div>

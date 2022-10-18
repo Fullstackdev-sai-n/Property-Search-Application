@@ -7,14 +7,15 @@
 		<link rel="stylesheet" href="index.css" />
 		<link rel="stylesheet" href="mediaQueries.css" />
 		<script src="./components/FeaturedCard.js"></script>
-		<script src="./components/CustomHeading.js"></script>
-		<script src="./components/PropertiesCard.js"></script>
+		<script src="./elements/customHeading.js"></script>
+		<script src="./components/ImageOverlayCard.js"></script>
 		<script src="./components/ServicesCard.js"></script>
 		<script src="./components/ExploreCard.js"></script>
 		<script src="./components/AdviceCard.js"></script>
 		<script src="./components/GuideCard.js"></script>
 		<script src="./elements/arrowRight.js"></script>
 		<script src="./elements/customButton.js"></script>
+		<script src="./components/PropertiesListedCard.js"></script>
 		<title>Property Search</title>
 	</head>
 
@@ -51,9 +52,7 @@
 				</ul>
 			</section>
 		</header>
-
 		<main class="main-container">
-			<custom-button></custom-button>
 			<section class="main-section-container main-section-search-holder">
 				<div class="main-section-search-holder__content">
 					<div class="main-section-search-holder__content__headline">
@@ -114,14 +113,27 @@
 				<section-heading
 					heading="Because you searched Hyderabad"></section-heading>
 				<div class="main-section-search-hyd__cards">
-					<div class="main-section-search-hyd__card">
-						<div class="main-section-search-hyd__card__text-top">
-							<span>22K+</span> Properties listed for you
-						</div>
-						<div class="main-section-search-hyd__card__text-bottom">
-							Continue last search
-						</div>
-					</div>
+					<properties-listed-card
+						hydimg-part="plc-bg-icon"
+						info="Properties listed for you"
+						frwdtxt="Continue last search">
+						<span slot="propcount">NEW TEST</span>
+					</properties-listed-card>
+					<properties-listed-card
+						hydimg-part="plc-bg-icon"
+						info="Properties listed for you"
+						frwdtxt="Continue last search">
+					</properties-listed-card>
+					<properties-listed-card
+						hydimg-part="plc-bg-icon"
+						info="Properties listed for you"
+						frwdtxt="Continue last search">
+					</properties-listed-card>
+					<properties-listed-card
+						hydimg-part="plc-bg-icon"
+						info="Properties listed for you"
+						frwdtxt="Continue last search">
+					</properties-listed-card>
 				</div>
 			</section>
 			<section class="main-section-container main-section-showcase">
@@ -146,7 +158,9 @@
 				</div>
 			</section>
 			<section class="main-section-container main-section-project-gallery">
-				<section-heading heading="Project Gallery"></section-heading>
+				<section-heading
+					beforecolor-part="line-color-gallery"
+					heading="Project Gallery"></section-heading>
 				<div class="main-section-project-gallery__content">
 					<div class="main-section-project-gallery__content__heading-btn">
 						Sukhii Ubuntu
@@ -213,33 +227,63 @@
 					<div>See all projects</div>
 				</div>
 				<div class="main-section-featured__content">
-					<featured-card> </featured-card>
-					<featured-card> </featured-card>
+					<featured-card
+						title="Sri Aditya Squares Ornate"
+						by="by Sri Aditya Squares"
+						loc="Kollur, Hyderabad"
+						marketed="Marketed by Sri Aditya Squares"
+						flats=" 2, 3 BHK Flats"
+						price="₹ 40.9 Lac">
+					</featured-card>
+					<featured-card
+						title="Sri Aditya Squares Ornate"
+						by="by Sri Aditya Squares"
+						loc="Kollur, Hyderabad"
+						marketed="Marketed by Sri Aditya Squares"
+						flats=" 2, 3 BHK Flats"
+						price="₹ 40.9 Lac">
+					</featured-card>
 				</div>
 			</section>
 			<section class="main-section-container main-section-image-card">
 				<section-heading
 					heading="We've got properties for everyone"></section-heading>
 				<div class="main-section-image-cards-wrapper">
-					<image-card number="22348" title="Owners Properties"></image-card>
-					<image-card number="22348" title="Owners Properties"></image-card>
-					<image-card number="22348" title="Owners Properties"></image-card>
-					<image-card number="22348" title="Owners Properties"></image-card>
+					<image-overlay-text-card
+						imageurl='url("./assets/showcase1.jpg")'
+						number="22348"
+						title="Owners Properties"></image-overlay-text-card>
+					<image-overlay-text-card
+						imageurl='url("./assets/showcase2.jpg")'
+						number="22348"
+						title="Owners Properties"></image-overlay-text-card>
+					<image-overlay-text-card
+						imageurl='url("./assets/showcase1.jpg")'
+						number="22348"
+						title="Owners Properties"></image-overlay-text-card>
+					<image-overlay-text-card
+						imageurl='url("./assets/showcase2.jpg")'
+						number="22348"
+						title="Owners Properties"></image-overlay-text-card>
 				</div>
 			</section>
 			<section class="main-section-container main-section-property_services">
 				<section-heading heading="Property Services"></section-heading>
 				<div class="main-section-property_services_cards-wrapper">
 					<services-card
+						src="./assets/showcase1.jpg"
 						title="Cashback on Home Loans"
 						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
 					<services-card
+						src="./assets/showcase2.jpg"
 						title="Cashback on Home Loans"
 						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
 					<services-card
+						src="./assets/showcase2.jpg"
 						title="Cashback on Home Loans"
 						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
 					<services-card
+						src="./assets/showcase2.jpg"
 						title="Cashback on Home Loans"
 						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
 				</div>
@@ -249,6 +293,7 @@
 					<div class="popular-cities-first-block">
 						<div class="title">Explore</div>
 						<section-heading
+							beforecolor-part="line-color-explore"
 							heading="Popular Localities
 					in Hyderabad"></section-heading>
 					</div>
@@ -265,7 +310,6 @@
 						rating="4.6"
 						reviews="20"
 						count="4">
-						Check for result
 					</explore-card>
 					<explore-card
 						city="lothkunta"
@@ -277,7 +321,10 @@
 				</div>
 			</section>
 			<section class="main-section-container main-section-advice-tools">
-				<section-heading heading="Advice & Tools"> </section-heading>
+				<section-heading
+					beforecolor-part="line-color-advice"
+					heading="Advice & Tools">
+				</section-heading>
 				<div class="main-section-advice-tools__card-wrapper">
 					<advice-card
 						ac-image-part="logo-image-1"
@@ -306,11 +353,31 @@
 				</div>
 			</section>
 			<section class="main-section-container main-section-real-estate-guide">
-				<section-heading heading="Your Real Estate Guide"></section-heading>
+				<section-heading
+					beforecolor-part="line-color-guide"
+					heading="Your Real Estate Guide"></section-heading>
 				<div class="main-section-real-estate-guide-cards_wrapper">
-					<guide-card> </guide-card>
-					<guide-card> </guide-card>
-					<guide-card> </guide-card>
+					<guide-card
+						title="Locality Videos"
+						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
+						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
+						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
+						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in">
+					</guide-card>
+					<guide-card
+						title="New title"
+						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
+						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
+						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
+						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in">
+					</guide-card>
+					<guide-card
+						title="Locality Videos"
+						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
+						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
+						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
+						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in">
+					</guide-card>
 				</div>
 			</section>
 			<section class="main-section-container main-section-hyd-prop-snapshot">
@@ -552,9 +619,6 @@
 
 		<script>
 			const node = document.querySelector(".main-section-search-hyd__card");
-			[...Array(3)].forEach((_) =>
-				node.parentNode.insertBefore(node.cloneNode(true), node)
-			);
 
 			function changeBg() {
 				const fadeImages = document.querySelector(

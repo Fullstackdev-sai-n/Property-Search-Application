@@ -372,67 +372,6 @@ li {
 	gap: 20px;
 }
 
-.main-section-search-hyd__card {
-	width: 100%;
-	height: 148px;
-	border: 1px solid rgba(255, 199, 44, 0.4);
-	background-color: rgba(255, 247, 225, 0.4);
-	position: relative;
-	overflow: hidden;
-	border-radius: 8px;
-	background-clip: padding-box;
-	display: grid;
-	grid-template-rows: 0.5fr 0.1fr;
-}
-
-.main-section-search-hyd__card::after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 64px;
-	height: 60px;
-	right: 0;
-	bottom: 0;
-	background: url("assets/mb-home-sprite-web.svg") no-repeat -14px -30px;
-}
-
-.main-section-search-hyd__card__text-top {
-	color: var(--text-primary);
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 24px;
-	padding: 24px 28px;
-}
-
-.main-section-search-hyd__card__text-bottom {
-	color: var(--primary);
-	font-size: 14px;
-	font-weight: 600;
-	line-height: 20px;
-	position: relative;
-	padding: 0 28px;
-}
-
-.main-section-search-hyd__card__text-bottom::after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 12px;
-	height: 11px;
-	right: 90px;
-	top: 5px;
-	background: url("./assets/mb-home-sprite-web.svg") no-repeat;
-	background-position: -46px -668px;
-	transition: all 0.6s ease;
-}
-.main-section-search-hyd__card__text-top > span {
-	font-size: 32px;
-	font-weight: 600;
-	background: -webkit-linear-gradient(#d8232a, #ffc72c);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
 /* Section 3 */
 
 .main-section-showcase__images {
@@ -764,7 +703,7 @@ li {
 .main-section-popular-cities-cards-wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 60px;
+	gap: 20px;
 }
 
 .popular-cities-first-block {
@@ -772,7 +711,6 @@ li {
 	width: 100%;
 	background-color: #dff6f9;
 	border-radius: 8px;
-	padding: 0 20px;
 	position: relative;
 }
 .popular-cities-first-block > .title {
@@ -781,11 +719,13 @@ li {
 	color: var(--text-primary);
 	position: absolute;
 	top: 20%;
+	padding-left: 20px;
 }
 .popular-cities-first-block > section-heading {
 	position: absolute;
 	top: 45%;
 	padding: 0 5px;
+	padding-left: 20px;
 }
 
 .main-section-advice-tools__card-wrapper {
@@ -1182,6 +1122,19 @@ li {
 
 .footer-section-4 > span {
 	margin: 0 60px;
+}
+
+section-heading::part(line-color-gallery)::before {
+	background-color: #00c1d4;
+}
+section-heading::part(line-color-explore)::before {
+	background-color: #00c1d4;
+}
+section-heading::part(line-color-advice)::before {
+	background-color: #00c1d4;
+}
+section-heading::part(line-color-guide)::before {
+	background-color: var(--primary);
 }
 
 advice-card::part(logo-image-1) {

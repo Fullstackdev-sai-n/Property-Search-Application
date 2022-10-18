@@ -1,4 +1,4 @@
-`<style>
+<style>
 	.explore-card {
 		height: 246px;
 		width: 100%;
@@ -8,6 +8,9 @@
 		display: grid;
 		grid-template-columns: 1fr, 1fr, 1fr;
 		align-items: center;
+	}
+
+	.explore-head {
 		padding: 0 20px;
 	}
 
@@ -41,12 +44,17 @@
 		display: grid;
 		grid-template-columns: 0.2fr 0.3fr;
 		font: var(--description-font);
+		padding: 0 20px;
 	}
-	.explore-reviews > .rating {
+
+	.explore-reviews {
+		padding: 0 20px;
+	}
+	.explore-reviews > div > .rating {
 		font-weight: 600;
 		position: relative;
 	}
-	.explore-reviews > .rating::after {
+	.explore-reviews > div > .rating::after {
 		content: "";
 		position: absolute;
 		background: url("./assets/mb-home-sprite-web.svg");
@@ -87,15 +95,15 @@
 </style>
 <div class="explore-card">
 	<div class="explore-head">
-		<span class="explore-card-city">${this.city}</span><br />
-		<span class="explore-card-price"> ${this.price} </span>
+		<span class="explore-card-city"></span><br />
+		<span class="explore-card-price"></span>
 	</div>
 	<div class="explore-reviews">
-		<div class="rating">${this.rating}</div>
-		<div class="review">${this.reviews} Reviews</div>
+		<div><span class="rating"></span></div>
+		<div><span class="review"></span> Reviews</div>
 	</div>
 	<div class="explore-sales">
-		<span class="explore-card-">${this.count} properties for sale</span>
+		<span class="explore-card-count">${this.count}</span>
+		<span>properties for sale</span>
 	</div>
 </div>
-`
