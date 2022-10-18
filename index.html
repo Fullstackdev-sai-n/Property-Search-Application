@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="mediaQueries.css" />
+		<script src="./components/FeaturedCard.js"></script>
+		<script src="./components/CustomHeading.js"></script>
+		<script src="./components/PropertiesCard.js"></script>
+		<script src="./components/ServicesCard.js"></script>
+		<script src="./components/ExploreCard.js"></script>
+		<script src="./components/AdviceCard.js"></script>
+		<script src="./components/GuideCard.js"></script>
+		<script src="./elements/arrowRight.js"></script>
+		<script src="./elements/customButton.js"></script>
+		<title>Property Search</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<section>
+				<div class="hamburger">
+					<div class="hamburger__line-1"></div>
+					<div class="hamburger__line-2"></div>
+					<div class="hamburger__line-3"></div>
+				</div>
+				<ul class="nav-links">
+					<li class="nav-items"></li>
+					<li class="nav-items nav-dropdown">Hyderabad</li>
+					<li class="nav-items nav-dropdown">MB Prime</li>
+					<li class="nav-items nav-dropdown">Login</li>
+					<li class="nav-items nav-btn">
+						<button>Post Property <span>Free</span></button>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<ul class="nav-links-bottom">
+					<li class="nav-items-bottom">Buy</li>
+					<li class="nav-items-bottom">Rent</li>
+					<li class="nav-items-bottom">Sell</li>
+					<li class="nav-items-bottom">Home Loans</li>
+					<li class="nav-items-bottom">Property Services</li>
+					<li class="nav-items-bottom">MB Advice <span>New</span></li>
+					<li class="nav-items-bottom">Help</li>
+					<li class="nav-bottom-btn">
+						<span class="nav-item-icon"></span>Pay your Rent
+					</li>
+				</ul>
+			</section>
+		</header>
+
+		<main class="main-container">
+			<custom-button></custom-button>
+			<section class="main-section-container main-section-search-holder">
+				<div class="main-section-search-holder__content">
+					<div class="main-section-search-holder__content__headline">
+						Welcome back! Let’s continue your search
+					</div>
+					<div class="main-section-search-holder__content__input-heads">
+						<ul class="main-section-search-holder__content__input-heads__list">
+							<li
+								class="main-section-search-holder__content__input-heads__list-items">
+								Buy
+							</li>
+							<li
+								class="main-section-search-holder__content__input-heads__list-items">
+								Rent
+							</li>
+							<li
+								class="main-section-search-holder__content__input-heads__list-items">
+								PG
+							</li>
+							<li
+								class="main-section-search-holder__content__input-heads__list-items">
+								Plot
+							</li>
+							<li
+								class="main-section-search-holder__content__input-heads__list-items">
+								Commercial
+							</li>
+							<li
+								class="main-section-search-holder__content__input-heads__list-items">
+								Post Free Property Ad
+							</li>
+						</ul>
+					</div>
+					<div class="main-section-search-holder__content__input">
+						<div class="main-section-search-holder__content__input__fields">
+							<input
+								type="search"
+								placeholder="Enter City, Locality, Project"
+								id="" />
+						</div>
+						<div class="main-section-search-holder__content__input__fields">
+							Flat +2
+						</div>
+						<div class="main-section-search-holder__content__input__fields">
+							Budget
+						</div>
+						<div
+							class="main-section-search-holder__content__input__fields main-section-search-holder__content__input__fields__button">
+							<button><span></span> Search</button>
+						</div>
+					</div>
+				</div>
+				<div class="main-section-search-holder__image">
+					<img src="./assets/payrent.jpg" alt="dream home display image" />
+				</div>
+			</section>
+			<section class="main-section-container main-section-search-hyd">
+				<section-heading
+					heading="Because you searched Hyderabad"></section-heading>
+				<div class="main-section-search-hyd__cards">
+					<div class="main-section-search-hyd__card">
+						<div class="main-section-search-hyd__card__text-top">
+							<span>22K+</span> Properties listed for you
+						</div>
+						<div class="main-section-search-hyd__card__text-bottom">
+							Continue last search
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-section-container main-section-showcase">
+				<section-heading
+					heading="An Exclusive Showcase - Aspire Spaces - Ameya"></section-heading>
+				<div class="main-section-showcase__images">
+					<ul>
+						<li>Overview</li>
+						<li>Gallery</li>
+						<li>Location Advantages</li>
+						<li>Project Details</li>
+						<li>Project Aminities</li>
+						<li>About Builder</li>
+					</ul>
+					<button class="main-section-showcase__images__details-btn">
+						See Details
+					</button>
+					<button class="main-section-showcase__images__contact-btn">
+						Contact Us
+						<img src="./assets/ic-contact.svg" alt="mail-box-image" />
+					</button>
+				</div>
+			</section>
+			<section class="main-section-container main-section-project-gallery">
+				<section-heading heading="Project Gallery"></section-heading>
+				<div class="main-section-project-gallery__content">
+					<div class="main-section-project-gallery__content__heading-btn">
+						Sukhii Ubuntu
+					</div>
+					<div class="main-section-project-gallery__content__desc-btn">
+						<div class="main-section-project-gallery__content__desc-btn__desc">
+							<div class="desc--1">
+								2, 3, 4 BHK Flats at Puppalaguda, Hyderabad
+							</div>
+							<div class="desc--2">Starting from 95.9 Lac</div>
+							<div class="desc--3">Marketed by Sukhii Group</div>
+						</div>
+						<div class="main-section-project-gallery__content__desc-btn__btn">
+							<button>See Details</button>
+						</div>
+					</div>
+				</div>
+				<div class="main-section-project-gallery__cards">
+					<div class="gallery__card">
+						<img src="./assets/showcase1.jpg" alt="" />
+						<div class="gallery__card__text--1">
+							<div>The Willow</div>
+							<div>Gandiguda, Hyderabad</div>
+							<div class="gallery__card__text--1__bottom">
+								<div>3, 4 BHK Flats</div>
+								<div>
+									<strong>₹ &nbsp1.80 Cr</strong> <small>onwards</small>
+								</div>
+							</div>
+						</div>
+						<div class="gallery__card__text--2">
+							<span>Marketed by</span>
+							<span>BSCPL Infrastructure Ltd</span>
+							<button class="gallery__card__text--2__btn">
+								Contact Builder
+							</button>
+						</div>
+					</div>
+					<div class="gallery__card">
+						<img src="./assets/showcase1.jpg" alt="" />
+						<div class="gallery__card__text--1">
+							<div>The Willow</div>
+							<div>Gandiguda, Hyderabad</div>
+							<div class="gallery__card__text--1__bottom">
+								<div>3, 4 BHK Flats</div>
+								<div>
+									<strong>₹ &nbsp1.80 Cr</strong> <small>onwards</small>
+								</div>
+							</div>
+						</div>
+						<div class="gallery__card__text--2">
+							Marketed by
+							<span>BSCPL Infrastructure Ltd</span>
+							<button class="gallery__card__text--2__btn">
+								Contact Builder
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-section-container main-section-featured">
+				<div class="main-section-featured__title main-section__title">
+					<section-heading heading="Featured Projects"> </section-heading>
+					<div>See all projects</div>
+				</div>
+				<div class="main-section-featured__content">
+					<featured-card> </featured-card>
+					<featured-card> </featured-card>
+				</div>
+			</section>
+			<section class="main-section-container main-section-image-card">
+				<section-heading
+					heading="We've got properties for everyone"></section-heading>
+				<div class="main-section-image-cards-wrapper">
+					<image-card number="22348" title="Owners Properties"></image-card>
+					<image-card number="22348" title="Owners Properties"></image-card>
+					<image-card number="22348" title="Owners Properties"></image-card>
+					<image-card number="22348" title="Owners Properties"></image-card>
+				</div>
+			</section>
+			<section class="main-section-container main-section-property_services">
+				<section-heading heading="Property Services"></section-heading>
+				<div class="main-section-property_services_cards-wrapper">
+					<services-card
+						title="Cashback on Home Loans"
+						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
+					<services-card
+						title="Cashback on Home Loans"
+						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
+					<services-card
+						title="Cashback on Home Loans"
+						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
+					<services-card
+						title="Cashback on Home Loans"
+						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
+				</div>
+			</section>
+			<section class="main-section-container main-section-popular-cities">
+				<div class="main-section-popular-cities-cards-wrapper">
+					<div class="popular-cities-first-block">
+						<div class="title">Explore</div>
+						<section-heading
+							heading="Popular Localities
+					in Hyderabad"></section-heading>
+					</div>
+					<explore-card
+						city="Nalagantla"
+						price="4,984 -7,289 per sqft"
+						rating="4.6"
+						reviews="3"
+						count="0">
+					</explore-card>
+					<explore-card
+						city="patancheru"
+						price="4,984 -7,289 per sqft"
+						rating="4.6"
+						reviews="20"
+						count="4">
+						Check for result
+					</explore-card>
+					<explore-card
+						city="lothkunta"
+						price="4,984 -7,289 per sqft"
+						rating="4.6"
+						reviews="3"
+						count="4">
+					</explore-card>
+				</div>
+			</section>
+			<section class="main-section-container main-section-advice-tools">
+				<section-heading heading="Advice & Tools"> </section-heading>
+				<div class="main-section-advice-tools__card-wrapper">
+					<advice-card
+						ac-image-part="logo-image-1"
+						content="dynamic-content-1"
+						title="Property Valuation"
+						description="new description ashould be dynamic new description ashould be dynamic">
+					</advice-card>
+					<advice-card
+						ac-image-part="logo-image-2"
+						content="dynamic-content-2"
+						title="Property Valuation"
+						description="new description ashould be dynamic new description ashould be dynamic">
+					</advice-card>
+					<advice-card
+						ac-image-part="logo-image-3"
+						content="dynamic-content-3"
+						title="Property Valuation"
+						description="new description ashould be dynamic new description ashould be dynamic">
+					</advice-card>
+					<advice-card
+						ac-image-part="logo-image-4"
+						content="dynamic-content-4"
+						title="Property Valuation"
+						description="new description ashould be dynamic new description ashould be dynamic">
+					</advice-card>
+				</div>
+			</section>
+			<section class="main-section-container main-section-real-estate-guide">
+				<section-heading heading="Your Real Estate Guide"></section-heading>
+				<div class="main-section-real-estate-guide-cards_wrapper">
+					<guide-card> </guide-card>
+					<guide-card> </guide-card>
+					<guide-card> </guide-card>
+				</div>
+			</section>
+			<section class="main-section-container main-section-hyd-prop-snapshot">
+				<section-heading
+					heading="Hyderabad Property Snapshot"></section-heading>
+				<div class="main-section-hyd-prop-snapshot-content">
+					<div class="main-section-hyd-prop-snapshot-content_desc">
+						Being situated in a south-west region of Telangana, Hyderabad is
+						also known as Cyberabad as it has established itself as the hub of
+						IT, Biotech Industry and Pharmaceuticals. Including the amalgamation
+						of ancient and modern lifestyle, Hyderabad is more likely a
+						cosmopolitan city that features everything from 5-star hotels,
+						trendy shopping malls to monuments like Charminar, Hitex Gate,
+						Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.
+						Thi....Read more
+					</div>
+					<div class="main-section-hyd-prop-snapshot-content_total-projects">
+						<div
+							class="main-section-hyd-prop-snapshot-content_total-projects-1">
+							<span>1878+</span><br />
+							<span>Low Budget Flats</span><br />
+							<span>in Hyderabad</span>
+						</div>
+						<div
+							class="main-section-hyd-prop-snapshot-content_total-projects-1">
+							<span>1878+</span><br />
+							<span>Low Budget Flats</span><br />
+							<span>in Hyderabad</span>
+						</div>
+						<div
+							class="main-section-hyd-prop-snapshot-content_total-projects-1">
+							<span>1878+</span><br />
+							<span>Low Budget Flats</span><br />
+							<span>in Hyderabad</span>
+						</div>
+						<div
+							class="main-section-hyd-prop-snapshot-content_total-projects-1">
+							<span>1878+</span><br />
+							<span>Low Budget Flats</span><br />
+							<span>in Hyderabad</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-section-container main-section-post-your-property">
+				<div class="main-section-post-your-property-text">
+					Post your property for <bold>Free</bold><br />
+					<span>List it in Magicbricks and get genuine leads</span>
+				</div>
+				<div class="main-section-post-your-property-btn">
+					Post property <small>free</small>
+				</div>
+			</section>
+			<section class="main-section-container main-section-browse-projects">
+				<section-heading heading="Browse Residential Projects in Top 8 Cities">
+				</section-heading>
+				<div class="main-section-browse-projects-cities">
+					<ul>
+						<li>Bangalore</li>
+						<li>Mumbai</li>
+						<li>Pune</li>
+						<li>Noida</li>
+						<li>Gurgaon</li>
+						<li>Kolkata</li>
+						<li>Chennai</li>
+						<li>Thane</li>
+						<li>Ahmedabad</li>
+					</ul>
+				</div>
+				<div class="main-section-browse-projects-project-names">
+					<div class="main-section-browse-projects-project-names-1">
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+					</div>
+					<div class="main-section-browse-projects-project-names-1">
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+					</div>
+					<div class="main-section-browse-projects-project-names-1">
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+					</div>
+					<div class="main-section-browse-projects-project-names-1">
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+						<div>My Home Bhooja</div>
+						<div>Rainbow Vistas</div>
+						<div>Rajapushpa Provincia</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-section-container main-section-recommended">
+				<section-heading heading="Recommended for You"></section-heading>
+				<div class="main-section-recommended-content">
+					<div class="main-section-recommended-catergories">
+						<ul>
+							<li>Top Blogs</li>
+							<li>Govt Portals</li>
+							<li>Celebrity Hom</li>
+							<li>Home Decor</li>
+							<li>Land Records</li>
+							<li>Housing Schem</li>
+							<li>RERA</li>
+							<li>
+								<p><i class="arrow right"></i></p>
+							</li>
+						</ul>
+					</div>
+					<div class="main-section-recommended-catergories-details">
+						<div></div>
+						<div class="main-section-recommended-catergories-details-1">
+							<div>My Home Bhooja</div>
+							<div>Rainbow Vistas</div>
+							<div>Rajapushpa Provincia</div>
+						</div>
+						<div class="main-section-recommended-catergories-details-1">
+							<div>My Home Bhooja</div>
+							<div>Rainbow Vistas</div>
+							<div>Rajapushpa Provincia</div>
+						</div>
+						<div class="main-section-recommended-catergories-details-1">
+							<div>My Home Bhooja</div>
+							<div>Rainbow Vistas</div>
+							<div>Rajapushpa Provincia</div>
+						</div>
+						<div class="main-section-recommended-catergories-details-1">
+							<div>My Home Bhooja</div>
+							<div>Rainbow Vistas</div>
+							<div>Rajapushpa Provincia</div>
+						</div>
+					</div>
+					<div class="main-section-recommended-utils">
+						<ul>
+							<li>Area Calculator</li>
+							<li>Square Feet to Square Meter</li>
+							<li>Square Meter to Square Feet</li>
+							<li>Hectare to Acre</li>
+							<li>Square Feet to Square Yards</li>
+							<li>Housing Schem</li>
+							<li>RERA</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer-section-1">
+				<div class="footer-section-1-left">
+					<div class="footer-section-1-left-text">
+						About Magicbricks<br />
+						<div>
+							Magicbricks is a full stack service provider for all real estate
+							needs, with 15+ services including home loans, pay rent, packers
+							and movers, legal assistance, property valuation, and expert
+							advice. As the largest platform for buyers and sellers of property
+							to connect in a transparent manner, Magicbricks has an active base
+							of over 15 lakh property listings.
+						</div>
+					</div>
+					<div class="footer-section-1-left-social-icons">
+						<ul>
+							<li class="g-play"></li>
+							<li class="a-store"></li>
+							<li class="f-social"></li>
+							<li class="t-social"></li>
+							<li class="l-social"></li>
+							<li class="y-social"></li>
+							<li class="i-social"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-section-1-right">
+					<div class="footer-section-1-right-text">
+						Properties in India<br />
+						<div>
+							Property in New Delhi | &nbsp; Property in Mumbai | &nbsp;
+							Property in Chennai | &nbsp; Property in Pune | &nbsp; Property in
+							Noida | &nbsp; Property in Gurgaon | &nbsp; Property in Bangalore
+							| &nbsp; Property in Ahmedabad
+						</div>
+					</div>
+					<div class="footer-section-1-right-text">
+						Properties in India<br />
+						<div>
+							New Projects in New Delhi | &nbsp; New Projects in Mumbai | &nbsp;
+							New Projects in Chennai | &nbsp; New Projects in Pune | &nbsp; New
+							Projects in Noida | &nbsp; New Projects in Gurgaon | &nbsp; New
+							Projects in Bangalore | &nbsp; New Projects in Ahmedabad
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-section-2">
+				<ul>
+					<li>Sitemap</li>
+					<li>Terms & Conditions</li>
+					<li>Privacy Policy</li>
+					<li>Blog</li>
+					<li>Careers</li>
+					<li>Testimonials</li>
+					<li>Feedback</li>
+					<li>Unsubscribe</li>
+					<li>Help Center</li>
+					<li>Sales Enquiry</li>
+					<li>Buy Our Services</li>
+				</ul>
+			</div>
+			<div class="footer-section-3">
+				<div>
+					Disclaimer: Magicbricks Realty Services Limited is only an
+					intermediary offering its platform to advertise properties of Seller
+					for a Customer/Buyer/User coming on its Website and is not and cannot
+					be a party to or privy to or control in any manner any transactions
+					between the Seller and the Customer/Buyer/User. All the offers and
+					discounts on this Website have been extended by Read more
+				</div>
+			</div>
+			<div class="footer-section-4">
+				<span
+					>All trademarks, logos and names are properties of their respective
+					owners. All Rights Reserved. © Copyright 2022 Magicbricks Realty
+					Services Limited.</span
+				>
+			</div>
+		</footer>
+
+		<script>
+			const node = document.querySelector(".main-section-search-hyd__card");
+			[...Array(3)].forEach((_) =>
+				node.parentNode.insertBefore(node.cloneNode(true), node)
+			);
+
+			function changeBg() {
+				const fadeImages = document.querySelector(
+					".main-section-showcase__images"
+				);
+				const images = [
+					'url("./assets/showcase1.jpg")',
+					'url("./assets/showcase2.jpg")',
+					'url("./assets/showcase3.jpg")',
+				];
+				const bg = images[Math.floor(Math.random() * images.length)];
+				fadeImages.style.backgroundImage = bg;
+			}
+			setInterval(changeBg, 2000);
+
+			const toggleMenu = document.querySelector(".hamburger");
+
+			toggleMenu.addEventListener("click", function () {
+				const navItems = document.querySelector(".nav-links");
+				const menuAnimateOne = document.querySelector(".hamburger__line-1");
+				const menuAnimateTwo = document.querySelector(".hamburger__line-2");
+				const menuAnimateThree = document.querySelector(".hamburger__line-3");
+				menuAnimateOne.classList.add("hamburger__animate-1");
+				menuAnimateTwo.classList.add("hamburger__animate-2");
+				menuAnimateThree.classList.add("hamburger__animate-3");
+
+				const styles = getComputedStyle(navItems);
+				if (styles.display === "none") {
+					navItems.style.display = "grid";
+					menuAnimateOne.classList.add("hamburger__animate-1");
+					menuAnimateTwo.classList.add("hamburger__animate-2");
+					menuAnimateThree.classList.add("hamburger__animate-3");
+				} else {
+					navItems.style.display = "none";
+					menuAnimateOne.classList.remove("hamburger__animate-1");
+					menuAnimateTwo.classList.remove("hamburger__animate-2");
+					menuAnimateThree.classList.remove("hamburger__animate-3");
+					navItems.removeAttribute("style");
+				}
+			});
+			const navItems = document.querySelector(".nav-links");
+			const styles = getComputedStyle(navItems);
+			window.innerWidth >= 600 && styles.display === "none"
+				? navItems.style.display === "grid"
+				: "";
+
+			const galleryCard = document.querySelector(".gallery__card");
+
+			galleryCard.addEventListener("mouseover", function () {
+				const hoverBtn = document.querySelector(".gallery__card__text--2__btn");
+				const styles = getComputedStyle(hoverBtn);
+				if (styles.display === "none") {
+					hoverBtn.style.display = "block";
+				} else {
+					hoverBtn.style.display = "none";
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<style>
+	.custom-btn-container {
+		margin-top: 100px;
+		width: 100%;
+		border-radius: 40px;
+		background-color: var(--secondary);
+		height: auto;
+		outline: none;
+		border: none;
+		padding: 10px;
+		font: var(--description-font);
+		color: var(--text-primary);
+		font-weight: 600;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		transition: 1s all;
+	}
+
+	.custom-btn-container:hover {
+		background-color: var(--primary);
+		width: 100%;
+		height: 100%;
+	}
+
+	.custom-btn-content {
+		display: flex;
+		justify-content: center;
+	}
+	.custom-btn-content > span:last-child {
+		background-color: white;
+		padding: 5px;
+		border-radius: 20px;
+		width: 60px;
+		margin-left: 10px;
+	}
+	.custom-btn-content > span:first-child {
+		margin-top: 5px;
+	}
+</style>
+<button class="custom-btn-container">
+	<slot class="custom-btn-content">
+		<span>Post Property</span><span>Free</span>
+	</slot>
+</button>
