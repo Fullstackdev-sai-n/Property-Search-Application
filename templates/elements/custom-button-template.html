@@ -1,44 +1,24 @@
 <style>
 	.custom-btn-container {
-		margin-top: 100px;
-		width: 100%;
+		padding: 0 16px;
 		border-radius: 40px;
-		background-color: var(--secondary);
+		background-color: var(--primary);
 		height: auto;
 		outline: none;
 		border: none;
-		padding: 10px;
 		font: var(--description-font);
-		color: var(--text-primary);
+		color: var(--white);
 		font-weight: 600;
 		cursor: pointer;
-		background-repeat: no-repeat;
-		transition: 1s all;
+		transition: 0.5s ease;
+		height: 32px;
+		line-height: 32px;
 	}
 
 	.custom-btn-container:hover {
-		background-color: var(--primary);
-		width: 100%;
-		height: 100%;
-	}
-
-	.custom-btn-content {
-		display: flex;
-		justify-content: center;
-	}
-	.custom-btn-content > span:last-child {
-		background-color: white;
-		padding: 5px;
-		border-radius: 20px;
-		width: 60px;
-		margin-left: 10px;
-	}
-	.custom-btn-content > span:first-child {
-		margin-top: 5px;
+		background-color: #c31f25;
 	}
 </style>
-<button class="custom-btn-container">
-	<slot class="custom-btn-content">
-		<span>Post Property</span><span>Free</span>
-	</slot>
+<button type="button" class="custom-btn-container">
+	<slot name="custom-btn-text">See Details</slot>
 </button>

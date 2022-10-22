@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="index.css" />
 		<link rel="stylesheet" href="mediaQueries.css" />
+		<script src="./components/Header.js"></script>
+		<script src="./components/HeaderDropdownCard.js"></script>
 		<script src="./components/FeaturedCard.js"></script>
 		<script src="./elements/customHeading.js"></script>
 		<script src="./components/ImageOverlayCard.js"></script>
@@ -14,44 +16,19 @@
 		<script src="./components/AdviceCard.js"></script>
 		<script src="./components/GuideCard.js"></script>
 		<script src="./elements/arrowRight.js"></script>
+		<script src="./elements/iconText.js"></script>
+		<script src="./elements/imageOverlayButton.js"></script>
 		<script src="./elements/customButton.js"></script>
 		<script src="./components/PropertiesListedCard.js"></script>
+		<script src="./components/GalleryCard.js"></script>
+		<script src="./components/OwnerPropertyCard.js"></script>
+		<script src="./components/HandpickedProjectCard.js"></script>
+		<script src="./components/Footer.js"></script>
 		<title>Property Search</title>
 	</head>
 
 	<body>
-		<header class="header">
-			<section>
-				<div class="hamburger">
-					<div class="hamburger__line-1"></div>
-					<div class="hamburger__line-2"></div>
-					<div class="hamburger__line-3"></div>
-				</div>
-				<ul class="nav-links">
-					<li class="nav-items"></li>
-					<li class="nav-items nav-dropdown">Hyderabad</li>
-					<li class="nav-items nav-dropdown">MB Prime</li>
-					<li class="nav-items nav-dropdown">Login</li>
-					<li class="nav-items nav-btn">
-						<button>Post Property <span>Free</span></button>
-					</li>
-				</ul>
-			</section>
-			<section>
-				<ul class="nav-links-bottom">
-					<li class="nav-items-bottom">Buy</li>
-					<li class="nav-items-bottom">Rent</li>
-					<li class="nav-items-bottom">Sell</li>
-					<li class="nav-items-bottom">Home Loans</li>
-					<li class="nav-items-bottom">Property Services</li>
-					<li class="nav-items-bottom">MB Advice <span>New</span></li>
-					<li class="nav-items-bottom">Help</li>
-					<li class="nav-bottom-btn">
-						<span class="nav-item-icon"></span>Pay your Rent
-					</li>
-				</ul>
-			</section>
-		</header>
+		<custom-header></custom-header>
 		<main class="main-container">
 			<section class="main-section-container main-section-search-holder">
 				<div class="main-section-search-holder__content">
@@ -178,48 +155,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="main-section-project-gallery__cards">
-					<div class="gallery__card">
-						<img src="./assets/showcase1.jpg" alt="" />
-						<div class="gallery__card__text--1">
-							<div>The Willow</div>
-							<div>Gandiguda, Hyderabad</div>
-							<div class="gallery__card__text--1__bottom">
-								<div>3, 4 BHK Flats</div>
-								<div>
-									<strong>₹ &nbsp1.80 Cr</strong> <small>onwards</small>
-								</div>
-							</div>
-						</div>
-						<div class="gallery__card__text--2">
-							<span>Marketed by</span>
-							<span>BSCPL Infrastructure Ltd</span>
-							<button class="gallery__card__text--2__btn">
-								Contact Builder
-							</button>
-						</div>
-					</div>
-					<div class="gallery__card">
-						<img src="./assets/showcase1.jpg" alt="" />
-						<div class="gallery__card__text--1">
-							<div>The Willow</div>
-							<div>Gandiguda, Hyderabad</div>
-							<div class="gallery__card__text--1__bottom">
-								<div>3, 4 BHK Flats</div>
-								<div>
-									<strong>₹ &nbsp1.80 Cr</strong> <small>onwards</small>
-								</div>
-							</div>
-						</div>
-						<div class="gallery__card__text--2">
-							Marketed by
-							<span>BSCPL Infrastructure Ltd</span>
-							<button class="gallery__card__text--2__btn">
-								Contact Builder
-							</button>
-						</div>
-					</div>
-				</div>
 			</section>
 			<section class="main-section-container main-section-featured">
 				<div class="main-section-featured__title main-section__title">
@@ -243,6 +178,54 @@
 						flats=" 2, 3 BHK Flats"
 						price="₹ 40.9 Lac">
 					</featured-card>
+				</div>
+			</section>
+			<section class="main-section-container hnp-container">
+				<div class="hnp-container-title-block">
+					<section-heading
+						heading="Handpicked New Project Launches in Hyderabad">
+					</section-heading>
+					<arrow-right
+						><span slot="arrow-text">See all projects</span></arrow-right
+					>
+				</div>
+				<div class="hnp-categories-block">
+					<sideicon-with-text
+						side-icon="before-icon-1"
+						it-text="Unbaised Project reviews"
+						it-caption="by experts"></sideicon-with-text>
+					<sideicon-with-text
+						side-icon="before-icon-2"
+						it-text="Unbaised Project reviews"
+						it-caption="by experts"></sideicon-with-text>
+					<sideicon-with-text
+						side-icon="before-icon-3"
+						it-text="Unbaised Project reviews"
+						it-caption="by experts"></sideicon-with-text>
+					<sideicon-with-text
+						side-icon="before-icon-4"
+						it-text="Unbaised Project reviews"
+						it-caption="by experts"></sideicon-with-text>
+				</div>
+				<div class="hnp-diplay-cards-block">
+					<handpicked-project-card
+						imagemain="./assets/showcase1.jpg"
+						projecttitle="GHR Callisto"
+						marketedby="by GHR Infra in Kollur, Outer Ring Road, Hyderabad"
+						price="59.7"
+						thumbnail="./assets/showcase1.jpg"
+						thunmbnailtext="Introduction"
+						showcount="15 More">
+					</handpicked-project-card>
+					<handpicked-project-card
+						imagemain="./assets/showcase1.jpg"
+						projecttitle="GHR Callisto"
+						marketedby="by GHR Infra in Kollur, Outer Ring Road, Hyderabad"
+						price="59.7"
+						thumbnail="./assets/showcase1.jpg"
+						thunmbnailtext="Introduction"
+						showcount="15 More">
+					</handpicked-project-card>
 				</div>
 			</section>
 			<section class="main-section-container main-section-image-card">
@@ -288,6 +271,67 @@
 						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
 				</div>
 			</section>
+			<section class="main-section main-section-new-project-gallery">
+				<section-heading
+					beforecolor-part="line-color-npg"
+					heading="New Project Gallery"></section-heading>
+				<div class="main-section-new-project-gallery-cards">
+					<gallery-card
+						pgcimage="./assets/showcase1.jpg"
+						title="The Willow"
+						area="Gandiguda, Hyderabad"
+						flats="3, 4 BHK Flats"
+						price="₹ &nbsp1.80 C"
+						projectname="BSCPL Infrastructure Ltd"
+						prname="Alpine Infratech">
+					</gallery-card>
+					<gallery-card
+						pgcimage="./assets/showcase1.jpg"
+						title="The Willow"
+						area="Gandiguda, Hyderabad"
+						flats="3, 4 BHK Flats"
+						price="₹ &nbsp1.80 C"
+						projectname="BSCPL Infrastructure Ltd"
+						prname="Alpine Infratech">
+					</gallery-card>
+					<gallery-card
+						pgcimage="./assets/showcase1.jpg"
+						title="The Willow"
+						area="Gandiguda, Hyderabad"
+						flats="3, 4 BHK Flats"
+						price="₹ &nbsp1.80 C"
+						projectname="BSCPL Infrastructure Ltd"
+						prname="Alpine Infratech">
+					</gallery-card>
+					<gallery-card
+						pgcimage="./assets/showcase1.jpg"
+						title="The Willow"
+						area="Gandiguda, Hyderabad"
+						flats="3, 4 BHK Flats"
+						price="₹ &nbsp1.80 C"
+						projectname="BSCPL Infrastructure Ltd"
+						prname="Alpine Infratech">
+					</gallery-card>
+					<gallery-card
+						pgcimage="./assets/showcase1.jpg"
+						title="The Willow"
+						area="Gandiguda, Hyderabad"
+						flats="3, 4 BHK Flats"
+						price="₹ &nbsp1.80 C"
+						projectname="BSCPL Infrastructure Ltd"
+						prname="Alpine Infratech">
+					</gallery-card>
+					<gallery-card
+						pgcimage="./assets/showcase1.jpg"
+						title="The Willow"
+						area="Gandiguda, Hyderabad"
+						flats="3, 4 BHK Flats"
+						price="₹ &nbsp1.80 C"
+						projectname="BSCPL Infrastructure Ltd"
+						prname="Alpine Infratech">
+					</gallery-card>
+				</div>
+			</section>
 			<section class="main-section-container main-section-popular-cities">
 				<div class="main-section-popular-cities-cards-wrapper">
 					<div class="popular-cities-first-block">
@@ -318,6 +362,40 @@
 						reviews="3"
 						count="4">
 					</explore-card>
+				</div>
+			</section>
+			<section class="main-section-container main-section-owner-properties">
+				<section-heading
+					heading="Exclusive Owner Properties in Hyderabad"></section-heading>
+				<div class="main-section-owner-properties-cards">
+					<owner-property-card
+						opcimg="./assets/showcase1.jpg"
+						flats="3 BHK Flat"
+						price="₹1.29 Cr"
+						location="Sainikpuri,Hyderabad"
+						status="Ready to Move">
+					</owner-property-card>
+					<owner-property-card
+						opcimg="./assets/showcase1.jpg"
+						flats="3 BHK Flat"
+						price="₹1.29 Cr"
+						location="Sainikpuri,Hyderabad"
+						status="Ready to Move">
+					</owner-property-card>
+					<owner-property-card
+						opcimg="./assets/showcase1.jpg"
+						flats="3 BHK Flat"
+						price="₹1.29 Cr"
+						location="Sainikpuri,Hyderabad"
+						status="Ready to Move">
+					</owner-property-card>
+					<owner-property-card
+						opcimg="./assets/showcase1.jpg"
+						flats="3 BHK Flat"
+						price="₹1.29 Cr"
+						location="Sainikpuri,Hyderabad"
+						status="Ready to Move">
+					</owner-property-card>
 				</div>
 			</section>
 			<section class="main-section-container main-section-advice-tools">
@@ -362,21 +440,25 @@
 						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
 						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
 						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in">
+						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
+						gc-show-videoblock="block">
 					</guide-card>
 					<guide-card
-						title="New title"
+						title="Industry Insights"
 						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
 						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
 						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in">
+						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
+						gc-show-insightsblock="grid">
 					</guide-card>
 					<guide-card
-						title="Locality Videos"
+						title="Legal Updates"
 						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
 						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
 						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in">
+						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
+						gcbtn="block"
+						gc-show-updatesblock="block">
 					</guide-card>
 				</div>
 			</section>
@@ -536,87 +618,7 @@
 				</div>
 			</section>
 		</main>
-		<footer class="footer">
-			<div class="footer-section-1">
-				<div class="footer-section-1-left">
-					<div class="footer-section-1-left-text">
-						About Magicbricks<br />
-						<div>
-							Magicbricks is a full stack service provider for all real estate
-							needs, with 15+ services including home loans, pay rent, packers
-							and movers, legal assistance, property valuation, and expert
-							advice. As the largest platform for buyers and sellers of property
-							to connect in a transparent manner, Magicbricks has an active base
-							of over 15 lakh property listings.
-						</div>
-					</div>
-					<div class="footer-section-1-left-social-icons">
-						<ul>
-							<li class="g-play"></li>
-							<li class="a-store"></li>
-							<li class="f-social"></li>
-							<li class="t-social"></li>
-							<li class="l-social"></li>
-							<li class="y-social"></li>
-							<li class="i-social"></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer-section-1-right">
-					<div class="footer-section-1-right-text">
-						Properties in India<br />
-						<div>
-							Property in New Delhi | &nbsp; Property in Mumbai | &nbsp;
-							Property in Chennai | &nbsp; Property in Pune | &nbsp; Property in
-							Noida | &nbsp; Property in Gurgaon | &nbsp; Property in Bangalore
-							| &nbsp; Property in Ahmedabad
-						</div>
-					</div>
-					<div class="footer-section-1-right-text">
-						Properties in India<br />
-						<div>
-							New Projects in New Delhi | &nbsp; New Projects in Mumbai | &nbsp;
-							New Projects in Chennai | &nbsp; New Projects in Pune | &nbsp; New
-							Projects in Noida | &nbsp; New Projects in Gurgaon | &nbsp; New
-							Projects in Bangalore | &nbsp; New Projects in Ahmedabad
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-section-2">
-				<ul>
-					<li>Sitemap</li>
-					<li>Terms & Conditions</li>
-					<li>Privacy Policy</li>
-					<li>Blog</li>
-					<li>Careers</li>
-					<li>Testimonials</li>
-					<li>Feedback</li>
-					<li>Unsubscribe</li>
-					<li>Help Center</li>
-					<li>Sales Enquiry</li>
-					<li>Buy Our Services</li>
-				</ul>
-			</div>
-			<div class="footer-section-3">
-				<div>
-					Disclaimer: Magicbricks Realty Services Limited is only an
-					intermediary offering its platform to advertise properties of Seller
-					for a Customer/Buyer/User coming on its Website and is not and cannot
-					be a party to or privy to or control in any manner any transactions
-					between the Seller and the Customer/Buyer/User. All the offers and
-					discounts on this Website have been extended by Read more
-				</div>
-			</div>
-			<div class="footer-section-4">
-				<span
-					>All trademarks, logos and names are properties of their respective
-					owners. All Rights Reserved. © Copyright 2022 Magicbricks Realty
-					Services Limited.</span
-				>
-			</div>
-		</footer>
-
+		<custom-footer></custom-footer>
 		<script>
 			const node = document.querySelector(".main-section-search-hyd__card");
 

@@ -9,6 +9,11 @@ class GuideCard extends HTMLElement {
 		  this.shadowRoot.querySelector('.iframe-two').attributes[1].value = this.getAttribute('srctwo');
 		  this.shadowRoot.querySelector('.guide-card-video-text-1').innerHTML = this.getAttribute('srconeTtext');
 		  this.shadowRoot.querySelector('.guide-card-video-text-1').innerHTML = this.getAttribute('srctwotext');
+		  this.shadowRoot.querySelector('.gc-btn').style.display = this.getAttribute('gcbtn');
+		  this.shadowRoot.querySelector('.guide-card-videos-block').style.display = this.getAttribute('gc-show-videoblock');
+		  this.shadowRoot.querySelector('.gc-insights-block').style.display = this.getAttribute('gc-show-insightsblock');
+		  this.shadowRoot.querySelector('.guide-card-legal-updates-block').style.display = this.getAttribute('gc-show-updatesblock');
+
         }
   }
   

@@ -63,11 +63,72 @@
 		margin-right: 10px;
 	}
 
+	.gc-insights-block {
+		padding: 0 16px;
+		margin-top: 13px;
+	}
+
+	.gc-insights-play-text {
+		display: flex;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 12px 0;
+		width: 100%;
+		font: var(--description-font);
+	}
+
+	.gc-insights-play-text-icon {
+		background: url("./assets/locality__detail__sprite_v2.svg");
+		width: 30px;
+		height: 20px;
+		background-position: -1px -1149px;
+		display: block;
+	}
+
+	.gc-updates-block {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 20px;
+		padding: 0 16px;
+		grid-template-rows: 1fr 0.1fr;
+	}
+
+	.gc-updates-block-text {
+		font: var(--description-font);
+		font-weight: 600;
+		color: var(--text-primary);
+	}
+
+	.gc-updates-block-image {
+		width: 100%;
+		height: 88px;
+	}
+
 	.guide-card-see-all {
 		padding: 10px 16px 0 16px;
 		font: var(--description-font);
 		color: var(--primary);
 		font-weight: 600;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* shown hidden elements dynamically when required */
+
+	.gc-btn {
+		display: none;
+	}
+
+	.guide-card-videos-block {
+		display: none;
+	}
+
+	.gc-insights-block {
+		display: none;
+	}
+
+	.guide-card-legal-updates-block {
+		display: none;
 	}
 </style>
 <div class="guide-card-container">
@@ -109,7 +170,60 @@
 			><span class="guide-card-bullet"></span>
 		</div>
 	</div>
+	<div class="gc-insights-block">
+		<div class="gc-insights-play-text">
+			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
+			Means and How is it Calculated..
+		</div>
+		<div class="gc-insights-play-text">
+			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
+			Means and How is it Calculated..
+		</div>
+		<div class="gc-insights-play-text">
+			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
+			Means and How is it Calculated..
+		</div>
+		<div class="gc-insights-play-text">
+			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
+			Means and How is it Calculated..
+		</div>
+		<div class="gc-insights-play-text">
+			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
+			Means and How is it Calculated..
+		</div>
+	</div>
+	<div class="guide-card-legal-updates-block">
+		<div class="gc-updates-block">
+			<div class="gc-updates-block-image-sec">
+				<img
+					class="gc-updates-block-image"
+					src="./assets/showcase1.jpg"
+					alt="updates-image" />
+			</div>
+			<div class="gc-updates-block-text">
+				Tranfer of propperty Act
+				<arrow-right><span slot="arrow-text">Read article</span></arrow-right>
+			</div>
+		</div>
+		<div class="gc-updates-block">
+			<div class="gc-updates-block-image-sec">
+				<img
+					class="gc-updates-block-image"
+					src="./assets/showcase1.jpg"
+					alt="updates-image" />
+			</div>
+			<div class="gc-updates-block-text">
+				Tranfer of propperty Act
+				<arrow-right><span slot="arrow-text">Read article</span></arrow-right>
+			</div>
+		</div>
+	</div>
 	<div class="guide-card-see-all">
 		<arrow-right><span slot="arrow-text">See all</span></arrow-right>
+		<span class="gc-btn">
+			<custom-button>
+				<span slot="custom-btn-text">Explore Services</span></custom-button
+			>
+		</span>
 	</div>
 </div>
