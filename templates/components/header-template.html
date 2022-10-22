@@ -131,28 +131,27 @@
 		display: flex;
 		align-items: center;
 		position: relative;
+		margin-top: 4px;
 	}
 
-	.header-dropdown-container {
+	.header-dropdown-display {
 		position: absolute;
 		top: 40px;
 		left: 0;
 		max-width: 80vw;
 		overflow: scroll;
-		z-index: 99999;
-		box-shadow: 0px 10px 10px 2px var(--border-color);
+		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
 		border-radius: 0 0 8px 8px;
-	}
-	.header-dropdown-container::-webkit-scrollbar {
 		display: none;
 	}
+
 	.nav-items-bottom:not(.nav-bottom-btn):hover {
 		color: var(--primary);
 		border-radius: 8px 8px 0 0;
 		background-color: var(--white);
-		border: 1px solid var(--border-color);
+		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
 		margin-top: 4px;
-		box-shadow: 0px 0px 10px 2px var(--border-color);
+		z-index: 11;
 	}
 
 	.nav-dropdown-bottom {
@@ -234,6 +233,107 @@
 		top: 5px;
 		left: 3px;
 	}
+	@media (max-width: 960px) {
+		.nav-links {
+			grid-template-columns: 1.2fr 1fr 0.7fr 0.6fr 0.1fr;
+		}
+		.nav-links-bottom {
+			grid-template-columns: repeat(4, 0.2fr) 0.4fr 0.4fr 0.2fr 0.2fr;
+			padding: 0;
+			transition: all 0.6s ease;
+		}
+		.nav-items-bottom {
+			font-size: 12px;
+		}
+	}
+	@media (max-width: 800px) {
+		.nav-items-bottom {
+			font-size: 10px;
+		}
+		.nav-items:first-child {
+			width: 160px;
+		}
+		.nav-links-bottom {
+			grid-template-columns: repeat(3, 0.3fr) 0.6fr 0.6fr 0.8fr 0.4fr 0.3fr;
+		}
+	}
+
+	@media (max-width: 760px) {
+		.nav-links {
+			grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+			padding: 0px 10px;
+		}
+	}
+	@media (max-width: 600px) {
+		.header {
+			padding-top: 20px;
+		}
+		.nav-links {
+			position: absolute;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(5, 1fr);
+			background-color: var(--primary);
+			animation: 0.4s menu 1 linear;
+			padding: 20px 20px;
+			margin-top: 10px;
+			z-index: 1;
+			border-bottom-right-radius: 10px;
+			display: none;
+		}
+
+		@keyframes menu {
+			0% {
+				transform: translateX(-100px);
+			}
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		.nav-links-bottom {
+			display: none;
+		}
+
+		.hamburger {
+			display: block;
+			margin-left: 20px;
+			cursor: pointer;
+			z-index: 2;
+		}
+		.hamburger__line-1 {
+			width: 30px;
+			background-color: var(--white);
+			height: 3px;
+			border-radius: 2px;
+		}
+		.hamburger__animate-1 {
+			transform: rotate(-40deg);
+			transition: all 1s;
+		}
+		.hamburger__animate-2 {
+			transform: rotate(40deg);
+			transition: all 1s;
+		}
+		.hamburger__animate-3 {
+			transform: rotate(-40deg);
+			transition: all 1s;
+		}
+		.hamburger__line-2 {
+			width: 30px;
+			background-color: var(--white);
+			height: 3px;
+			border-radius: 2px;
+			margin-top: 5px;
+		}
+		.hamburger__line-3 {
+			width: 30px;
+			background-color: var(--white);
+			height: 3px;
+			border-radius: 2px;
+
+			margin-top: 5px;
+		}
+	}
 </style>
 
 <header class="header">
@@ -254,32 +354,8 @@
 			</li>
 		</ul>
 	</nav>
-	<nav>
+	<nav class="nav-links-bottom-container">
 		<ul class="nav-links-bottom">
-			<!-- <li class="nav-items-bottom">
-				<a class="nav-dropdown-bottom" href="#"></a>
-			</li> -->
-			<!-- <li class="nav-items-bottom">
-				<a class="nav-dropdown-bottom" href="#">Rent</a>
-			</li>
-			<li class="nav-items-bottom">
-				<a class="nav-dropdown-bottom" href="#">Sell</a>
-			</li>
-			<li class="nav-items-bottom">
-				<a class="nav-dropdown-bottom" href="#">Home Loans</a>
-			</li>
-			<li class="nav-items-bottom">
-				<a class="nav-dropdown-bottom" href="#">Property Services</a>
-			</li>
-			<li class="nav-items-bottom">
-				<a class="nav-dropdown-bottom" href="#">MB Advice <span>New</span></a>
-			</li>
-			<li class="nav-items-bottom">
-				<a class="nav-dropdown-bottom" href="#">Help</a>
-			</li> -->
-			<div class="header-dropdown-container">
-				<header-dropdown-card> </header-dropdown-card>
-			</div>
 			<li class="nav-items-bottom nav-bottom-btn">
 				<span class="nav-item-icon"></span>Pay your Rent
 			</li>

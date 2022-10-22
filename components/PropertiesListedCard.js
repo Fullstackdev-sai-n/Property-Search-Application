@@ -6,10 +6,7 @@ class PropertiesListedCard extends HTMLElement {
 		  .innerHTML = await res.text()
 		  this.shadowRoot.querySelector('.main-section-search-hyd__card').attributes.part.value = this.getAttribute('hydimg-part');
 		  this.shadowRoot.querySelector('.main-section-search-hyd__card__text-top-info').innerHTML = this.getAttribute('info');
-	      this.shadowRoot.querySelector('.plc-arrow-right').innerHTML = this.getAttribute('frwdtxt');
-
-          console.log(this.shadowRoot)
-        
+	      this.shadowRoot.querySelector('.plc-arrow-right').innerHTML = this.getAttribute('frwdtxt');        
         }
   }
   

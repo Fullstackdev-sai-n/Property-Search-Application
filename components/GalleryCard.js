@@ -11,12 +11,11 @@ class GalleryCard extends HTMLElement {
 		  this.shadowRoot.querySelector('.pgc-price').innerHTML = this.getAttribute('price');
 		  this.shadowRoot.querySelector('.pgc-pjcname').innerHTML = this.getAttribute('projectname');
 		  this.shadowRoot.querySelector('.pgc-name').innerHTML = this.getAttribute('prname');
-		  this.shadowRoot.querySelector('.gallery__card').addEventListener('mouseover', () => {
-
-			this.shadowRoot.querySelector('.pgc-image').style.transform = 'scale(1.1)';	
+		  this.shadowRoot.querySelector('.gallery__card').addEventListener('mouseenter', () => {
+			this.shadowRoot.querySelector('.pgc-image').style.transform = 'scale(1.1)';
 		})
 
-		this.shadowRoot.querySelector('.gallery__card').addEventListener('mouseout', () => {
+		this.shadowRoot.querySelector('.gallery__card').addEventListener('mouseleave', () => {
 			this.shadowRoot.querySelector('.pgc-image').style.transform = 'scale(1)';
 		})
 		

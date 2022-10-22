@@ -14,7 +14,12 @@
       "city": "Patancheruvu",
       "navbottom": "Buy",
       "navTop": "Hyderabad",
-      "rating": "4.6"
+      "rating": "4.6",
+      "propertiesListed": {
+        "totalCount": "22k",
+        "text": "properties listed for",
+        "arrowText": "Continue last search"
+      }
     
     },
     {
@@ -32,7 +37,12 @@
       "city": "Patancheruvu",
       "navbottom": "Buy",
       "navTop": "Hyderabad",
-      "rating": "4.6"
+      "rating": "4.6",
+      "propertiesListed": {
+        "totalCount": "22k",
+        "text": "Get personalised property",
+        "arrowText": "See all"
+      }
     },
     {
       "userId": 1,
@@ -49,7 +59,12 @@
       "city": "Patancheruvu",
       "navbottom": "Buy",
       "navTop": "Hyderabad",
-      "rating": "4.6"
+      "rating": "4.6",
+      "propertiesListed": {
+        "totalCount": "22k",
+        "text": "Get personalised property",
+        "arrowText": "See all"
+      }
     },
     {
       "userId": 1,
@@ -66,7 +81,12 @@
       "city": "Patancheruvu",
       "navbottom": "Buy",
       "navTop": "Hyderabad",
-      "rating": "4.6"
+      "rating": "4.6",
+      "propertiesListed": {
+        "totalCount": "22k",
+        "text": "Get personalised property",
+        "arrowText": "See all"
+      }
     },
     {
       "userId": 1,

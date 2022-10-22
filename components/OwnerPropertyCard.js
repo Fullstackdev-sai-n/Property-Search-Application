@@ -8,12 +8,13 @@ class OwnerPropertyCard extends HTMLElement {
           this.shadowRoot.querySelector('.opc-location').innerHTML = this.getAttribute('location');
           this.shadowRoot.querySelector('.opc-status').innerHTML = this.getAttribute('status');
           this.shadowRoot.querySelector('.opc-image').attributes[0].value = this.getAttribute('opcimg');
-          this.shadowRoot.querySelector('.opc-card').addEventListener('mouseover', () => {
+          this.shadowRoot.querySelector('.opc-card').addEventListener('mouseenter', () => {
             this.shadowRoot.querySelector('.contact-btn-blk').style.display = 'block';
             this.shadowRoot.querySelector('.opc-image').style.transform = 'scale(1.1)';	
+          
           })
       
-          this.shadowRoot.querySelector('.opc-card').addEventListener('mouseout', () => {
+          this.shadowRoot.querySelector('.opc-card').addEventListener('mouseleave', () => {
             this.shadowRoot.querySelector('.contact-btn-blk').style.display = 'none';
             this.shadowRoot.querySelector('.opc-image').style.transform = 'scale(1)';
           })

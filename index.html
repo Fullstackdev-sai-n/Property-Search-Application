@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="index.css" />
 		<link rel="stylesheet" href="mediaQueries.css" />
+		<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
 		<script src="./components/Header.js"></script>
 		<script src="./components/HeaderDropdownCard.js"></script>
 		<script src="./components/FeaturedCard.js"></script>
@@ -24,6 +25,44 @@
 		<script src="./components/OwnerPropertyCard.js"></script>
 		<script src="./components/HandpickedProjectCard.js"></script>
 		<script src="./components/Footer.js"></script>
+		<script>
+			let addData = [];
+			const jsonData = fetch("./dynamicData.json")
+				.then((res) => res.json())
+				.then((result) => result)
+				.then((res) => fetchResponse(res?.slice(0, 4)));
+
+			function fetchResponse(data) {
+				if (!data) return;
+				document.querySelector(".main-section-search-hyd__cards").innerHTML =
+					data
+						?.map(
+							(slicing) => `
+						<properties-listed-card
+						hydimg-part="plc-bg-icon"
+						info="${slicing?.propertiesListed?.text}"
+						frwdtxt="${slicing?.propertiesListed?.arrowText}">
+					</properties-listed-card>`
+						)
+						.join("");
+			}
+
+			const node = document.querySelector(".main-section-search-hyd__card");
+
+			function changeBg() {
+				const fadeImages = document.querySelector(
+					".main-section-showcase__images"
+				);
+				const images = [
+					'url("./assets/showcase1.jpg")',
+					'url("./assets/showcase2.jpg")',
+					'url("./assets/showcase3.jpg")',
+				];
+				const bg = images[Math.floor(Math.random() * images.length)];
+				fadeImages.style.backgroundImage = bg;
+			}
+			setInterval(changeBg, 2000);
+		</script>
 		<title>Property Search</title>
 	</head>
 
@@ -89,29 +128,7 @@
 			<section class="main-section-container main-section-search-hyd">
 				<section-heading
 					heading="Because you searched Hyderabad"></section-heading>
-				<div class="main-section-search-hyd__cards">
-					<properties-listed-card
-						hydimg-part="plc-bg-icon"
-						info="Properties listed for you"
-						frwdtxt="Continue last search">
-						<span slot="propcount">NEW TEST</span>
-					</properties-listed-card>
-					<properties-listed-card
-						hydimg-part="plc-bg-icon"
-						info="Properties listed for you"
-						frwdtxt="Continue last search">
-					</properties-listed-card>
-					<properties-listed-card
-						hydimg-part="plc-bg-icon"
-						info="Properties listed for you"
-						frwdtxt="Continue last search">
-					</properties-listed-card>
-					<properties-listed-card
-						hydimg-part="plc-bg-icon"
-						info="Properties listed for you"
-						frwdtxt="Continue last search">
-					</properties-listed-card>
-				</div>
+				<div class="main-section-search-hyd__cards"></div>
 			</section>
 			<section class="main-section-container main-section-showcase">
 				<section-heading
@@ -619,65 +636,5 @@
 			</section>
 		</main>
 		<custom-footer></custom-footer>
-		<script>
-			const node = document.querySelector(".main-section-search-hyd__card");
-
-			function changeBg() {
-				const fadeImages = document.querySelector(
-					".main-section-showcase__images"
-				);
-				const images = [
-					'url("./assets/showcase1.jpg")',
-					'url("./assets/showcase2.jpg")',
-					'url("./assets/showcase3.jpg")',
-				];
-				const bg = images[Math.floor(Math.random() * images.length)];
-				fadeImages.style.backgroundImage = bg;
-			}
-			setInterval(changeBg, 2000);
-
-			const toggleMenu = document.querySelector(".hamburger");
-
-			toggleMenu.addEventListener("click", function () {
-				const navItems = document.querySelector(".nav-links");
-				const menuAnimateOne = document.querySelector(".hamburger__line-1");
-				const menuAnimateTwo = document.querySelector(".hamburger__line-2");
-				const menuAnimateThree = document.querySelector(".hamburger__line-3");
-				menuAnimateOne.classList.add("hamburger__animate-1");
-				menuAnimateTwo.classList.add("hamburger__animate-2");
-				menuAnimateThree.classList.add("hamburger__animate-3");
-
-				const styles = getComputedStyle(navItems);
-				if (styles.display === "none") {
-					navItems.style.display = "grid";
-					menuAnimateOne.classList.add("hamburger__animate-1");
-					menuAnimateTwo.classList.add("hamburger__animate-2");
-					menuAnimateThree.classList.add("hamburger__animate-3");
-				} else {
-					navItems.style.display = "none";
-					menuAnimateOne.classList.remove("hamburger__animate-1");
-					menuAnimateTwo.classList.remove("hamburger__animate-2");
-					menuAnimateThree.classList.remove("hamburger__animate-3");
-					navItems.removeAttribute("style");
-				}
-			});
-			const navItems = document.querySelector(".nav-links");
-			const styles = getComputedStyle(navItems);
-			window.innerWidth >= 600 && styles.display === "none"
-				? navItems.style.display === "grid"
-				: "";
-
-			const galleryCard = document.querySelector(".gallery__card");
-
-			galleryCard.addEventListener("mouseover", function () {
-				const hoverBtn = document.querySelector(".gallery__card__text--2__btn");
-				const styles = getComputedStyle(hoverBtn);
-				if (styles.display === "none") {
-					hoverBtn.style.display = "block";
-				} else {
-					hoverBtn.style.display = "none";
-				}
-			});
-		</script>
 	</body>
 </html>
