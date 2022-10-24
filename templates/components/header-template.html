@@ -12,12 +12,15 @@
 		color: unset;
 	}
 	.header {
-		background-color: #d8232a;
 		width: 100%;
-		height: 48px;
+		height: 92px;
 		margin: 0;
 		padding: 0;
 		display: flow-root;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 100000;
 	}
 
 	.nav-links {
@@ -25,6 +28,7 @@
 		grid-template-columns: 1.4fr 0.8fr 3fr 0.7fr 0.6fr 0.1fr;
 		color: var(--white);
 		padding: 0px 60px;
+		background-color: #d8232a;
 	}
 
 	.nav-items {
@@ -36,6 +40,23 @@
 		line-height: 47px;
 		cursor: pointer;
 	}
+
+	.nav-items-dropdown-link {
+		position: relative;
+	}
+
+	.header-dropdown-display-top {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		max-width: 80vw;
+		overflow: scroll;
+		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
+		border-radius: 0 0 8px 8px;
+		display: none;
+		z-index: 10;
+	}
+
 	.nav-items:nth-child(3) {
 		visibility: hidden;
 	}
@@ -143,6 +164,7 @@
 		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
 		border-radius: 0 0 8px 8px;
 		display: none;
+		z-index: 10;
 	}
 
 	.nav-items-bottom:not(.nav-bottom-btn):hover {
@@ -233,40 +255,68 @@
 		top: 5px;
 		left: 3px;
 	}
-	@media (max-width: 960px) {
-		.nav-links {
-			grid-template-columns: 1.2fr 1fr 0.7fr 0.6fr 0.1fr;
-		}
+	@media (max-width: 1298px) {
 		.nav-links-bottom {
-			grid-template-columns: repeat(4, 0.2fr) 0.4fr 0.4fr 0.2fr 0.2fr;
+			grid-template-columns: repeat(3, 0.1fr) 0.3fr 0.4fr 0.3fr 0.2fr 0.4fr;
 			padding: 0;
 			transition: all 0.6s ease;
 		}
-		.nav-items-bottom {
-			font-size: 12px;
+
+		.nav-bottom-btn {
+			font-size: 10px;
+			margin-right: 20px;
+		}
+	}
+	@media (max-width: 1110px) {
+		.nav-links {
+			grid-template-columns: 1fr 0.8fr 0.1fr 0.8fr 1fr 1fr;
+		}
+		.nav-links-bottom {
+			grid-template-columns: repeat(3, 0.1fr) 0.4fr 0.4fr 0.3fr 0.2fr 0.2fr;
+			padding: 0;
+			transition: all 0.6s ease;
+		}
+		.nav-links-bottom {
+			height: 84px;
+		}
+	}
+	@media (max-width: 960px) {
+		.nav-links {
+			grid-template-columns: 1fr 0.6fr 0.1fr 0.6fr 0.6fr 1fr;
+		}
+		.nav-links-bottom {
+			grid-template-columns: repeat(4, 1fr);
+			padding: 0;
+			transition: all 0.6s ease;
 		}
 	}
 	@media (max-width: 800px) {
-		.nav-items-bottom {
-			font-size: 10px;
-		}
 		.nav-items:first-child {
 			width: 160px;
-		}
-		.nav-links-bottom {
-			grid-template-columns: repeat(3, 0.3fr) 0.6fr 0.6fr 0.8fr 0.4fr 0.3fr;
 		}
 	}
 
 	@media (max-width: 760px) {
 		.nav-links {
-			grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+			grid-template-columns: 1fr 0.6fr 0.1fr 0.8fr 0.6fr 0.4fr;
 			padding: 0px 10px;
+		}
+		.nav-btn > button {
+			width: 140px;
+			font-size: 10px;
+			display: flex;
+		}
+		.nav-bottom-btn {
+			font-size: 8px;
+			margin-right: 20px;
+			width: 100px;
 		}
 	}
 	@media (max-width: 600px) {
 		.header {
 			padding-top: 20px;
+			background-color: var(--primary);
+			height: 48px;
 		}
 		.nav-links {
 			position: absolute;
@@ -345,10 +395,16 @@
 		</div>
 		<ul class="nav-links">
 			<li class="nav-items"><a href="#"></a></li>
-			<li class="nav-items"><a class="nav-dropdown" href="#"> Hyderabad</a></li>
-			<li class="nav-items"></li>
-			<li class="nav-items"><a class="nav-dropdown" href="#"> MB Prime</a></li>
-			<li class="nav-items"><a class="nav-dropdown" href="#"> Login</a></li>
+			<li class="nav-items nav-items-dropdown-link">
+				<a class="nav-dropdown" href="#"> Hyderabad</a>
+			</li>
+			<li class="nav-items nav-items-empty"></li>
+			<li class="nav-items nav-items-dropdown-link">
+				<a class="nav-dropdown" href="#"> MB Prime</a>
+			</li>
+			<li class="nav-items nav-items-dropdown-link">
+				<a class="nav-dropdown" href="#"> Login</a>
+			</li>
 			<li class="nav-items nav-btn">
 				<button>Post Property <span>Free</span></button>
 			</li>

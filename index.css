@@ -561,6 +561,13 @@ li {
 	gap: 20px;
 }
 
+@media (max-width: 960px) {
+	.main-section-real-estate-guide-cards_wrapper {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+
 .main-section-hyd-prop-snapshot-content {
 	width: 100%;
 	height: auto;
@@ -913,6 +920,19 @@ li {
 		grid-template-columns: 1fr;
 		gap: 10px;
 	}
+}
+
+properties-listed-card::part(plc-1)::after {
+	background: url("assets/mb-home-sprite-web.svg") no-repeat -14px -30px;
+}
+properties-listed-card::part(plc-2)::after {
+	background: url("assets/mb-home-sprite-web.svg") no-repeat -17px -289px;
+}
+properties-listed-card::part(plc-3)::after {
+	background: url("assets/mb-home-sprite-web.svg") no-repeat -18px -198px;
+}
+properties-listed-card::part(plc-4)::after {
+	background: url("assets/mb-home-sprite-web.svg") no-repeat -12px -371px;
 }
 
 sideicon-with-text::part(before-icon-1)::before {

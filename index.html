@@ -30,24 +30,23 @@
 			const jsonData = fetch("./dynamicData.json")
 				.then((res) => res.json())
 				.then((result) => result)
-				.then((res) => fetchResponse(res?.slice(0, 4)));
+				.then((res) => fetchResponse(res));
 
 			function fetchResponse(data) {
 				if (!data) return;
 				document.querySelector(".main-section-search-hyd__cards").innerHTML =
 					data
+						.slice(0, 4)
 						?.map(
-							(slicing) => `
+							(apiData) => `
 						<properties-listed-card
-						hydimg-part="plc-bg-icon"
-						info="${slicing?.propertiesListed?.text}"
-						frwdtxt="${slicing?.propertiesListed?.arrowText}">
+						hydimg-part="${apiData?.propertiesListed?.image}"
+						info="${apiData?.propertiesListed?.text}"
+						frwdtxt="${apiData?.propertiesListed?.arrowText}">
 					</properties-listed-card>`
 						)
 						.join("");
 			}
-
-			const node = document.querySelector(".main-section-search-hyd__card");
 
 			function changeBg() {
 				const fadeImages = document.querySelector(
@@ -125,12 +124,15 @@
 					<img src="./assets/payrent.jpg" alt="dream home display image" />
 				</div>
 			</section>
-			<section class="main-section-container main-section-search-hyd">
+			<section
+				class="main-section-container main-section-search-hyd section-heading-container">
 				<section-heading
 					heading="Because you searched Hyderabad"></section-heading>
 				<div class="main-section-search-hyd__cards"></div>
 			</section>
-			<section class="main-section-container main-section-showcase">
+
+			<section
+				class="main-section-container main-section-showcase section-heading-container">
 				<section-heading
 					heading="An Exclusive Showcase - Aspire Spaces - Ameya"></section-heading>
 				<div class="main-section-showcase__images">
@@ -151,7 +153,8 @@
 					</button>
 				</div>
 			</section>
-			<section class="main-section-container main-section-project-gallery">
+			<section
+				class="main-section-container main-section-project-gallery section-heading-container">
 				<section-heading
 					beforecolor-part="line-color-gallery"
 					heading="Project Gallery"></section-heading>
@@ -174,7 +177,8 @@
 				</div>
 			</section>
 			<section class="main-section-container main-section-featured">
-				<div class="main-section-featured__title main-section__title">
+				<div
+					class="main-section-featured__title main-section__title section-heading-container">
 					<section-heading heading="Featured Projects"> </section-heading>
 					<div>See all projects</div>
 				</div>
@@ -198,7 +202,7 @@
 				</div>
 			</section>
 			<section class="main-section-container hnp-container">
-				<div class="hnp-container-title-block">
+				<div class="hnp-container-title-block section-heading-container">
 					<section-heading
 						heading="Handpicked New Project Launches in Hyderabad">
 					</section-heading>
@@ -245,7 +249,8 @@
 					</handpicked-project-card>
 				</div>
 			</section>
-			<section class="main-section-container main-section-image-card">
+			<section
+				class="main-section-container main-section-image-card section-heading-container">
 				<section-heading
 					heading="We've got properties for everyone"></section-heading>
 				<div class="main-section-image-cards-wrapper">
@@ -267,7 +272,8 @@
 						title="Owners Properties"></image-overlay-text-card>
 				</div>
 			</section>
-			<section class="main-section-container main-section-property_services">
+			<section
+				class="main-section-container main-section-property_services section-heading-container">
 				<section-heading heading="Property Services"></section-heading>
 				<div class="main-section-property_services_cards-wrapper">
 					<services-card
@@ -288,7 +294,8 @@
 						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
 				</div>
 			</section>
-			<section class="main-section main-section-new-project-gallery">
+			<section
+				class="main-section main-section-new-project-gallery section-heading-container">
 				<section-heading
 					beforecolor-part="line-color-npg"
 					heading="New Project Gallery"></section-heading>
@@ -351,7 +358,7 @@
 			</section>
 			<section class="main-section-container main-section-popular-cities">
 				<div class="main-section-popular-cities-cards-wrapper">
-					<div class="popular-cities-first-block">
+					<div class="popular-cities-first-block section-heading-container">
 						<div class="title">Explore</div>
 						<section-heading
 							beforecolor-part="line-color-explore"
@@ -381,7 +388,8 @@
 					</explore-card>
 				</div>
 			</section>
-			<section class="main-section-container main-section-owner-properties">
+			<section
+				class="main-section-container main-section-owner-properties section-heading-container">
 				<section-heading
 					heading="Exclusive Owner Properties in Hyderabad"></section-heading>
 				<div class="main-section-owner-properties-cards">
@@ -415,7 +423,8 @@
 					</owner-property-card>
 				</div>
 			</section>
-			<section class="main-section-container main-section-advice-tools">
+			<section
+				class="main-section-container main-section-advice-tools section-heading-container">
 				<section-heading
 					beforecolor-part="line-color-advice"
 					heading="Advice & Tools">
@@ -447,7 +456,8 @@
 					</advice-card>
 				</div>
 			</section>
-			<section class="main-section-container main-section-real-estate-guide">
+			<section
+				class="main-section-container main-section-real-estate-guide section-heading-container">
 				<section-heading
 					beforecolor-part="line-color-guide"
 					heading="Your Real Estate Guide"></section-heading>
@@ -479,7 +489,8 @@
 					</guide-card>
 				</div>
 			</section>
-			<section class="main-section-container main-section-hyd-prop-snapshot">
+			<section
+				class="main-section-container main-section-hyd-prop-snapshot section-heading-container">
 				<section-heading
 					heading="Hyderabad Property Snapshot"></section-heading>
 				<div class="main-section-hyd-prop-snapshot-content">
@@ -530,7 +541,8 @@
 					Post property <small>free</small>
 				</div>
 			</section>
-			<section class="main-section-container main-section-browse-projects">
+			<section
+				class="main-section-container main-section-browse-projects section-heading-container">
 				<section-heading heading="Browse Residential Projects in Top 8 Cities">
 				</section-heading>
 				<div class="main-section-browse-projects-cities">
@@ -581,7 +593,8 @@
 					</div>
 				</div>
 			</section>
-			<section class="main-section-container main-section-recommended">
+			<section
+				class="main-section-container main-section-recommended section-heading-container">
 				<section-heading heading="Recommended for You"></section-heading>
 				<div class="main-section-recommended-content">
 					<div class="main-section-recommended-catergories">
