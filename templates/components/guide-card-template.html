@@ -1,56 +1,59 @@
 <style>
 	.guide-card-container {
 		height: 348px;
-		width: 100%;
+		max-width: 100%;
 		border: 1px solid var(--border-color);
 		border-top-color: var(--primary);
 		border-radius: 8px;
 		display: grid;
-		grid-template-rows: 0.6fr 1fr 0.2fr;
+		grid-template-rows: 0.3fr 1fr 0.2fr;
 	}
 	.guide-card-title {
 		padding: 20px 16px 0 16px;
 		font: var(--title-font);
 		color: var(--text-primary);
 	}
+
 	.guide-card-videos-block {
 		display: grid;
-		grid-template-rows: 0.6fr 0.3fr 0.1fr;
+		grid-template-columns: 49% 49%;
+		column-gap: 10px;
 		padding: 0 16px;
-		margin-top: 13px;
 	}
 
-	.guide-card-video {
-		width: 100%;
+	.guide-card-video-1,
+	.guide-card-video-2 {
 		height: 136px;
-		overflow: hidden;
-		position: relative;
-		column-count: 2;
+		max-width: 177px;
+		width: 100%;
 	}
 
-	.guide-card-video iframe {
+	.guide-card-video-1 guide-card-video-1,
+	.guide-card-video-2 guide-card-video-1 {
 		width: 100%;
 		height: inherit;
 		border-radius: 8px;
 		background-color: var(--border-color);
 	}
 
-	.guide-card-video-text {
+	.guide-card-video-text-1,
+	.guide-card-video-text-2 {
 		width: 100%;
 		font-size: 14px;
 		color: var(--text-primary);
 		line-height: 20px;
-		overflow: visible;
 		margin: 16px 0;
 		display: -webkit-box;
+		max-width: 200px;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
-		column-count: 2;
+		overflow: hidden;
 	}
 
 	.guide-card-bullets-block {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	.guide-card-bullet {
@@ -63,24 +66,32 @@
 		margin-right: 10px;
 	}
 
+	/* /videos block end */
+
 	.gc-insights-block {
 		padding: 0 16px;
-		margin-top: 13px;
 	}
 
 	.gc-insights-play-text {
-		display: flex;
-		text-overflow: ellipsis;
-		padding: 12px 0;
+		padding: 0px 20px;
 		font: var(--description-font);
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		position: relative;
+		line-height: 35px;
 	}
 
-	.gc-insights-play-text-icon {
+	.gc-insights-play-text::before {
+		position: absolute;
+		top: 8px;
+		left: 0px;
+		content: "";
 		background: url("./assets/locality__detail__sprite_v2.svg");
 		width: 30px;
 		height: 20px;
 		background-position: -1px -1149px;
-		display: block;
 	}
 
 	.gc-updates-block {
@@ -117,7 +128,7 @@
 		display: none;
 	}
 
-	.guide-card-videos-block {
+	.guide-card-videos-container {
 		display: none;
 	}
 
@@ -131,30 +142,18 @@
 </style>
 <div class="guide-card-container">
 	<div class="guide-card-title"></div>
-	<div class="guide-card-videos-block">
-		<div class="guide-card-video">
-			<iframe
-				class="iframe-one"
-				width="100%"
-				height="100%"
-				src=""
-				title="YouTube video player"
-				frameborder="0"
-				crossorigin="anonymous"
-				allowfullscreen></iframe>
-			<iframe
-				class="iframe-two"
-				width="100%"
-				height="100%"
-				src=""
-				title="YouTube video player"
-				frameborder="0"
-				crossorigin="anonymous"
-				allowfullscreen></iframe>
-		</div>
-		<div class="guide-card-video-text">
-			<span class="guide-card-video-text-1"></span>
-			<span class="guide-card-video-text-2"></span>
+	<div class="guide-card-videos-container">
+		<div class="guide-card-videos-block">
+			<div class="guide-card-video-1">
+				<image-overlay-play-button iob-image="./assets/showcase1.jpg">
+				</image-overlay-play-button>
+				<div class="guide-card-video-text-1"></div>
+			</div>
+			<div class="guide-card-video-2">
+				<image-overlay-play-button iob-image="./assets/showcase1.jpg">
+				</image-overlay-play-button>
+				<div class="guide-card-video-text-2"></div>
+			</div>
 		</div>
 		<div class="guide-card-bullets-block">
 			<span class="guide-card-bullet"></span
@@ -170,24 +169,19 @@
 	</div>
 	<div class="gc-insights-block">
 		<div class="gc-insights-play-text">
-			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
-			Means and How is it Calculated..
+			What RERA Carpet Area Means and How is it Calculated..
 		</div>
 		<div class="gc-insights-play-text">
-			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
-			Means and How is it Calculated..
+			What RERA Carpet Area Means and How is it Calculated..
 		</div>
 		<div class="gc-insights-play-text">
-			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
-			Means and How is it Calculated..
+			What RERA Carpet Area Means and How is it Calculated..
 		</div>
 		<div class="gc-insights-play-text">
-			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
-			Means and How is it Calculated..
+			What RERA Carpet Area Means and How is it Calculated..
 		</div>
 		<div class="gc-insights-play-text">
-			<span class="gc-insights-play-text-icon"></span>What RERA Carpet Area
-			Means and How is it Calculated..
+			What RERA Carpet Area Means and How is it Calculated..
 		</div>
 	</div>
 	<div class="guide-card-legal-updates-block">

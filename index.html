@@ -7,8 +7,10 @@
 		<link rel="stylesheet" href="index.css" />
 		<link rel="stylesheet" href="mediaQueries.css" />
 		<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+		<script src="./script.js" defer></script>
 		<script src="./components/Header.js"></script>
 		<script src="./components/HeaderDropdownCard.js"></script>
+		<script src="./elements/imageOverlayButton.js"></script>
 		<script src="./components/FeaturedCard.js"></script>
 		<script src="./elements/customHeading.js"></script>
 		<script src="./components/ImageOverlayCard.js"></script>
@@ -18,50 +20,12 @@
 		<script src="./components/GuideCard.js"></script>
 		<script src="./elements/arrowRight.js"></script>
 		<script src="./elements/iconText.js"></script>
-		<script src="./elements/imageOverlayButton.js"></script>
 		<script src="./elements/customButton.js"></script>
 		<script src="./components/PropertiesListedCard.js"></script>
 		<script src="./components/GalleryCard.js"></script>
 		<script src="./components/OwnerPropertyCard.js"></script>
 		<script src="./components/HandpickedProjectCard.js"></script>
 		<script src="./components/Footer.js"></script>
-		<script>
-			let addData = [];
-			const jsonData = fetch("./dynamicData.json")
-				.then((res) => res.json())
-				.then((result) => result)
-				.then((res) => fetchResponse(res));
-
-			function fetchResponse(data) {
-				if (!data) return;
-				document.querySelector(".main-section-search-hyd__cards").innerHTML =
-					data
-						.slice(0, 4)
-						?.map(
-							(apiData) => `
-						<properties-listed-card
-						hydimg-part="${apiData?.propertiesListed?.image}"
-						info="${apiData?.propertiesListed?.text}"
-						frwdtxt="${apiData?.propertiesListed?.arrowText}">
-					</properties-listed-card>`
-						)
-						.join("");
-			}
-
-			function changeBg() {
-				const fadeImages = document.querySelector(
-					".main-section-showcase__images"
-				);
-				const images = [
-					'url("./assets/showcase1.jpg")',
-					'url("./assets/showcase2.jpg")',
-					'url("./assets/showcase3.jpg")',
-				];
-				const bg = images[Math.floor(Math.random() * images.length)];
-				fadeImages.style.backgroundImage = bg;
-			}
-			setInterval(changeBg, 2000);
-		</script>
 		<title>Property Search</title>
 	</head>
 
@@ -130,7 +94,6 @@
 					heading="Because you searched Hyderabad"></section-heading>
 				<div class="main-section-search-hyd__cards"></div>
 			</section>
-
 			<section
 				class="main-section-container main-section-showcase section-heading-container">
 				<section-heading
@@ -176,31 +139,16 @@
 					</div>
 				</div>
 			</section>
+			<!-- // json data -->
 			<section class="main-section-container main-section-featured">
 				<div
 					class="main-section-featured__title main-section__title section-heading-container">
 					<section-heading heading="Featured Projects"> </section-heading>
 					<div>See all projects</div>
 				</div>
-				<div class="main-section-featured__content">
-					<featured-card
-						title="Sri Aditya Squares Ornate"
-						by="by Sri Aditya Squares"
-						loc="Kollur, Hyderabad"
-						marketed="Marketed by Sri Aditya Squares"
-						flats=" 2, 3 BHK Flats"
-						price="₹ 40.9 Lac">
-					</featured-card>
-					<featured-card
-						title="Sri Aditya Squares Ornate"
-						by="by Sri Aditya Squares"
-						loc="Kollur, Hyderabad"
-						marketed="Marketed by Sri Aditya Squares"
-						flats=" 2, 3 BHK Flats"
-						price="₹ 40.9 Lac">
-					</featured-card>
-				</div>
+				<div class="main-section-featured__content"></div>
 			</section>
+			<!-- // json data -->
 			<section class="main-section-container hnp-container">
 				<div class="hnp-container-title-block section-heading-container">
 					<section-heading
@@ -210,152 +158,31 @@
 						><span slot="arrow-text">See all projects</span></arrow-right
 					>
 				</div>
-				<div class="hnp-categories-block">
-					<sideicon-with-text
-						side-icon="before-icon-1"
-						it-text="Unbaised Project reviews"
-						it-caption="by experts"></sideicon-with-text>
-					<sideicon-with-text
-						side-icon="before-icon-2"
-						it-text="Unbaised Project reviews"
-						it-caption="by experts"></sideicon-with-text>
-					<sideicon-with-text
-						side-icon="before-icon-3"
-						it-text="Unbaised Project reviews"
-						it-caption="by experts"></sideicon-with-text>
-					<sideicon-with-text
-						side-icon="before-icon-4"
-						it-text="Unbaised Project reviews"
-						it-caption="by experts"></sideicon-with-text>
-				</div>
-				<div class="hnp-diplay-cards-block">
-					<handpicked-project-card
-						imagemain="./assets/showcase1.jpg"
-						projecttitle="GHR Callisto"
-						marketedby="by GHR Infra in Kollur, Outer Ring Road, Hyderabad"
-						price="59.7"
-						thumbnail="./assets/showcase1.jpg"
-						thunmbnailtext="Introduction"
-						showcount="15 More">
-					</handpicked-project-card>
-					<handpicked-project-card
-						imagemain="./assets/showcase1.jpg"
-						projecttitle="GHR Callisto"
-						marketedby="by GHR Infra in Kollur, Outer Ring Road, Hyderabad"
-						price="59.7"
-						thumbnail="./assets/showcase1.jpg"
-						thunmbnailtext="Introduction"
-						showcount="15 More">
-					</handpicked-project-card>
-				</div>
+				<div class="hnp-categories-block"></div>
+				<div class="hnp-diplay-cards-block"></div>
 			</section>
+			<!-- // json data -->
 			<section
 				class="main-section-container main-section-image-card section-heading-container">
 				<section-heading
 					heading="We've got properties for everyone"></section-heading>
-				<div class="main-section-image-cards-wrapper">
-					<image-overlay-text-card
-						imageurl='url("./assets/showcase1.jpg")'
-						number="22348"
-						title="Owners Properties"></image-overlay-text-card>
-					<image-overlay-text-card
-						imageurl='url("./assets/showcase2.jpg")'
-						number="22348"
-						title="Owners Properties"></image-overlay-text-card>
-					<image-overlay-text-card
-						imageurl='url("./assets/showcase1.jpg")'
-						number="22348"
-						title="Owners Properties"></image-overlay-text-card>
-					<image-overlay-text-card
-						imageurl='url("./assets/showcase2.jpg")'
-						number="22348"
-						title="Owners Properties"></image-overlay-text-card>
-				</div>
+				<div class="main-section-image-cards-wrapper"></div>
 			</section>
+			<!-- // json data -->
 			<section
 				class="main-section-container main-section-property_services section-heading-container">
 				<section-heading heading="Property Services"></section-heading>
-				<div class="main-section-property_services_cards-wrapper">
-					<services-card
-						src="./assets/showcase1.jpg"
-						title="Cashback on Home Loans"
-						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
-					<services-card
-						src="./assets/showcase2.jpg"
-						title="Cashback on Home Loans"
-						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
-					<services-card
-						src="./assets/showcase2.jpg"
-						title="Cashback on Home Loans"
-						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
-					<services-card
-						src="./assets/showcase2.jpg"
-						title="Cashback on Home Loans"
-						text="Get assured cashback upto ₹90k on Home Loans + Free MB Prime"></services-card>
-				</div>
+				<div class="main-section-property_services_cards-wrapper"></div>
 			</section>
+			<!-- // json data -->
 			<section
 				class="main-section main-section-new-project-gallery section-heading-container">
 				<section-heading
 					beforecolor-part="line-color-npg"
 					heading="New Project Gallery"></section-heading>
-				<div class="main-section-new-project-gallery-cards">
-					<gallery-card
-						pgcimage="./assets/showcase1.jpg"
-						title="The Willow"
-						area="Gandiguda, Hyderabad"
-						flats="3, 4 BHK Flats"
-						price="₹ &nbsp1.80 C"
-						projectname="BSCPL Infrastructure Ltd"
-						prname="Alpine Infratech">
-					</gallery-card>
-					<gallery-card
-						pgcimage="./assets/showcase1.jpg"
-						title="The Willow"
-						area="Gandiguda, Hyderabad"
-						flats="3, 4 BHK Flats"
-						price="₹ &nbsp1.80 C"
-						projectname="BSCPL Infrastructure Ltd"
-						prname="Alpine Infratech">
-					</gallery-card>
-					<gallery-card
-						pgcimage="./assets/showcase1.jpg"
-						title="The Willow"
-						area="Gandiguda, Hyderabad"
-						flats="3, 4 BHK Flats"
-						price="₹ &nbsp1.80 C"
-						projectname="BSCPL Infrastructure Ltd"
-						prname="Alpine Infratech">
-					</gallery-card>
-					<gallery-card
-						pgcimage="./assets/showcase1.jpg"
-						title="The Willow"
-						area="Gandiguda, Hyderabad"
-						flats="3, 4 BHK Flats"
-						price="₹ &nbsp1.80 C"
-						projectname="BSCPL Infrastructure Ltd"
-						prname="Alpine Infratech">
-					</gallery-card>
-					<gallery-card
-						pgcimage="./assets/showcase1.jpg"
-						title="The Willow"
-						area="Gandiguda, Hyderabad"
-						flats="3, 4 BHK Flats"
-						price="₹ &nbsp1.80 C"
-						projectname="BSCPL Infrastructure Ltd"
-						prname="Alpine Infratech">
-					</gallery-card>
-					<gallery-card
-						pgcimage="./assets/showcase1.jpg"
-						title="The Willow"
-						area="Gandiguda, Hyderabad"
-						flats="3, 4 BHK Flats"
-						price="₹ &nbsp1.80 C"
-						projectname="BSCPL Infrastructure Ltd"
-						prname="Alpine Infratech">
-					</gallery-card>
-				</div>
+				<div class="main-section-new-project-gallery-cards"></div>
 			</section>
+			<!-- // json data -->
 			<section class="main-section-container main-section-popular-cities">
 				<div class="main-section-popular-cities-cards-wrapper">
 					<div class="popular-cities-first-block section-heading-container">
@@ -365,274 +192,74 @@
 							heading="Popular Localities
 					in Hyderabad"></section-heading>
 					</div>
-					<explore-card
-						city="Nalagantla"
-						price="4,984 -7,289 per sqft"
-						rating="4.6"
-						reviews="3"
-						count="0">
-					</explore-card>
-					<explore-card
-						city="patancheru"
-						price="4,984 -7,289 per sqft"
-						rating="4.6"
-						reviews="20"
-						count="4">
-					</explore-card>
-					<explore-card
-						city="lothkunta"
-						price="4,984 -7,289 per sqft"
-						rating="4.6"
-						reviews="3"
-						count="4">
-					</explore-card>
 				</div>
 			</section>
+			<!-- // json data -->
 			<section
 				class="main-section-container main-section-owner-properties section-heading-container">
 				<section-heading
 					heading="Exclusive Owner Properties in Hyderabad"></section-heading>
-				<div class="main-section-owner-properties-cards">
-					<owner-property-card
-						opcimg="./assets/showcase1.jpg"
-						flats="3 BHK Flat"
-						price="₹1.29 Cr"
-						location="Sainikpuri,Hyderabad"
-						status="Ready to Move">
-					</owner-property-card>
-					<owner-property-card
-						opcimg="./assets/showcase1.jpg"
-						flats="3 BHK Flat"
-						price="₹1.29 Cr"
-						location="Sainikpuri,Hyderabad"
-						status="Ready to Move">
-					</owner-property-card>
-					<owner-property-card
-						opcimg="./assets/showcase1.jpg"
-						flats="3 BHK Flat"
-						price="₹1.29 Cr"
-						location="Sainikpuri,Hyderabad"
-						status="Ready to Move">
-					</owner-property-card>
-					<owner-property-card
-						opcimg="./assets/showcase1.jpg"
-						flats="3 BHK Flat"
-						price="₹1.29 Cr"
-						location="Sainikpuri,Hyderabad"
-						status="Ready to Move">
-					</owner-property-card>
-				</div>
+				<div class="main-section-owner-properties-cards"></div>
 			</section>
+			<!-- // json data -->
 			<section
 				class="main-section-container main-section-advice-tools section-heading-container">
 				<section-heading
 					beforecolor-part="line-color-advice"
 					heading="Advice & Tools">
 				</section-heading>
-				<div class="main-section-advice-tools__card-wrapper">
-					<advice-card
-						ac-image-part="logo-image-1"
-						content="dynamic-content-1"
-						title="Property Valuation"
-						description="new description ashould be dynamic new description ashould be dynamic">
-					</advice-card>
-					<advice-card
-						ac-image-part="logo-image-2"
-						content="dynamic-content-2"
-						title="Property Valuation"
-						description="new description ashould be dynamic new description ashould be dynamic">
-					</advice-card>
-					<advice-card
-						ac-image-part="logo-image-3"
-						content="dynamic-content-3"
-						title="Property Valuation"
-						description="new description ashould be dynamic new description ashould be dynamic">
-					</advice-card>
-					<advice-card
-						ac-image-part="logo-image-4"
-						content="dynamic-content-4"
-						title="Property Valuation"
-						description="new description ashould be dynamic new description ashould be dynamic">
-					</advice-card>
-				</div>
+				<div class="main-section-advice-tools__card-wrapper"></div>
 			</section>
+			<!-- // json data -->
 			<section
 				class="main-section-container main-section-real-estate-guide section-heading-container">
 				<section-heading
 					beforecolor-part="line-color-guide"
 					heading="Your Real Estate Guide"></section-heading>
-				<div class="main-section-real-estate-guide-cards_wrapper">
-					<guide-card
-						title="Locality Videos"
-						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
-						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
-						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						gc-show-videoblock="block">
-					</guide-card>
-					<guide-card
-						title="Industry Insights"
-						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
-						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
-						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						gc-show-insightsblock="grid">
-					</guide-card>
-					<guide-card
-						title="Legal Updates"
-						srcone="https://www.youtube.com/embed/3xRLim5LSsE"
-						srctwo="https://www.youtube.com/embed/3xRLim5LSsE"
-						srconetext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						srctwotext="Dharani Portal 2022-23: View Telangana Land Records @ dharani.telangana.gov.in"
-						gcbtn="block"
-						gc-show-updatesblock="block">
-					</guide-card>
-				</div>
+				<div class="main-section-real-estate-guide-cards_wrapper"></div>
 			</section>
+			<!-- // json data -->
 			<section
 				class="main-section-container main-section-hyd-prop-snapshot section-heading-container">
 				<section-heading
 					heading="Hyderabad Property Snapshot"></section-heading>
 				<div class="main-section-hyd-prop-snapshot-content">
-					<div class="main-section-hyd-prop-snapshot-content_desc">
-						Being situated in a south-west region of Telangana, Hyderabad is
-						also known as Cyberabad as it has established itself as the hub of
-						IT, Biotech Industry and Pharmaceuticals. Including the amalgamation
-						of ancient and modern lifestyle, Hyderabad is more likely a
-						cosmopolitan city that features everything from 5-star hotels,
-						trendy shopping malls to monuments like Charminar, Hitex Gate,
-						Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.
-						Thi....Read more
-					</div>
-					<div class="main-section-hyd-prop-snapshot-content_total-projects">
-						<div
-							class="main-section-hyd-prop-snapshot-content_total-projects-1">
-							<span>1878+</span><br />
-							<span>Low Budget Flats</span><br />
-							<span>in Hyderabad</span>
-						</div>
-						<div
-							class="main-section-hyd-prop-snapshot-content_total-projects-1">
-							<span>1878+</span><br />
-							<span>Low Budget Flats</span><br />
-							<span>in Hyderabad</span>
-						</div>
-						<div
-							class="main-section-hyd-prop-snapshot-content_total-projects-1">
-							<span>1878+</span><br />
-							<span>Low Budget Flats</span><br />
-							<span>in Hyderabad</span>
-						</div>
-						<div
-							class="main-section-hyd-prop-snapshot-content_total-projects-1">
-							<span>1878+</span><br />
-							<span>Low Budget Flats</span><br />
-							<span>in Hyderabad</span>
-						</div>
-					</div>
+					<div class="main-section-hyd-prop-snapshot-content_desc"></div>
+					<div
+						class="main-section-hyd-prop-snapshot-content_total-projects"></div>
 				</div>
 			</section>
+			<!-- // json data -->
 			<section class="main-section-container main-section-post-your-property">
-				<div class="main-section-post-your-property-text">
-					Post your property for <bold>Free</bold><br />
-					<span>List it in Magicbricks and get genuine leads</span>
-				</div>
+				<div class="main-section-post-your-property-text"></div>
 				<div class="main-section-post-your-property-btn">
 					Post property <small>free</small>
 				</div>
 			</section>
+
+			<!-- // json data -->
 			<section
 				class="main-section-container main-section-browse-projects section-heading-container">
 				<section-heading heading="Browse Residential Projects in Top 8 Cities">
 				</section-heading>
-				<div class="main-section-browse-projects-cities">
-					<ul>
-						<li>Bangalore</li>
-						<li>Mumbai</li>
-						<li>Pune</li>
-						<li>Noida</li>
-						<li>Gurgaon</li>
-						<li>Kolkata</li>
-						<li>Chennai</li>
-						<li>Thane</li>
-						<li>Ahmedabad</li>
-					</ul>
-				</div>
-				<div class="main-section-browse-projects-project-names">
-					<div class="main-section-browse-projects-project-names-1">
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-					</div>
-					<div class="main-section-browse-projects-project-names-1">
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-					</div>
-					<div class="main-section-browse-projects-project-names-1">
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-					</div>
-					<div class="main-section-browse-projects-project-names-1">
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-						<div>My Home Bhooja</div>
-						<div>Rainbow Vistas</div>
-						<div>Rajapushpa Provincia</div>
-					</div>
-				</div>
+				<div class="main-section-browse-projects-cities"></div>
+				<div class="main-section-browse-projects-project-names"></div>
 			</section>
 			<section
 				class="main-section-container main-section-recommended section-heading-container">
 				<section-heading heading="Recommended for You"></section-heading>
 				<div class="main-section-recommended-content">
 					<div class="main-section-recommended-catergories">
-						<ul>
-							<li>Top Blogs</li>
-							<li>Govt Portals</li>
-							<li>Celebrity Hom</li>
-							<li>Home Decor</li>
-							<li>Land Records</li>
-							<li>Housing Schem</li>
-							<li>RERA</li>
+						<ul class="rc-head-list">
+							<li class="rc-title">Top Blogs</li>
+
 							<li>
 								<p><i class="arrow right"></i></p>
 							</li>
 						</ul>
 					</div>
 					<div class="main-section-recommended-catergories-details">
-						<div></div>
-						<div class="main-section-recommended-catergories-details-1">
-							<div>My Home Bhooja</div>
-							<div>Rainbow Vistas</div>
-							<div>Rajapushpa Provincia</div>
-						</div>
-						<div class="main-section-recommended-catergories-details-1">
-							<div>My Home Bhooja</div>
-							<div>Rainbow Vistas</div>
-							<div>Rajapushpa Provincia</div>
-						</div>
-						<div class="main-section-recommended-catergories-details-1">
-							<div>My Home Bhooja</div>
-							<div>Rainbow Vistas</div>
-							<div>Rajapushpa Provincia</div>
-						</div>
-						<div class="main-section-recommended-catergories-details-1">
-							<div>My Home Bhooja</div>
-							<div>Rainbow Vistas</div>
-							<div>Rajapushpa Provincia</div>
-						</div>
+						<div class="rc-empty-div"></div>
 					</div>
 					<div class="main-section-recommended-utils">
 						<ul>

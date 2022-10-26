@@ -22,6 +22,8 @@ class Header extends HTMLElement {
 					})
 				})
 			})
+
+
 			
 			this.shadowRoot.querySelectorAll('.nav-items-bottom').forEach((links, index) => {
 				links.addEventListener('mouseleave', () => {
@@ -33,6 +35,24 @@ class Header extends HTMLElement {
 					})
 				})
 			})
+
+			this.shadowRoot.querySelector('.toggle-arrow-nav').addEventListener('mouseenter', () => {
+			Array.from(
+					this.shadowRoot
+					.querySelectorAll('.nav-items-bottom'))
+					.forEach((navs) => {
+					navs.style.display = 'flex'
+					
+				})
+				this.shadowRoot.querySelector('.toggle-arrow-nav').style.display = 'none'
+	})
+			this.shadowRoot.querySelector('.toggle-arrow-nav').addEventListener('mouseleave', () => {
+				Array.from(this.shadowRoot.querySelectorAll('.nav-items-bottom')).forEach((navs) => {
+					if(window.screen.width >= 960 || window.screen.width <= 600){
+						navs.style.display = 'none'
+					}
+				})
+	})
 
 			
 			Array.from(this.shadowRoot.querySelectorAll('.nav-items-dropdown-link')).map((element => element.insertAdjacentHTML('beforeend', 

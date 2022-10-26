@@ -1,4 +1,11 @@
 <style>
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+	}
 	.footer {
 		width: 100%;
 		min-height: 200px;
@@ -39,68 +46,74 @@
 		margin: 20px 60px;
 	}
 
-	.footer-section-1-left-social-icons > ul {
+	.footer-section-1-left-social-icons {
 		display: grid;
-		grid-template-columns: repeat(7, 0.3fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.footer-section-1-left-social-icons > ul > li {
+	.footer-section-1-left-social-icons > .icon-top-wrap > div,
+	.footer-section-1-left-social-icons > .icon-bottom-wrap > div {
 		background-image: url("./assets/web-header-footer.svg");
 		background-repeat: no-repeat;
 		display: inline-block;
 	}
 
-	.footer-section-1-left-social-icons > ul > .g-play {
+	.footer-section-1-left-social-icons > .icon-top-wrap > .g-play {
 		width: 120px;
 		height: 32px;
 		background-position: -59px 0;
 		margin-right: 5px;
 	}
-	.footer-section-1-left-social-icons > ul > .a-store {
+	.footer-section-1-left-social-icons > .icon-top-wrap > .a-store {
 		width: 120px;
 		height: 32px;
 		background-position: -187px 0;
 		margin-right: 34px;
 	}
-	.footer-section-1-left-social-icons > ul > .f-social {
+	.footer-section-1-left-social-icons > .icon-bottom-wrap > .f-social {
 		width: 32px;
 		height: 32px;
 		background-position: -59px -52px;
+		margin-right: 10px;
 	}
-	.footer-section-1-left-social-icons > ul > .t-social {
+	.footer-section-1-left-social-icons > .icon-bottom-wrap > .t-social {
 		width: 32px;
 		height: 32px;
+		margin-right: 10px;
 		background-position: -99px -52px;
 	}
-	.footer-section-1-left-social-icons > ul > .l-social {
+	.footer-section-1-left-social-icons > .icon-bottom-wrap > .l-social {
 		width: 32px;
 		height: 32px;
+		margin-right: 10px;
 		background-position: -139px -52px;
 	}
-	.footer-section-1-left-social-icons > ul > .y-social {
+	.footer-section-1-left-social-icons > .icon-bottom-wrap > .y-social {
 		width: 32px;
 		height: 32px;
+		margin-right: 10px;
 		background-position: -179px -52px;
 	}
-	.footer-section-1-left-social-icons > ul > .i-social {
+	.footer-section-1-left-social-icons > .icon-bottom-wrap > .i-social {
 		width: 32px;
 		height: 32px;
+		margin-right: 10px;
 		background-position: -219px -52px;
 	}
 
 	.footer-section-2 {
 		width: 100%;
-
+		display: grid;
+		align-items: center;
 		background-color: #e8e8e8;
 	}
 
 	.footer-section-2 > ul {
-		display: grid;
-		grid-template-columns:
-			0.6fr 1fr 0.8fr 0.4fr 0.6fr 0.8fr 0.7fr 0.8fr repeat(2, 0.8fr)
-			1.5fr;
+		display: flex;
+		justify-content: space-between;
+		margin-top: auto;
 		font-size: 14px;
-		margin: 20px 60px;
+		margin: 0px 60px;
 	}
 
 	.footer-section-3 {
@@ -116,17 +129,90 @@
 	}
 
 	.footer-section-4 {
-		font-size: 10px;
 		width: 100%;
-		height: 40px;
 		background-color: #303030;
 		color: #fff;
-		font-size: 10px;
-		line-height: 40px;
 	}
 
-	.footer-section-4 > span {
-		margin: 0 60px;
+	.footer-section-4 > div {
+		font-size: 10px;
+		line-height: 40px;
+		text-align: center;
+		padding: 0 60px;
+	}
+
+	@media (max-width: 1110px) {
+		.footer-section-2 > ul {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			row-gap: 20px;
+		}
+
+		.footer-section-1 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+			width: 100%;
+		}
+
+		.footer-section-1-left-social-icons {
+			margin-top: 20px;
+		}
+	}
+	@media (max-width: 960px) {
+		.footer-section-1-left-social-icons {
+			grid-template-columns: 1fr;
+			row-gap: 20px;
+		}
+		.footer-section-1 {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 10px;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		.footer-section-1-left {
+			display: grid;
+			grid-template-rows: 1fr 0.2fr;
+			margin: 20px 60px 0 60px;
+		}
+		.footer-section-1-right {
+			margin: 20px 60px 0 60px;
+		}
+	}
+	@media (max-width: 600px) {
+		.footer {
+			grid-template-rows: 4fr 1fr 0.7fr 0.2fr;
+		}
+		.footer-section-1-left {
+			margin: 20px 10px 0 10px;
+		}
+		.footer-section-1-right {
+			margin: 20px 10px 0 10px;
+		}
+		.footer-section-2 {
+			width: 100%;
+			display: grid;
+			align-items: center;
+			background-color: #e8e8e8;
+		}
+
+		.footer-section-2 > ul {
+			display: grid;
+			margin-top: auto;
+			font-size: 12px;
+			margin: 0px 10px;
+		}
+
+		.footer-section-3 > div {
+			margin: 10px 10px;
+		}
+
+		.footer-section-4 > div {
+			padding: 10px 10px;
+			line-height: 20px;
+		}
 	}
 </style>
 
@@ -145,15 +231,17 @@
 				</div>
 			</div>
 			<div class="footer-section-1-left-social-icons">
-				<ul>
-					<li class="g-play"></li>
-					<li class="a-store"></li>
-					<li class="f-social"></li>
-					<li class="t-social"></li>
-					<li class="l-social"></li>
-					<li class="y-social"></li>
-					<li class="i-social"></li>
-				</ul>
+				<div class="icon-top-wrap">
+					<div class="g-play"></div>
+					<div class="a-store"></div>
+				</div>
+				<div class="icon-bottom-wrap">
+					<div class="f-social"></div>
+					<div class="t-social"></div>
+					<div class="l-social"></div>
+					<div class="y-social"></div>
+					<div class="i-social"></div>
+				</div>
 			</div>
 		</div>
 		<div class="footer-section-1-right">
@@ -203,10 +291,12 @@
 		</div>
 	</div>
 	<div class="footer-section-4">
-		<span
-			>All trademarks, logos and names are properties of their respective
-			owners. All Rights Reserved. © Copyright 2022 Magicbricks Realty Services
-			Limited.</span
-		>
+		<div>
+			<span>
+				All trademarks, logos and names are properties of their respective
+				owners. All Rights Reserved. © Copyright 2022 Magicbricks Realty
+				Services Limited.
+			</span>
+		</div>
 	</div>
 </footer>

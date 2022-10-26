@@ -34,6 +34,11 @@
 	.services-card__text-block > div:nth-child(2) {
 		font: var(--description-font);
 		color: var(--text-primary);
+		display: -webkit-box;
+		max-width: 100%;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 </style>
 <div class="services-card">

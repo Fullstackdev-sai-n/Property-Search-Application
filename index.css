@@ -24,7 +24,6 @@ li {
 	--secondary: #ffc72c;
 	--text-primary: #303030;
 	--text-secondary: #606060;
-
 	--heading-font: 400 normal 28px/32px "Montserrat", Helvetica, Arial,
 		sans-serif;
 	--title-font: 600 normal 18px / normal "Montserrat", Helvetica, Arial,
@@ -35,6 +34,8 @@ li {
 	--black: #000;
 	--white: #fff;
 	--border-color: #d7d7d7;
+	--before-hide: none;
+	--bg-secondary: #def6f8;
 }
 
 /* Header section start  */
@@ -548,24 +549,11 @@ li {
 		gap: 20px;
 	}
 }
-@media (max-width: 600px) {
-	.main-section-advice-tools__card-wrapper {
-		grid-template-columns: 1fr;
-		gap: 20px;
-	}
-}
 
 .main-section-real-estate-guide-cards_wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
-}
-
-@media (max-width: 960px) {
-	.main-section-real-estate-guide-cards_wrapper {
-		grid-template-columns: 1fr;
-		gap: 20px;
-	}
 }
 
 .main-section-hyd-prop-snapshot-content {
@@ -608,7 +596,7 @@ li {
 
 .main-section-post-your-property {
 	width: 100%;
-	height: 112px;
+	min-height: 112px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -699,6 +687,9 @@ li {
 	grid-template-columns: repeat(4, 1fr);
 	height: 156px;
 	overflow: scroll;
+	font: var(--description-font);
+	color: var(--text-primary);
+	padding: 20px 60px;
 }
 .main-section-browse-projects-project-names-1 {
 	padding-top: 26px;
@@ -713,7 +704,7 @@ li {
 
 .main-section-recommended-content {
 	display: grid;
-	grid-template-rows: 0.3fr 2fr 1fr;
+	grid-template-rows: 0.3fr 2fr 0.3fr;
 }
 
 .main-section-recommended-catergories > ul {
@@ -775,10 +766,11 @@ li {
 
 .main-section-recommended-catergories-details {
 	display: grid;
-	grid-template-columns: 0.6fr repeat(4, 1fr);
+	grid-auto-flow: column;
+	display: none;
 }
 
-.main-section-recommended-catergories-details-1 > div {
+.main-section-recommended-catergories-details-content > div {
 	padding-top: 26px;
 	font: var(--description-font);
 	color: var(--text-primary);
@@ -820,6 +812,143 @@ li {
 	overflow: visible;
 }
 
+@media (max-width: 960px) {
+	.main-section-browse-projects-project-names {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 20px 20px;
+		row-gap: 20px;
+	}
+	.main-section-recommended-catergories > ul {
+		grid-template-columns: repeat(3, 1fr) 0.5fr;
+		padding: 6px 0;
+		row-gap: 10px;
+	}
+	.main-section-recommended-catergories > ul > li:first-child {
+		font: var(--description-font);
+		font-weight: 600;
+	}
+	.main-section-recommended-catergories > ul > li {
+		font: var(--description-font);
+	}
+	.main-section-recommended-catergories-details {
+		display: grid;
+		grid-auto-flow: column;
+		display: none;
+	}
+	.main-section-recommended-utils > ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 4px 0 12px 0;
+		position: relative;
+		margin: 0px 0 36px;
+		gap: 20px;
+	}
+	.main-section-recommended-content {
+		display: grid;
+		grid-template-rows: 0.3fr 1.4fr 0.3fr;
+	}
+	.main-section-browse-projects-cities > ul {
+		grid-template-columns: repeat(5, auto);
+		row-gap: 10px;
+	}
+	.main-section-post-your-property-btn {
+		line-height: 16px;
+		font-size: 12px;
+		display: flex;
+		width: 30%;
+	}
+	.main-section-post-your-property-btn > small {
+		height: 16px;
+		padding: 0 2px;
+		margin-left: 0px;
+		width: 40px;
+		margin: auto;
+	}
+	.main-section-hyd-prop-snapshot-content_total-projects {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 24px 0 4px;
+		line-height: 24px;
+		padding: 20px 24px 20px;
+	}
+}
+@media (max-width: 600px) {
+	.main-section-hyd-prop-snapshot-content_total-projects {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 15px;
+		padding: 24px 0 4px;
+		line-height: 24px;
+		padding: 20px 24px 20px;
+	}
+	.main-section-post-your-property {
+		width: 100%;
+		min-height: 112px;
+		display: block;
+		justify-content: flex-start;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff8e2;
+		border-radius: 8px;
+	}
+	.main-section-browse-projects-cities > ul {
+		grid-template-columns: repeat(3, auto);
+		row-gap: 10px;
+	}
+
+	.main-section-browse-projects-project-names {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.main-section-recommended-catergories > ul {
+		grid-template-columns: repeat(3, 0.4fr);
+		padding: 6px 0;
+		row-gap: 10px;
+	}
+	.main-section-recommended-catergories-details {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: row;
+		row-gap: 10px;
+		display: none;
+
+		margin-bottom: 40px;
+	}
+	.rc-empty-div {
+		display: none;
+	}
+	.main-section-recommended-catergories-details-content > div {
+		padding-top: 16px;
+		overflow: scroll;
+	}
+	.main-section-recommended-content {
+		display: grid;
+		grid-template-rows: 0.3fr 0.6fr 0.3fr;
+	}
+	.main-section-recommended-utils > ul {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 4px 0 12px 0;
+		position: relative;
+		margin: 0px 0 36px;
+		gap: 20px;
+		place-items: center;
+	}
+}
+
+@media (max-width: 460px) {
+	.main-section-hyd-prop-snapshot-content_total-projects {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 15px;
+	}
+	.main-section-recommended-catergories > ul {
+		grid-template-columns: repeat(2, 0.4fr);
+		padding: 6px 0;
+		row-gap: 10px;
+	}
+}
+
 /* new project gallery */
 
 .main-section-new-project-gallery {
@@ -850,6 +979,11 @@ li {
 		grid-template-columns: 1fr;
 		column-gap: 10px;
 		row-gap: 10px;
+	}
+	.main-section-browse-projects-project-names {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 20px 10px;
+		row-gap: 20px;
 	}
 }
 
@@ -922,6 +1056,21 @@ li {
 	}
 }
 
+.rc-heads-top {
+	position: relative;
+}
+.rc-heads-top::before {
+	position: absolute;
+	content: "";
+	background-color: var(--primary);
+	height: 4px;
+	bottom: -18px;
+	border-radius: 4px;
+	width: 80%;
+	z-index: 9999;
+	display: var(--before-hide);
+}
+
 properties-listed-card::part(plc-1)::after {
 	background: url("assets/mb-home-sprite-web.svg") no-repeat -14px -30px;
 }
@@ -935,16 +1084,16 @@ properties-listed-card::part(plc-4)::after {
 	background: url("assets/mb-home-sprite-web.svg") no-repeat -12px -371px;
 }
 
-sideicon-with-text::part(before-icon-1)::before {
+sideicon-with-text::part(before-icon-0)::before {
 	background: url(./assets/hp-new-project-topSec-sprite.svg) 0 -3px;
 }
-sideicon-with-text::part(before-icon-2)::before {
+sideicon-with-text::part(before-icon-1)::before {
 	background: url(./assets/hp-new-project-topSec-sprite.svg) 0 -55px;
 }
-sideicon-with-text::part(before-icon-3)::before {
+sideicon-with-text::part(before-icon-2)::before {
 	background: url(./assets/hp-new-project-topSec-sprite.svg) 0 -106px;
 }
-sideicon-with-text::part(before-icon-4)::before {
+sideicon-with-text::part(before-icon-3)::before {
 	background: url(./assets/hp-new-project-topSec-sprite.svg) 0 -164px;
 	height: 25px;
 }
@@ -961,35 +1110,53 @@ section-heading::part(line-color-gallery)::before {
 	background-color: #00c1d4;
 }
 
-advice-card::part(logo-image-1) {
+advice-card::part(logo-image-0) {
 	background: url("./assets/mb-home-sprite-web.svg") no-repeat;
 	background-position: -32px -2067px;
 }
-advice-card::part(logo-image-2) {
+advice-card::part(logo-image-1) {
 	background: url("./assets/mb-home-sprite-web.svg") no-repeat;
 	background-position: -32px -2115px;
 }
-advice-card::part(logo-image-3) {
+advice-card::part(logo-image-2) {
 	background: url("./assets/mb-home-sprite-web.svg") no-repeat;
 	background-position: -28px -1420px;
 }
-advice-card::part(logo-image-4) {
+advice-card::part(logo-image-3) {
 	background: url("./assets/mb-home-sprite-web.svg") no-repeat;
 	background-position: -28px -1661px;
 }
-advice-card::part(dynamic-content-1)::after {
+advice-card::part(dynamic-content-0)::after {
 	content: "certified";
 }
-advice-card::part(dynamic-content-2)::after {
+advice-card::part(dynamic-content-1)::after {
 	content: "GET FREE";
 }
-advice-card::part(dynamic-content-3)::after {
+advice-card::part(dynamic-content-2)::after {
 	display: none;
 }
-advice-card::part(dynamic-content-4)::after {
+advice-card::part(dynamic-content-3)::after {
 	display: none;
 }
 
 guide-card::part(hide-gc-btn) {
 	display: none;
+}
+
+@media (max-width: 960px) {
+	.main-section-real-estate-guide-cards_wrapper {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.main-section-advice-tools__card-wrapper {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	.main-section-real-estate-guide-cards_wrapper {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
 }
