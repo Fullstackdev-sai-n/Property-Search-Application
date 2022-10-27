@@ -25,7 +25,7 @@ class HandpickedProjectCard extends HTMLElement {
             this.shadowRoot.querySelector('.hnp-image-content-block-info-middle-video-4-default-display').style.display = 'grid'
             this.shadowRoot.querySelector('.hnp-image-content-block-info-middle').style.height = '70px'
             this.shadowRoot.querySelector('.hnp-hover-popup-btn').style.display = 'none'
-            this.shadowRoot.querySelector('.hnp-image-content-block-info-bottom-more-col').style.border = '1px solid #e8e8e8'
+            this.shadowRoot.querySelector('.hnp-image-content-block-info-bottom-more-col').style.border = '1px solid var(--footer-secondary)'
             this.shadowRoot.querySelector('.hnp-image-content-block').style.backgroundImage = 'none'
            
           })

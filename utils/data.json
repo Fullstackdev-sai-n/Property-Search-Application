@@ -192,43 +192,353 @@
       "image": "plc-1"
     },
     "recommended": {
-      "topBlogs": {
-        "heads": {
-          "heading": "Govt Protals",
-          "details": [
-            {
-              "value": [
-                "IGRS AP",
-                "TNREGINET",
-                "IGRS Telangana"
-              ]
-            },
-            {
-              "value": [
-                "IGRS Rajasthan",
-                "TSMDC",
-                "IGRS Bihar",
-                "IGRS Jharkhand",
-                "EPFO UAN Login"
-              ]
-            },
-            {
-              "value": [
-                "IGRSUP",
-                "MPIGR",
-                "IGR Maharashtra"
-              ]
-            },
-            {
-              "value": [
-                "IGRSUP",
-                "MPIGR",
-                "IGR Maharashtra"
-              ]
-            }
-          ]
-        }
-      }
+      "content": 
+      [
+        {"name": "Govt Protals", 
+        "selection": [ {
+        "name": "IGRS AP"
+       },
+       {
+        "name": "IGRS Rajasthan"
+       },
+       {
+        "name": "IGRS Jharkhand"
+       },
+       {
+        "name": "MPIGR"
+       },
+       {
+        "name": "TNREGINET"
+       },
+       {
+        "name": "TSMDC"
+       },
+       {
+        "name": "EPFO UAN Login"
+       },
+       {
+        "name": "IGR Maharashtra"
+       },
+       {
+        "name": "IGRS Telangana"
+       },
+       {
+        "name": "IGRS Bihar"
+       },
+       {
+        "name": "IGRSUP"
+       }]}, 
+
+       {
+        "name": "Celebrity Homes",
+        "selection": [  {
+          "name": "Mukesh Ambani House Antilia"
+         },
+         {
+          "name": "Mannat - Shahrukh Khan House"
+         },
+         {
+          "name": "Pataudi Palace"
+         },
+         {
+          "name": "Salman Khan House"
+         },
+         {
+          "name": "Alia Bhatt House"
+         },
+         {
+          "name": "Virat Kohli House"
+         },
+         {
+          "name": "MS Dhoni Farm House"
+         },
+         {
+          "name": "Ajay Devgan House"
+         },
+         {
+          "name": "Hrithik Roshan House"
+         },
+         {
+          "name": "Amitabh Bachchan House"
+         },
+         {
+          "name": "Gautam Adani House"
+         }]
+       },
+       {
+        "name": "Home Decor",
+        "selection": [{
+          "name": "Two Colour Combination for Bedroom Walls"
+         },
+         {
+          "name": "Two Colour Combination for Living Room"
+         },
+         {
+          "name": "Pink Two Colour Combination for Bedroom Walls"
+         },
+         {
+          "name": "Orange Two Colour Combination for Bedroom Walls"
+         },
+         {
+          "name": "Pop Design"
+         },
+         {
+          "name": "Plus Minus Pop Design"
+         },
+         {
+          "name": "Pop Design for Hall"
+         },
+         {
+          "name": "Kitchen Designs"
+         },
+         {
+          "name": "Bathroom Designs"
+         },
+         {
+          "name": "Griha Pravesh Muhurat 2022"
+         }
+        ]
+       },
+       {
+        "name": "Land Records",
+        "selection": [ 
+         {
+          "name": "7 12 Mahabhulekh"
+         },
+         {
+          "name": "Bhoomi Online: Karnataka Land Records"
+         },
+         {
+          "name": "UP Bhulekh"
+         },
+         {
+          "name": "Bihar Bhulekh"
+         },
+         {
+          "name": "Patta Chitta"
+         },
+         {
+          "name": "Meebhoomi"
+         },
+         {
+          "name": "Jharbhoomi"
+         },
+         {
+          "name": "Jamabandi Punjab"
+         },
+         {
+          "name": "Jamabandi Haryana"
+         },
+         {
+          "name": "Banglarbhumi"
+         },
+         {
+          "name": "AnyROR Gujarat"
+         },
+         {
+          "name": "Apna Khata Rajasthan"
+         }]
+       },
+       {
+        "name": "Housing Schemes",
+        "selection": [  {
+          "name": "MHADA Lottery Pune"
+         },
+         {
+          "name": "MHADA Lottery 2022"
+         },
+         {
+          "name": "DDA Housing Scheme"
+         },
+         {
+          "name": "CIDCO Lottery"
+         },
+         {
+          "name": "RGRHCL"
+         },
+         {
+          "name": "APSHCL"
+         }]
+       },
+       {
+        "name": "RERA",
+        "selection": [  {
+          "name": "UP RERA"
+         },
+         {
+          "name": "RERA Act"
+         },
+         {
+          "name": "RERA Registration Process"
+         },
+         {
+          "name": "RERA Gujarat"
+         },
+         {
+          "name": "RERA Karnataka"
+         },
+         {
+          "name": "RERA Kerala"
+         },
+         {
+          "name": "RERA MP"
+         },
+         {
+          "name": "RERA Odisha"
+         },
+         {
+          "name": "RERA Bihar"
+         },
+         {
+          "name": "RERA Goa"
+         }]
+       },
+       {
+        "name": "Stamp Duty",
+        "selection": [{
+          "name": "Stamp Duty in Telangana"
+         },
+         {
+          "name": "Stamp Duty in Punjab"
+         },
+         {
+          "name": "Stamp Duty in Maharashtra"
+         },
+         {
+          "name": "Stamp Duty in UP"
+         },
+         {
+          "name": "Stamp Duty in MP"
+         },
+         {
+          "name": "Stamp Duty in Delhi"
+         },
+         {
+          "name": "Stamp Duty in Tamil Nadu"
+         },
+         {
+          "name": "Stamp Duty in West Bengal"
+         },
+         {
+          "name": "Stamp Duty in Gujarat"
+         },
+         {
+          "name": "Stamp Duty in Haryana"
+         },
+         {
+          "name": "Stamp Duty in Rajasthan"
+         }]
+       },
+       {
+        "name": "PMAY",
+        "selection": [  {
+          "name": "Pradhan Mantri Awas Yojana"
+         },
+         {
+          "name": "Pradhan Mantri Awas Yojana Gramin"
+         },
+         {
+          "name": "Pradhan Mantri Awas Yojana Urban"
+         },
+         {
+          "name": "Documents required for PMAY"
+         },
+         {
+          "name": "Pradhan Mantri Awas Yojana Eligibility"
+         },
+         {
+          "name": "Pradhan Mantri Awas Yojana Online Form"
+         },
+         {
+          "name": "PMAY Subsidy Status"
+         },
+         {
+          "name": "PMAY Gramin List"
+         },
+         {
+          "name": "PMAY List"
+         },
+         {
+          "name": "PMAY Urban List"
+         }]
+       },
+       {
+        "name": "Metro Projects",
+        "selection": [ {
+          "name": "Delhi Metro"
+         },
+         {
+          "name": "Mumbai Metro"
+         },
+         {
+          "name": "Namma Metro Bangalore"
+         },
+         {
+          "name": "Kolkata Metro"
+         },
+         {
+          "name": "Chennai Metro"
+         }]
+       },
+       {
+        "name": "Circle Rates",
+        "selection": [{
+          "name": "Circle Rate in Delhi"
+         },
+         {
+          "name": "Circle Rate in NOIDA"
+         },
+         {
+          "name": "Circle Rate in Gurgaon"
+         },
+         {
+          "name": "Circle Rates in Ghaziabad"
+         },
+         {
+          "name": "Circle Rates in Lucknow"
+         },
+         {
+          "name": "Circle Rate in Hyderabad"
+         },
+         {
+          "name": "Circle Rate in Pune"
+         }]
+       },
+       {
+        "name": "Property Tax",
+        "selection": [  {
+          "name": "BBMP Property Tax Bangalore"
+         },
+         {
+          "name": "GHMC Property Tax Hyderabad"
+         },
+         {
+          "name": "Pune Property Tax"
+         },
+         {
+          "name": "MCD Property Tax Delhi"
+         },
+         {
+          "name": "MCG Property Tax Gurgaon"
+         },
+         {
+          "name": "Ahmedabad Municipal Corporation Property Tax"
+         },
+         {
+          "name": "PCMC Property Tax"
+         },
+         {
+          "name": "Chennai Property Tax"
+         },
+         {
+          "name": "Pune Property Tax"
+         },
+         {
+          "name": "MCGM Property Tax BMC Mumbai"
+         }]
+       }
+      
+      ]
     },
     "newprojects" : {
       "content": [

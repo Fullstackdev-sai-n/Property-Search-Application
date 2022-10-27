@@ -3,7 +3,7 @@ class ArrowRight extends HTMLElement {
     let res = await fetch( './templates/elements/arrow-right-template.html')
     this.attachShadow( { mode: 'open' } )
         .innerHTML = await res.text()
-
+this.shadowRoot.querySelector('.mg-arrow-right').attributes.part.value = this.getAttribute('arrow-right-part')
   
    }
 }

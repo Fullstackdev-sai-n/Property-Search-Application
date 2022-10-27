@@ -60,14 +60,19 @@
 	.nav-items:nth-child(3) {
 		visibility: hidden;
 	}
-	.nav-items:hover {
+	.nav-items:not(.logo-nav-item):hover {
 		background-color: var(--white);
 		color: var(--primary);
 		border-radius: 8px 8px 0 0;
 	}
 
-	.nav-items:first-child {
-		background: url("./assets/icons.svg") no-repeat -58px -98px;
+	.logo-nav-item {
+		font-size: x-large;
+		font-family: "Damion", cursive;
+	}
+	.logo-nav-item > img {
+		width: 50px;
+		height: 40px;
 	}
 
 	.nav-dropdown {
@@ -445,7 +450,9 @@
 			<div class="hamburger__line-3"></div>
 		</div>
 		<ul class="nav-links">
-			<li class="nav-items"><a href="#"></a></li>
+			<li class="nav-items logo-nav-item">
+				<img src="../../assets/logo.png" alt="" />Property Search
+			</li>
 			<li class="nav-items nav-items-dropdown-link">
 				<a class="nav-dropdown" href="#"> Hyderabad</a>
 			</li>

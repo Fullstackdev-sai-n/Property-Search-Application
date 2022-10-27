@@ -4,10 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="index.css" />
-		<link rel="stylesheet" href="mediaQueries.css" />
+		<link rel="stylesheet" href="./styles/index.css" />
+		<link rel="stylesheet" href="./styles/mediaqueries.css" />
 		<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
-		<script src="./script.js" defer></script>
+		<script src="./scripts/script.js" defer></script>
 		<script src="./components/Header.js"></script>
 		<script src="./components/HeaderDropdownCard.js"></script>
 		<script src="./elements/imageOverlayButton.js"></script>
@@ -236,43 +236,31 @@
 					Post property <small>free</small>
 				</div>
 			</section>
-
 			<!-- // json data -->
 			<section
 				class="main-section-container main-section-browse-projects section-heading-container">
-				<section-heading heading="Browse Residential Projects in Top 8 Cities">
-				</section-heading>
+				<section-heading heading="New projects in Hyderabad"> </section-heading>
 				<div class="main-section-browse-projects-cities"></div>
 				<div class="main-section-browse-projects-project-names"></div>
 			</section>
+
 			<section
 				class="main-section-container main-section-recommended section-heading-container">
-				<section-heading heading="Recommended for You"></section-heading>
-				<div class="main-section-recommended-content">
-					<div class="main-section-recommended-catergories">
-						<ul class="rc-head-list">
-							<li class="rc-title">Top Blogs</li>
-
-							<li>
-								<p><i class="arrow right"></i></p>
-							</li>
-						</ul>
+				<section-heading heading="Recommended For You"> </section-heading>
+				<div class="nph-wrapper">
+					<div class="nph-cities-title">Top Blogs</div>
+					<arrow-right class="nph-btn-left" arrow-right-part="rc-part-arrow"
+						><span slot="arrow-text"></span
+					></arrow-right>
+					<div class="nph-cities-wrapper">
+						<div class="main-section-recommended-catergories"></div>
 					</div>
-					<div class="main-section-recommended-catergories-details">
-						<div class="rc-empty-div"></div>
-					</div>
-					<div class="main-section-recommended-utils">
-						<ul>
-							<li>Area Calculator</li>
-							<li>Square Feet to Square Meter</li>
-							<li>Square Meter to Square Feet</li>
-							<li>Hectare to Acre</li>
-							<li>Square Feet to Square Yards</li>
-							<li>Housing Schem</li>
-							<li>RERA</li>
-						</ul>
-					</div>
+					<arrow-right class="nch-arrow-color" arrow-right-part="rc-part-arrow"
+						><span slot="arrow-text"></span
+					></arrow-right>
 				</div>
+
+				<div class="main-section-recommended-catergories-details"></div>
 			</section>
 		</main>
 		<custom-footer></custom-footer>
