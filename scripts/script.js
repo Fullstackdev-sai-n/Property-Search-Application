@@ -1,3 +1,4 @@
+"use strict";
 const jsonData = fetch("./utils/data.json")
 	.then((res) => res.json())
 	.then((result) => result)
@@ -6,36 +7,67 @@ const jsonData = fetch("./utils/data.json")
 function fetchResponse(data) {
 	if (!data) return;
 
-	document.querySelector(".main-section-search-hyd__cards").innerHTML = data
-		.slice(0, 4)
-		?.map(
-			(apiData) => `
-						<properties-listed-card
+	function elementSelector(elIndex, elementData, insertAdjacent = 0) {
+		const docSelector = document.querySelectorAll(
+			".main-section-search-hyd__cards,.hnp-categories-block, .hnp-diplay-cards-block, .hnp-diplay-cards-block, .main-section-featured__content,.main-section-image-cards-wrapper,.main-section-property_services_cards-wrapper,.main-section-new-project-gallery-cards,.main-section-popular-cities-cards-wrapper,.main-section-owner-properties-cards,.main-section-advice-tools__card-wrapper,.main-section-real-estate-guide-cards_wrapper,.main-section-hyd-prop-snapshot-content_desc,.main-section-hyd-prop-snapshot-content_total-projects,.main-section-post-your-property-text,.main-section-post-your-property-text,.main-section-browse-projects-cities,.main-section-recommended-catergories,.main-section-recommended-catergories-details,.rc-heads-top, .main-section-showcase__images"
+		);
+		const elementResult =
+			insertAdjacent !== 0 || null || undefined
+				? docSelector[elIndex].insertAdjacentHTML("beforeend", insertAdjacent)
+				: (docSelector[elIndex].innerHTML = elementData);
+		return elementResult;
+	}
+
+	function dataSlice(index) {
+		const response = data?.slice(0, index);
+		return response;
+	}
+
+	elementSelector(
+		0,
+		dataSlice(4)
+			.map(
+				(apiData) => `<properties-listed-card
 						hydimg-part="${apiData?.propertiesListed?.image}"
 						info="${apiData?.propertiesListed?.text}"
 						frwdtxt="${apiData?.propertiesListed?.arrowText}">
 					</properties-listed-card>`
-		)
-		.join("");
+			)
+			.join("")
+	);
 
+	elementSelector(
+		2,
+		dataSlice(2)
+			.map((apiData) => {
+				return `<featured-card title="${apiData.name}"
+					by="${apiData.by}"
+					loc="${apiData.loc}"
+					marketed="${apiData.marketedby}"
+					flats="${apiData.size}"
+					price="${apiData.price}"> </featured-card>`;
+			})
+			.join("")
+	);
 
-	// Handpicked New Project Launches in Hyderabad
-
-	document.querySelector(".hnp-categories-block").innerHTML = data
-		?.slice(0, 4)
-		?.map((apiData, index) => {
-			return `<sideicon-with-text
+	elementSelector(
+		3,
+		dataSlice(4)
+			?.map((apiData, index) => {
+				return `<sideicon-with-text
 						side-icon="before-icon-${index}"
 						it-text="${apiData.launchText}"
 						it-caption="${apiData.launchCaption}"				
 						> </sideicon-with-text>`;
-		})
-		.join("");
+			})
+			.join("")
+	);
 
-	document.querySelector(".hnp-diplay-cards-block").innerHTML = data
-		?.slice(0, 2)
-		?.map((apiData, index) => {
-			return `<handpicked-project-card
+	elementSelector(
+		4,
+		dataSlice(2)
+			?.map((apiData, index) => {
+				return `<handpicked-project-card
 							imagemain="${apiData.imageUrl}"
 							projecttitle="${apiData.name}"
 							marketedby="${apiData.marketedby}"
@@ -44,56 +76,39 @@ function fetchResponse(data) {
 							thunmbnailtext="${apiData.status}"
 							showcount="15 More"				
 						> </handpicked-project-card>`;
-		})
-		.join("");
+			})
+			.join("")
+	);
 
-	// Featured Projects
-
-	document.querySelector(".main-section-featured__content").innerHTML = data
-		?.slice(0, 2)
-		?.map((apiData, index) => {
-			return `<featured-card title="${apiData.name}"
-						by="${apiData.by}"
-						loc="${apiData.loc}"
-						marketed="${apiData.marketedby}"
-						flats="${apiData.size}"
-						price="${apiData.price}"> </featured-card>`;
-		})
-		.join("");
-
-	// We've got properties for everyone
-
-	document.querySelector(".main-section-image-cards-wrapper").innerHTML = data
-		?.slice(0, 4)
-		?.map((apiData, index) => {
-			return `<image-overlay-text-card 
+	elementSelector(
+		5,
+		dataSlice(4)
+			?.map((apiData, index) => {
+				return `<image-overlay-text-card 
 									number="${apiData.count}"
 									title="${apiData.name}"
 									imageurl="url(${apiData.imageUrl})"
 									> </image-overlay-text-card>`;
-		})
-		.join("");
+			})
+			.join("")
+	);
 
-	// Property Services
-
-	document.querySelector(
-		".main-section-property_services_cards-wrapper"
-	).innerHTML = data
-		?.slice(0, 4)
-		?.map((apiData, index) => {
-			return `<services-card
+	elementSelector(
+		6,
+		dataSlice(4)
+			?.map((apiData, index) => {
+				return `<services-card
 									text="${apiData.body}"
 									title="${apiData.name}"
 									src="${apiData.imageUrl}"
 									> </services-card>`;
-		})
-		.join("");
+			})
+			.join("")
+	);
 
-	// New Project Gallery
-
-	document.querySelector(".main-section-new-project-gallery-cards").innerHTML =
-		data
-			?.slice(0, 6)
+	elementSelector(
+		7,
+		dataSlice(6)
 			?.map((apiData, index) => {
 				return `<gallery-card
 						pgcimage="${apiData.imageUrl}"
@@ -105,33 +120,28 @@ function fetchResponse(data) {
 						prname="${apiData.name}"
 									> </gallery-card>`;
 			})
-			.join("");
+			.join("")
+	);
 
-	// Popular Localities
-
-	document
-		.querySelector(".main-section-popular-cities-cards-wrapper")
-		.insertAdjacentHTML(
-			"beforeend",
-			data
-				?.slice(0, 3)
-				?.map((apiData, index) => {
-					return `<explore-card
-						city="${apiData.loc}"
+	elementSelector(
+		8,
+		null,
+		dataSlice(3)
+			?.map((apiData, index) => {
+				return `<explore-card
+						city="${apiData.city}"
 						price="${apiData.price}"
 						rating="${apiData.rating}"
 						reviews="${apiData.count}"
 						count="${apiData.count}"
 									> </explore-card>`;
-				})
-				.join("")
-		);
+			})
+			.join("")
+	);
 
-	// Exclusive Owner Properties in Hyderabad
-
-	document.querySelector(".main-section-owner-properties-cards").innerHTML =
-		data
-			?.slice(0, 4)
+	elementSelector(
+		9,
+		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<owner-property-card
 						opcimg="${apiData.imageUrl}"
@@ -142,13 +152,12 @@ function fetchResponse(data) {
 					
 									> </owner-property-card>`;
 			})
-			.join("");
+			.join("")
+	);
 
-	// Advice & Tools
-
-	document.querySelector(".main-section-advice-tools__card-wrapper").innerHTML =
-		data
-			?.slice(0, 4)
+	elementSelector(
+		10,
+		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<advice-card
 						title="${apiData.name}"
@@ -157,16 +166,14 @@ function fetchResponse(data) {
 						content="dynamic-content-${index}"
 									> </advice-card>`;
 			})
-			.join("");
+			.join("")
+	);
 
-	// Your Real Estate Guide
-
-	document.querySelector(
-		".main-section-real-estate-guide-cards_wrapper"
-	).innerHTML = data
-		?.slice(0, 3)
-		?.map((apiData, index) => {
-			return `<guide-card
+	elementSelector(
+		11,
+		dataSlice(3)
+			?.map((apiData, index) => {
+				return `<guide-card
 						title="${apiData.name}"
 						srconetext="${apiData.body}"
 						srctwotext="${apiData.body}"
@@ -174,66 +181,53 @@ function fetchResponse(data) {
 						gc-show-insightsblock="${index === 1 && "grid"}"
 						gc-show-updatesblock="${index === 2 && "block"}"
 									> </guide-card>`;
-		})
-		.join("");
+			})
+			.join("")
+	);
 
-	// Hyderabad Property Snapshot
+	elementSelector(
+		12,
+		dataSlice(1)
+			?.map((apiData, index) => {
+				return `${apiData?.propertysnapshot?.description}`;
+			})
+			.join("")
+	);
 
-	document.querySelector(
-		".main-section-hyd-prop-snapshot-content_desc"
-	).innerHTML = data
-		?.slice(0, 1)
-		?.map((apiData, index) => {
-			return `${apiData?.propertysnapshot?.description}`;
-		})
-		.join("");
-
-	document.querySelector(
-		".main-section-hyd-prop-snapshot-content_total-projects"
-	).innerHTML = data
-		?.slice(0, 4)
-		?.map((apiData, index) => {
-			return `<div
+	elementSelector(
+		13,
+		dataSlice(4)
+			?.map((apiData, index) => {
+				return `<div
 						class="main-section-hyd-prop-snapshot-content_total-projects-1">
 						<span>${apiData?.propertysnapshot?.totalCount}</span><br/> 
 						<span>${apiData?.propertysnapshot?.budgetInfo}</span><br/> 
 						<span>${apiData?.propertysnapshot?.city}</span></div>`;
-		})
-		.join("");
+			})
+			.join("")
+	);
 
-	// post-your-property
-
-	document.querySelector(".main-section-post-your-property-text").innerHTML =
-		data
-			?.slice(0, 1)
+	elementSelector(
+		14,
+		dataSlice(1)
 			?.map((apiData, index) => {
 				return `${JSON.parse(JSON.stringify(apiData.postProperty))}`;
 			})
-			.join("");
+			.join("")
+	);
 
-	// Browse Residential Projects in Top 8 Cities
-
-	document.querySelector(".main-section-post-your-property-text").innerHTML =
-		data
-			?.slice(0, 1)
-			?.map((apiData, index) => {
-				return `${JSON.parse(JSON.stringify(apiData.postProperty))}`;
-			})
-			.join("");
-
-	// 
-
-	document.querySelector(
-		".main-section-browse-projects-cities"
-	).innerHTML = `<ul class="nph-citynames-list"> 
-				${data.slice(0, 1).map((apiData, index) => {
-		return apiData.newprojects.content
-			.map(
-				(city, cityIndex) =>
-					'<li class="nph-citynames">' + city.name + "</li>"
-			)
-			.join("");
-	})} </ul>`;
+	elementSelector(
+		15,
+		`<ul class="nph-citynames-list"> 
+				${dataSlice(1).map((apiData, index) => {
+					return apiData.newprojects.content
+						.map(
+							(city, cityIndex) =>
+								'<li class="nph-citynames">' + city.name + "</li>"
+						)
+						.join("");
+				})} </ul>`
+	);
 
 	const cityNames = document.querySelectorAll(".nph-citynames");
 	cityNames.forEach(function (city, index) {
@@ -256,26 +250,24 @@ function fetchResponse(data) {
 		});
 	});
 
-	// Recommended for You
-
-	document.querySelector(".main-section-recommended-catergories").innerHTML =
-		` ${data
-			.slice(0, 1)
-			.map((apiData, index) => {
-				return (
-					apiData.recommended.content.map(catergoryheading => '<div class="rc-heads-top">' + catergoryheading.name + "</div>")
-				).join("");
-			})}`
-
+	elementSelector(
+		16,
+		` ${dataSlice(1).map((apiData, index) => {
+			return apiData.recommended.content
+				.map(
+					(catergoryheading) =>
+						'<div class="rc-heads-top">' + catergoryheading.name + "</div>"
+				)
+				.join("");
+		})}`
+	);
 
 	const cheads = document.querySelectorAll(".rc-heads-top");
 
 	cheads.forEach(function (categories, index) {
-		const categoriesSelector = document.querySelector(
-			".main-section-recommended-catergories-details"
-		);
+		const catergoryDetailsEl = document.querySelector('.main-section-recommended-catergories-details')
 		function categoryNamesInnerText(index) {
-			return `${data.slice(0, 1).map((categorynames) =>
+			return `${dataSlice(1).map((categorynames) =>
 				categorynames?.recommended?.content[index].selection
 					.map((category) => {
 						return "<div>" + category.name + "</div>";
@@ -283,16 +275,13 @@ function fetchResponse(data) {
 					.join("")
 			)}`;
 		}
-		categoriesSelector.innerHTML = categoryNamesInnerText(0)
-
+		catergoryDetailsEl.innerHTML = categoryNamesInnerText(0)
 		categories.addEventListener("click", () => {
-
-			console.log('click working')
-			categoriesSelector.innerHTML = categoryNamesInnerText(index)
+			console.log("click working");
+			catergoryDetailsEl.innerHTML = categoryNamesInnerText(index)
 		});
 	});
 }
-
 
 function changeBg() {
 	const fadeImages = document.querySelector(".main-section-showcase__images");

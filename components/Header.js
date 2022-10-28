@@ -3,6 +3,9 @@ class Header extends HTMLElement {
 
 	async connectedCallback() {
 		let res = await fetch('./templates/components/header-template.html');
+
+		
+
 		
 		this.attachShadow({ mode: 'open' })
 			.innerHTML = await res.text()
@@ -23,6 +26,8 @@ class Header extends HTMLElement {
 				})
 			})
 
+		
+			
 
 			
 			this.shadowRoot.querySelectorAll('.nav-items-bottom').forEach((links, index) => {
@@ -111,7 +116,11 @@ class Header extends HTMLElement {
 			window.innerWidth >= 600 && styles.display === "none"
 				? navItemsTop.style.display === "grid"
 				: "";
+
+			
 			}	
+
+			
 }
 
 
