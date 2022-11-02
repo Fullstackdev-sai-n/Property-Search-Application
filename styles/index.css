@@ -1,5 +1,7 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -70,11 +72,42 @@ li {
 .main-section-search-holder__content__headline {
 	font: var(--heading-font);
 	color: var(--text-primary);
+	font-weight: 400;
 }
 
 .main-section-search-holder__content__input-heads__list {
-	display: grid;
-	grid-template-columns: repeat(5, 0.2fr) 1fr;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.main-section-search-holder__content__input-heads__list-items {
+	margin-right: 20px;
+	position: relative;
+}
+
+.main-section-search-holder__content__input-heads__list-items:first-child::before,
+.main-section-search-holder__content__input-heads__list-items:hover::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: var(--primary);
+	bottom: -5px;
+	border-radius: 8px;
+	animation: 800ms beforeline;
+}
+
+@keyframes beforeline {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.main-section-search-holder__content__input-heads__list-items > a {
 	font-size: 14px;
 	font-weight: 600;
 	color: var(--text-primary);
@@ -90,6 +123,9 @@ li {
 	display: grid;
 	place-items: center;
 	grid-template-columns: 1.5fr 1fr 1fr 1fr;
+}
+.main-section-search-holder__content__input:hover {
+	border: 1px solid var(--primary);
 }
 .main-section-search-holder__content__input__fields {
 	position: relative;
@@ -135,9 +171,10 @@ li {
 }
 
 .main-section-search-holder__content__input__fields:nth-child(3)::before {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -45.3px -845px;
+	background: url("../assets/mb-home-sprite-web.svg") no-repeat -47px -845px;
 	left: -20px;
 	top: 2px;
+	width: 40px;
 }
 
 .main-section-search-holder__content__input__fields:nth-child(3)::after {
@@ -194,6 +231,7 @@ li {
 	width: 210px;
 	font-size: 16px;
 	color: var(--text-secondary);
+	outline: none;
 }
 
 .main-section-search-holder__image > img {
@@ -622,6 +660,16 @@ li {
 	font-weight: 400;
 	white-space: nowrap;
 }
+.nph-citynames:hover::before {
+	content: "";
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	background-color: var(--primary);
+	bottom: -5px;
+	border-radius: 8px;
+	animation: 800ms beforeline;
+}
 
 .main-section-recommended-catergories {
 	display: flex;
@@ -639,6 +687,25 @@ li {
 
 .nph-wrapper {
 	display: flex;
+}
+
+.rc-heads-top {
+	position: relative;
+	cursor: pointer;
+}
+
+.rc-heads-top:hover::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 80%;
+	height: 4px;
+	left: 0;
+	bottom: -10px;
+	background-color: var(--primary-alternate);
+	border-radius: 2px;
+	background-clip: padding-box;
+	transition: width 0.3s ease-in-out 0s;
 }
 
 .nph-wrapper > arrow-right {

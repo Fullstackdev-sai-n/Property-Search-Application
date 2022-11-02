@@ -9,11 +9,12 @@ function fetchResponse(data) {
 
 	function elementSelector(elIndex, elementData, insertAdjacent = 0) {
 		const docSelector = document.querySelectorAll(
-			".main-section-search-hyd__cards,.hnp-categories-block, .hnp-diplay-cards-block, .hnp-diplay-cards-block, .main-section-featured__content,.main-section-image-cards-wrapper,.main-section-property_services_cards-wrapper,.main-section-new-project-gallery-cards,.main-section-popular-cities-cards-wrapper,.main-section-owner-properties-cards,.main-section-advice-tools__card-wrapper,.main-section-real-estate-guide-cards_wrapper,.main-section-hyd-prop-snapshot-content_desc,.main-section-hyd-prop-snapshot-content_total-projects,.main-section-post-your-property-text,.main-section-post-your-property-text,.main-section-browse-projects-cities,.main-section-recommended-catergories,.main-section-recommended-catergories-details,.rc-heads-top, .main-section-showcase__images"
+			".main-section-search-holder__content__headline, .main-section-search-holder__content__input-heads__list, .main-section-search-hyd__cards,.hnp-categories-block, .hnp-diplay-cards-block, .hnp-diplay-cards-block, .main-section-featured__content,.main-section-image-cards-wrapper,.main-section-property_services_cards-wrapper,.main-section-new-project-gallery-cards,.main-section-popular-cities-cards-wrapper,.main-section-owner-properties-cards,.main-section-advice-tools__card-wrapper,.main-section-real-estate-guide-cards_wrapper,.main-section-hyd-prop-snapshot-content_desc,.main-section-hyd-prop-snapshot-content_total-projects,.main-section-post-your-property-text,.main-section-post-your-property-text,.main-section-browse-projects-cities,.main-section-recommended-catergories,.main-section-recommended-catergories-details,.rc-heads-top, .main-section-showcase__images"
 		);
+
 		const elementResult =
 			insertAdjacent !== 0 || null || undefined
-				? docSelector[elIndex].insertAdjacentHTML("beforeend", insertAdjacent)
+				? docSelector[elIndex].insertAdjacentHTML('beforeend', insertAdjacent)
 				: (docSelector[elIndex].innerHTML = elementData);
 		return elementResult;
 	}
@@ -23,8 +24,26 @@ function fetchResponse(data) {
 		return response;
 	}
 
+
+
+	elementSelector(0, dataSlice(1).map((apiData) => `
+	${apiData?.hero?.heading}
+	`))
+
+
+
+	elementSelector(1, dataSlice(1).map((apiData) => apiData?.hero?.content?.map((list) =>  `
+		<li
+		class="main-section-search-holder__content__input-heads__list-items">
+		<a href='#'>${list?.name}</a>
+		</li>
+		`
+	).join("")))
+
+	console.log(dataSlice(1).map(res => res.hero.heading))
+
 	elementSelector(
-		0,
+		2,
 		dataSlice(4)
 			.map(
 				(apiData) => `<properties-listed-card
@@ -37,7 +56,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		2,
+		4,
 		dataSlice(2)
 			.map((apiData) => {
 				return `<featured-card title="${apiData.name}"
@@ -51,7 +70,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		3,
+		5,
 		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<sideicon-with-text
@@ -64,7 +83,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		4,
+		6,
 		dataSlice(2)
 			?.map((apiData, index) => {
 				return `<handpicked-project-card
@@ -81,7 +100,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		5,
+		7,
 		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<image-overlay-text-card 
@@ -94,7 +113,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		6,
+		8,
 		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<services-card
@@ -107,7 +126,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		7,
+		9,
 		dataSlice(6)
 			?.map((apiData, index) => {
 				return `<gallery-card
@@ -124,7 +143,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		8,
+		10,
 		null,
 		dataSlice(3)
 			?.map((apiData, index) => {
@@ -140,7 +159,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		9,
+		11,
 		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<owner-property-card
@@ -156,7 +175,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		10,
+		12,
 		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<advice-card
@@ -170,7 +189,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		11,
+		13,
 		dataSlice(3)
 			?.map((apiData, index) => {
 				return `<guide-card
@@ -186,7 +205,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		12,
+		14,
 		dataSlice(1)
 			?.map((apiData, index) => {
 				return `${apiData?.propertysnapshot?.description}`;
@@ -195,7 +214,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		13,
+		15,
 		dataSlice(4)
 			?.map((apiData, index) => {
 				return `<div
@@ -208,7 +227,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		14,
+		16,
 		dataSlice(1)
 			?.map((apiData, index) => {
 				return `${JSON.parse(JSON.stringify(apiData.postProperty))}`;
@@ -217,7 +236,7 @@ function fetchResponse(data) {
 	);
 
 	elementSelector(
-		15,
+		17,
 		`<ul class="nph-citynames-list"> 
 				${dataSlice(1).map((apiData, index) => {
 					return apiData.newprojects.content
@@ -251,7 +270,7 @@ function fetchResponse(data) {
 	});
 
 	elementSelector(
-		16,
+		18,
 		` ${dataSlice(1).map((apiData, index) => {
 			return apiData.recommended.content
 				.map(
@@ -294,3 +313,8 @@ function changeBg() {
 	fadeImages.style.backgroundImage = bg;
 }
 setInterval(changeBg, 2000);
+
+
+
+
+

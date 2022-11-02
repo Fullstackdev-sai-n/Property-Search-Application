@@ -25,10 +25,21 @@
 
 	.nav-links {
 		display: grid;
-		grid-template-columns: 1.4fr 0.8fr 3fr 0.7fr 0.6fr 0.1fr;
+		grid-template-columns: 2fr 1fr;
 		color: var(--white);
 		padding: 0px 60px;
 		background-color: var(--primary);
+	}
+
+	.nav-top-left {
+		display: grid;
+		grid-template-columns: 0.3fr 120px;
+		gap: 20px;
+	}
+	.nav-top-right {
+		display: grid;
+		grid-template-columns: 0.5fr 0.4fr 0.5fr;
+		gap: 20px;
 	}
 
 	.nav-items {
@@ -39,36 +50,22 @@
 		font-size: 14px;
 		line-height: 47px;
 		cursor: pointer;
+		text-transform: capitalize;
 	}
 
 	.nav-items-dropdown-link {
 		position: relative;
 	}
 
-	.header-dropdown-display-top {
-		position: absolute;
-		top: 40px;
-		left: 0;
-		max-width: 80vw;
-		overflow: scroll;
-		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
-		border-radius: 0 0 8px 8px;
-		display: none;
-		z-index: 10;
-	}
-
-	.nav-items:nth-child(3) {
-		visibility: hidden;
-	}
-	.nav-items:not(.logo-nav-item):hover {
+	.nav-items:not(.logo-nav-item):not(.nav-btn):hover {
 		background-color: var(--white);
 		color: var(--primary);
 		border-radius: 8px 8px 0 0;
 	}
 
 	.logo-nav-item {
-		font-size: x-large;
-		font-family: "Damion", cursive;
+		font-size: 20px;
+		font-weight: 600;
 	}
 	.logo-nav-item > img {
 		width: 50px;
@@ -138,6 +135,54 @@
 		display: none;
 	}
 
+	/* 
+	dropdown top absolute section start */
+
+	.hd-topnav-list-container {
+		display: grid;
+		grid-auto-flow: row;
+		padding: 20px;
+		height: 400px;
+		color: var(--text-primary);
+		line-height: 24px;
+		gap: 20px;
+	}
+
+	.hd-topnav-list-items-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.hd-topnav-heading {
+		padding-bottom: 5px;
+		transition: all 0.4s;
+		font-weight: 600;
+	}
+	.hd-topnav-heading:hover {
+		color: var(--primary);
+	}
+	.hd-topnav-list-item:hover {
+		color: var(--primary);
+	}
+
+	/* 
+	dropdown top absolute section end */
+
+	/* nav bottom */
+
+	.dropdown-bottom,
+	.top-nav-dropdown {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		width: 70vw;
+		overflow: scroll;
+		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
+		border-radius: 0 0 8px 8px;
+		z-index: 10;
+		background-color: var(--white);
+	}
+
 	.nav-links-bottom {
 		background-color: var(--white);
 		height: 44px;
@@ -149,28 +194,17 @@
 		gap: 20px;
 		color: var(--text-primary);
 		font-size: 16px;
+		place-items: center;
 	}
 
 	.nav-items-bottom {
 		cursor: pointer;
 		border-right: none;
-		padding: 0 20px;
-		display: flex;
+		padding: 10px 20px 10px 20px;
 		align-items: center;
 		position: relative;
 		margin-top: 4px;
-	}
-
-	.header-dropdown-display {
-		position: absolute;
-		top: 40px;
-		left: 0;
-		max-width: 80vw;
-		overflow: scroll;
-		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
-		border-radius: 0 0 8px 8px;
-		display: none;
-		z-index: 10;
+		text-transform: capitalize;
 	}
 
 	.nav-items-bottom:not(.nav-bottom-btn):hover {
@@ -178,47 +212,8 @@
 		border-radius: 8px 8px 0 0;
 		background-color: var(--white);
 		box-shadow: 0 3px 9px 0 rgba(48, 48, 48, 0.2);
-		margin-top: 4px;
+
 		z-index: 11;
-	}
-
-	.nav-dropdown-bottom {
-		position: relative;
-	}
-
-	.nav-dropdown-bottom::after {
-		content: "";
-		position: absolute;
-		width: 10px;
-		height: 10px;
-		top: 5px;
-		right: -15px;
-		display: inline-block;
-		background: url("./assets/icons.svg") no-repeat -11px -570px;
-		transform: rotate(180deg);
-		transition: 0.4s ease-out;
-	}
-
-	.nav-dropdown-bottom:hover::after {
-		-moz-transform: rotate(180deg);
-		transform: rotate(360deg);
-	}
-	.nav-items-bottom:first-child {
-		padding-left: 20px;
-	}
-	.nav-dropdown {
-		position: relative;
-	}
-
-	.nav-dropdown::after {
-		content: "";
-		width: 10px;
-		height: 10px;
-		display: inline-block;
-		position: absolute;
-		top: 17px;
-
-		background: url("./assets/icons.svg") no-repeat -12px -646px;
 	}
 
 	.nav-items-bottom:nth-child(6) > a > span {
@@ -251,6 +246,72 @@
 		align-items: center;
 		margin-block: auto;
 	}
+
+	.nav-dropdown-bottom::after {
+		content: "";
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		top: 15px;
+		right: 5px;
+		display: inline-block;
+		background: url("./assets/icons.svg") no-repeat -11px -570px;
+		transform: rotate(180deg);
+		transition: 0.4s ease-out;
+	}
+
+	.nav-dropdown-bottom:hover::after {
+		transform: rotate(0deg);
+	}
+	/* 
+	dropdown bottom absolute section start */
+
+	.hd-list-container {
+		text-align: initial;
+		display: grid;
+		grid-auto-flow: column;
+		padding: 20px;
+		gap: 60px;
+		width: max-content;
+		overflow: scroll;
+		color: var(--text-primary);
+		font: var(--description-font);
+	}
+
+	.hd-col-heading {
+		border-bottom: 1px solid var(--border-color);
+		padding-bottom: 10px;
+		transition: all 0.4s;
+		width: max-content;
+	}
+
+	.hd-col-heading:hover {
+		border-bottom: 1px solid var(--primary);
+		padding-bottom: 10px;
+		color: var(--primary);
+	}
+
+	.hd-list-items-list {
+		padding-top: 10px;
+		max-width: 250px;
+		white-space: wrap;
+		color: var(--text-primary);
+		font-weight: 300;
+		display: grid;
+		grid-auto-flow: row;
+	}
+
+	.hd-list-item {
+		padding: 5px 0px;
+		line-height: 1.6;
+	}
+
+	.hd-list-item:hover {
+		color: var(--primary);
+	}
+
+	/* dropdown absolute section end */
+
 	.nav-item-icon {
 		display: inline-block;
 		padding-right: 10px;
@@ -450,24 +511,22 @@
 			<div class="hamburger__line-2"></div>
 			<div class="hamburger__line-3"></div>
 		</div>
-		<ul class="nav-links">
-			<li class="nav-items logo-nav-item">
-				<img src="../../assets/logo.png" alt="" />Property Search
-			</li>
-			<li class="nav-items nav-items-dropdown-link">
-				<a class="nav-dropdown" href="#"> Hyderabad</a>
-			</li>
-			<li class="nav-items nav-items-empty"></li>
-			<li class="nav-items nav-items-dropdown-link">
-				<a class="nav-dropdown" href="#"> MB Prime</a>
-			</li>
-			<li class="nav-items nav-items-dropdown-link">
-				<a class="nav-dropdown" href="#"> Login</a>
-			</li>
-			<li class="nav-items nav-btn">
-				<button>Post Property <span>Free</span></button>
-			</li>
-		</ul>
+		<div class="nav-links">
+			<ul class="nav-top-left">
+				<li class="nav-items logo-nav-item">
+					<img src="../../assets/logo.png" alt="" />
+					Property Search
+				</li>
+				<li class="nav-items nav-items-dropdown-link"></li>
+			</ul>
+			<ul class="nav-top-right">
+				<li class="nav-items nav-items-dropdown-link"></li>
+				<li class="nav-items nav-items-dropdown-link"></li>
+				<li class="nav-items nav-btn">
+					<button>Post Property <span>Free</span></button>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	<nav class="nav-links-bottom-container">
 		<div class="toggle-arrow-nav"></div>
