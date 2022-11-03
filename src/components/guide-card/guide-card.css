@@ -1,0 +1,140 @@
+.guide-card-container {
+	height: 348px;
+	max-width: 100%;
+	border: 1px solid var(--border-color);
+	border-top-color: var(--primary);
+	border-radius: 8px;
+	display: grid;
+	grid-template-rows: 0.3fr 1fr 0.2fr;
+}
+.guide-card-title {
+	padding: 20px 16px 0 16px;
+	font: var(--title-font);
+	color: var(--text-primary);
+}
+
+.guide-card-videos-block {
+	display: grid;
+	grid-template-columns: 49% 49%;
+	column-gap: 10px;
+	padding: 0 16px;
+}
+
+.guide-card-video-1,
+.guide-card-video-2 {
+	height: 136px;
+	max-width: 177px;
+	width: 100%;
+}
+
+.guide-card-video-1 guide-card-video-1,
+.guide-card-video-2 guide-card-video-1 {
+	width: 100%;
+	height: inherit;
+	border-radius: 8px;
+	background-color: var(--border-color);
+}
+
+.guide-card-video-text-1,
+.guide-card-video-text-2 {
+	width: 100%;
+	font-size: 14px;
+	color: var(--text-primary);
+	line-height: 20px;
+	margin: 16px 0;
+	display: -webkit-box;
+	max-width: 200px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.guide-card-bullets-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.guide-card-bullet {
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	border-radius: 100%;
+	background: var(--black);
+	opacity: 0.2;
+	margin-right: 10px;
+}
+
+/* /videos block end */
+
+.gc-insights-block {
+	padding: 0 16px;
+}
+
+.gc-insights-play-text {
+	padding: 0px 20px;
+	font: var(--description-font);
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	position: relative;
+	line-height: 35px;
+}
+
+.gc-insights-play-text::before {
+	position: absolute;
+	top: 8px;
+	left: 0px;
+	content: "";
+	background: url("./assets/locality__detail__sprite_v2.svg");
+	width: 30px;
+	height: 20px;
+	background-position: -1px -1149px;
+}
+
+.gc-updates-block {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 20px;
+	padding: 0 16px;
+	grid-template-rows: 1fr 0.1fr;
+}
+
+.gc-updates-block-text {
+	font: var(--description-font);
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.gc-updates-block-image {
+	width: 100%;
+	height: 88px;
+}
+
+.guide-card-see-all {
+	padding: 10px 16px 0 16px;
+	font: var(--description-font);
+	color: var(--primary);
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* shown hidden elements dynamically when required */
+
+.gc-btn {
+	display: none;
+}
+
+.guide-card-videos-container {
+	display: none;
+}
+
+.gc-insights-block {
+	display: none;
+}
+
+.guide-card-legal-updates-block {
+	display: none;
+}

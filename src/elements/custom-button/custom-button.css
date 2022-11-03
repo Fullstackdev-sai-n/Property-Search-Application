@@ -1,0 +1,19 @@
+.custom-btn-container {
+	padding: 0 16px;
+	border-radius: 40px;
+	background-color: var(--primary);
+	height: auto;
+	outline: none;
+	border: none;
+	font: var(--description-font);
+	color: var(--white);
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.5s ease;
+	height: 32px;
+	line-height: 32px;
+}
+
+.custom-btn-container:hover {
+	background-color: var(--primary-alternate);
+}

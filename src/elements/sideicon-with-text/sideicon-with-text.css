@@ -1,0 +1,34 @@
+.icontext-container {
+	display: flex;
+	padding: 10px 10px;
+	border-radius: 8px;
+	border: 1px solid var(--border-color);
+	background-color: var(--border-color);
+	align-items: center;
+}
+
+.icontext-side-icon {
+	width: 50px;
+	height: 50px;
+	background-color: var(--border-color);
+	border-radius: 50%;
+	margin-right: 10px;
+	position: relative;
+}
+.icontext-side-icon::before {
+	width: 31px;
+	height: 31px;
+	content: "";
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.icontext-main-text,
+.icontext-caption-text {
+	font: var(--description-font);
+	color: var(--text-primary);
+	font-weight: 600;
+}

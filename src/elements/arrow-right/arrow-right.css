@@ -1,0 +1,37 @@
+.mg-arrow-right-wrapper {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.mg-arrow-right {
+	position: relative;
+	width: 15px;
+	height: 2px;
+	background-color: var(--primary);
+	margin-left: 5px;
+	cursor: pointer;
+	transition: 0.8s ease-in-out;
+}
+.mg-arrow-right:hover {
+	margin-left: 15px;
+}
+.mg-arrow-right::after {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border: 2px solid var(--primary);
+	border-left: none;
+	border-bottom: none;
+	transform: rotate(45deg);
+	top: -4px;
+	right: 0;
+}
+
+.mg-arrow-right-text {
+	color: var(--primary);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+}
