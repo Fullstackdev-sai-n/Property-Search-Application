@@ -12,6 +12,8 @@ class SideIconText extends HTMLElement {
             this.shadowRoot.querySelector('.icontext-side-icon').attributes.part.value = this.getAttribute('side-icon');
             this.shadowRoot.querySelector('.icontext-main-text').innerHTML = this.getAttribute('it-text');
             this.shadowRoot.querySelector('.icontext-caption-text').innerHTML = this.getAttribute('it-caption');
+
+           
           }
    
 }

@@ -1,6 +1,7 @@
 import html from "./custom-header.html";
 import css from "./custom-header.css";
 import { setupShadow } from "../../utils/helper";
+import json from "../../utils/data.json";
 
 class Header extends HTMLElement {
 
@@ -11,10 +12,12 @@ class Header extends HTMLElement {
 
 	async connectedCallback() {
 		
-		fetch("./utils/data.json")
-			.then((res) => res.json())
-			.then((response) => dataResponse(response, this.shadowRoot));
+		// fetch(json)
+		// 	.then((res) => res.json())
+		// 	.then((response) => dataResponse(response, this.shadowRoot)); api integration code.
 
+
+		dataResponse(json, this.shadowRoot)
 		function dataResponse(data, shadow) {	
 			const slicedData = data.slice(0, 1).map((res) => res);
 			
@@ -53,7 +56,7 @@ class Header extends HTMLElement {
 						Array.from(shadow.querySelectorAll(".top-nav-dropdown"))[1].style.cssText = `width: 175px; top: 48px`;
 						Array.from(shadow.querySelectorAll(".top-nav-dropdown"))[0].style.cssText = `width: 80vw; top: 48px; left: -15vw;`;
 					
-						console.log(Array.from(shadow.querySelectorAll(".top-nav-dropdown"))[2])
+					
 					
 					});
 

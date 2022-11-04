@@ -17,3 +17,25 @@ export const setupShadow = (element, html, css) => {
     Window[componentName] = element;
     return html.replaceAll("this.", "Window." + componentName + ".");
   };
+
+  //function on adding scroll animations to the pages
+
+  export function scrollObserver(elementClass, animationClass, shadow){
+    const observer = new IntersectionObserver(entries => {
+      console.log('sai', entries)
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add(animationClass) 
+        return ;
+      }
+
+      entry.target.classList.remove(animationClass) 
+      
+      })
+
+    })
+
+    observer.observe(shadow.querySelector(elementClass))
+
+  }
+

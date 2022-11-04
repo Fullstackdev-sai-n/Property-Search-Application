@@ -22,7 +22,7 @@ class HandpickedProjectCard extends HTMLElement {
 		  this.shadowRoot.querySelector('.hnp-image-content-block').addEventListener('mouseenter', () => {
             this.shadowRoot.querySelector('.hnp-image-content-block-info-middle-video-4').style.display = 'block'
             this.shadowRoot.querySelector('.hnp-image-content-block-info-middle-video-4-default-display').style.display = 'none'
-            this.shadowRoot.querySelector('.hnp-image-content-block-info-middle').style.height = '190px'   
+            this.shadowRoot.querySelector('.hnp-image-content-block-info-middle').style.height = '190px'     
             this.shadowRoot.querySelector('.hnp-hover-popup-btn').style.display = 'block'   
             this.shadowRoot.querySelector('.hnp-image-content-block-info-bottom-more-col').style.border = 'none'
             this.shadowRoot.querySelector('.hnp-image-content-block').style.backgroundImage = 'linear-gradient(180deg,transparent,rgba(0,0,0,.47),rgba(0,0,0,.72))'
@@ -32,6 +32,7 @@ class HandpickedProjectCard extends HTMLElement {
             this.shadowRoot.querySelector('.hnp-image-content-block-info-middle-video-4').style.display = 'none'
             this.shadowRoot.querySelector('.hnp-image-content-block-info-middle-video-4-default-display').style.display = 'grid'
             this.shadowRoot.querySelector('.hnp-image-content-block-info-middle').style.height = '70px'
+        
             this.shadowRoot.querySelector('.hnp-hover-popup-btn').style.display = 'none'
             this.shadowRoot.querySelector('.hnp-image-content-block-info-bottom-more-col').style.border = '1px solid var(--footer-secondary)'
             this.shadowRoot.querySelector('.hnp-image-content-block').style.backgroundImage = 'none'

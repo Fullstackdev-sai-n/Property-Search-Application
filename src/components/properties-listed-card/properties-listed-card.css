@@ -9,6 +9,12 @@
 	background-clip: padding-box;
 	display: grid;
 	grid-template-rows: 0.5fr 0.1fr;
+	transition: all 400ms ease-out;
+	cursor: pointer;
+}
+
+.main-section-search-hyd__card:hover {
+	transform: scale(1.1);
 }
 
 .main-section-search-hyd__card::after {

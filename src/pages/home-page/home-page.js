@@ -1,7 +1,8 @@
 import html from "./home-page.html";
 import css from "./home-page.css";
-import { setupShadow } from "../../utils/helper";
+import { scrollObserver, setupShadow } from "../../utils/helper";
 import { Pages } from '../../models/Pages';
+import jsonData from '../../utils/data.json'
 
 
 
@@ -13,18 +14,17 @@ export class HomePage extends HTMLElement {
 	  setupShadow(this, html, css);
 	  
 	}
-
-	
-
+d
 	async connectedCallback(){
 
-		
+	// api integration code
+	// fetch(jsonData)
+	// .then((res) => res.json())
+	// .then((result) => result)
+	// .then((res) => fetchResponse(res, this.shadowRoot));
 
-	fetch("./utils/data.json")
-	.then((res) => res.json())
-	.then((result) => result)
-	.then((res) => fetchResponse(res, this.shadowRoot));
-
+	
+	fetchResponse(jsonData, this.shadowRoot)
 	function fetchResponse(data, shadow) {
 	if (!data) return;
 	function elementSelector(elIndex, elementData, insertAdjacent = 0) {
@@ -46,10 +46,16 @@ export class HomePage extends HTMLElement {
 
 
 
+	Array.from(shadow.querySelectorAll('section-heading'))
+	.map((heading, index) => heading.shadowRoot
+	.querySelector('.heading').innerHTML = dataSlice(1)
+	.map(el => `${el?.heading[index]?.name}`))
+	
+
+
 	elementSelector(0, dataSlice(1).map((apiData) => `
 	${apiData?.hero?.heading}
 	`))
-
 
 
 	elementSelector(1, dataSlice(1).map((apiData) => apiData?.hero?.content?.map((list) =>  `
@@ -65,10 +71,12 @@ export class HomePage extends HTMLElement {
 		2,
 		dataSlice(4)
 			.map(
-				(apiData) => `<properties-listed-card
+				(apiData, index) => `<properties-listed-card
 						hydimg-part="${apiData?.propertiesListed?.image}"
 						info="${apiData?.propertiesListed?.text}"
-						frwdtxt="${apiData?.propertiesListed?.arrowText}">
+						frwdtxt="${apiData?.propertiesListed?.arrowText}"
+						class="properties-listed-card-${index}"
+						>
 					</properties-listed-card>`
 			)
 			.join("")
@@ -77,13 +85,15 @@ export class HomePage extends HTMLElement {
 	elementSelector(
 		4,
 		dataSlice(2)
-			.map((apiData) => {
+			.map((apiData, index) => {
 				return `<featured-card title="${apiData.name}"
 					by="${apiData.by}"
 					loc="${apiData.loc}"
 					marketed="${apiData.marketedby}"
 					flats="${apiData.size}"
-					price="${apiData.price}"> </featured-card>`;
+					price="${apiData.price}"
+					class="featured-card-${index}"
+					> </featured-card>`;
 			})
 			.join("")
 	);
@@ -95,11 +105,12 @@ export class HomePage extends HTMLElement {
 				return `<sideicon-with-text
 						side-icon="before-icon-${index}"
 						it-text="${apiData.launchText}"
-						it-caption="${apiData.launchCaption}"				
+						it-caption="${apiData.launchCaption}"
+						class="side-icon-text-card-${index}"				
 						> </sideicon-with-text>`;
 			})
 			.join("")
-	);
+	);	
 
 	elementSelector(
 		6,
@@ -112,7 +123,8 @@ export class HomePage extends HTMLElement {
 							price="${apiData.price}"
 							thumbnail="${apiData.imageUrl}"
 							thunmbnailtext="${apiData.status}"
-							showcount="15 More"				
+							showcount="15 More"
+							class="hnp-card-${index}"			
 						> </handpicked-project-card>`;
 			})
 			.join("")
@@ -126,6 +138,7 @@ export class HomePage extends HTMLElement {
 									number="${apiData.count}"
 									title="${apiData.name}"
 									imageurl="url(${apiData.imageUrl})"
+									class="image-overlay-text-card-${index}"
 									> </image-overlay-text-card>`;
 			})
 			.join("")
@@ -139,6 +152,7 @@ export class HomePage extends HTMLElement {
 									text="${apiData.body}"
 									title="${apiData.name}"
 									src="${apiData.imageUrl}"
+									class="services-card-${index}"
 									> </services-card>`;
 			})
 			.join("")
@@ -156,6 +170,7 @@ export class HomePage extends HTMLElement {
 						price="${apiData.price}"
 						projectname="${apiData.marketedby}"
 						prname="${apiData.name}"
+						class="gallery-card-${index}"
 									> </gallery-card>`;
 			})
 			.join("")
@@ -172,6 +187,7 @@ export class HomePage extends HTMLElement {
 						rating="${apiData.rating}"
 						reviews="${apiData.count}"
 						count="${apiData.count}"
+						class="explore-card-${index}"
 									> </explore-card>`;
 			})
 			.join("")
@@ -187,6 +203,7 @@ export class HomePage extends HTMLElement {
 						location="${apiData.loc}"
 						flats="${apiData.size}"
 						price="${apiData.price}"
+						class="owner-card-${index}"
 					
 									> </owner-property-card>`;
 			})
@@ -202,6 +219,7 @@ export class HomePage extends HTMLElement {
 						description="${apiData.body}"
 						ac-image-part="logo-image-${index}"
 						content="dynamic-content-${index}"
+						class="advice-card-${index}"
 									> </advice-card>`;
 			})
 			.join("")
@@ -218,6 +236,7 @@ export class HomePage extends HTMLElement {
 						gc-show-videoblock="${index === 0 && "grid"}"
 						gc-show-insightsblock="${index === 1 && "grid"}"
 						gc-show-updatesblock="${index === 2 && "block"}"
+						class="guide-card-${index}"
 									> </guide-card>`;
 			})
 			.join("")
@@ -261,7 +280,7 @@ export class HomePage extends HTMLElement {
 					return apiData.newprojects.content
 						.map(
 							(city, cityIndex) =>
-								'<li class="nph-citynames">' + city.name + "</li>"
+								`<li class="nph-citynames nph-citynames-${index}"> ${city.name} </li>`
 						)
 						.join("");
 				})} </ul>`
@@ -269,6 +288,7 @@ export class HomePage extends HTMLElement {
 
 	const cityNames = shadow.querySelectorAll(".nph-citynames");
 	cityNames.forEach(function (city, index) {
+		
 		const projectElementSelector = shadow.querySelector(
 			".main-section-browse-projects-project-names"
 		);
@@ -311,6 +331,7 @@ export class HomePage extends HTMLElement {
 	})
 
 	cheads.forEach(function (categories, index) {
+
 		const catergoryDetailsEl = shadow.querySelector('.main-section-recommended-catergories-details')
 		categories.addEventListener('mouseenter', function(){
 		categories.querySelector('span').classList.add('rc-heads-top-underline')
@@ -349,9 +370,177 @@ function changeBg(shadow) {
 	const bg = images[Math.floor(Math.random() * images.length)];
 	fadeImages.style.backgroundImage = bg;
 }
+
 setInterval(changeBg(this.shadowRoot), 2000);
 
-	}
+scrollObserver(
+	'.main-section-project-gallery', 
+	'animate-section-project-gallery', 
+	this.shadowRoot)
+	scrollObserver(
+	'.main-section-showcase', 
+	'animate-section-showcase', 
+	this.shadowRoot)
+	scrollObserver(
+	'.featured-card-0', 
+	'animate-section-featured-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+		'.featured-card-1', 
+		'animate-section-featured-card-1',
+	this.shadowRoot)
+	scrollObserver(
+	'.hnp-card-0', 
+	'animate-section-hp-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+	'.hnp-card-1', 
+	'animate-section-hp-card-1', 
+	this.shadowRoot)
+	scrollObserver(
+	'.image-overlay-text-card-0', 
+	'animate-section-image-overlay-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+	'.image-overlay-text-card-1', 
+	'animate-section-image-overlay-card-1', 
+	this.shadowRoot)	
+	scrollObserver(
+	'.image-overlay-text-card-2', 
+	'animate-section-image-overlay-card-2', 
+	this.shadowRoot)
+	scrollObserver(
+	'.image-overlay-text-card-3', 
+	'animate-section-image-overlay-card-3', 
+	this.shadowRoot)
+	scrollObserver(
+	'.services-card-0', 
+	'animate-section-services-card-0', 
+	this.shadowRoot)	
+	scrollObserver(
+	'.services-card-1', 
+	'animate-section-services-card-1', 
+	this.shadowRoot)	
+	scrollObserver(
+	'.services-card-2', 
+	'animate-section-services-card-2', 
+	this.shadowRoot)	
+	scrollObserver(
+	'.services-card-3', 
+	'animate-section-services-card-3', 
+	this.shadowRoot)	
+	scrollObserver(
+	'.gallery-card-0', 
+	'animate-section-gallery-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+	'.gallery-card-1', 
+	'animate-section-gallery-card-1', 
+	this.shadowRoot)
+	scrollObserver(
+	'.gallery-card-2', 
+	'animate-section-gallery-card-2', 
+	this.shadowRoot)
+	scrollObserver(
+	'.gallery-card-3', 
+	'animate-section-gallery-card-3', 
+	this.shadowRoot)
+	scrollObserver(
+	'.gallery-card-4', 
+	'animate-section-gallery-card-4', 
+	this.shadowRoot)
+	scrollObserver(
+	'.gallery-card-5', 
+	'animate-section-gallery-card-5', 
+	this.shadowRoot)
+	scrollObserver(
+	'.explore-card-0', 
+	'animate-section-explore-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+	'.explore-card-1', 
+	'animate-section-explore-card-1', 
+	this.shadowRoot)
+	scrollObserver(
+	'.explore-card-2', 
+	'animate-section-explore-card-2', 
+	this.shadowRoot)
+	scrollObserver(
+	'.owner-card-0', 
+	'animate-section-owner-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+	'.owner-card-1', 
+	'animate-section-owner-card-1', 
+	this.shadowRoot)
+	scrollObserver(
+	'.owner-card-2', 
+	'animate-section-owner-card-2', 
+	this.shadowRoot)
+	scrollObserver(
+	'.owner-card-3', 
+	'animate-section-owner-card-3', 
+	this.shadowRoot)
+	scrollObserver(
+	'.advice-card-0', 
+	'animate-section-owner-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+	'.advice-card-1', 
+	'animate-section-owner-card-1', 
+	this.shadowRoot)
+	scrollObserver(
+	'.advice-card-2', 
+	'animate-section-owner-card-2', 
+	this.shadowRoot)
+	scrollObserver(
+	'.advice-card-3', 
+	'animate-section-owner-card-3', 
+	this.shadowRoot)
+	scrollObserver(
+	'.guide-card-0', 
+	'animate-section-guide-card-0', 
+	this.shadowRoot)
+	scrollObserver(
+	'.guide-card-1',
+	'animate-section-guide-card-1', 
+	this.shadowRoot)
+	scrollObserver(
+	'.guide-card-2', 
+	'animate-section-guide-card-2', 
+	this.shadowRoot)
+	scrollObserver(
+	'.main-section-hyd-prop-snapshot-content_total-projects', 
+	'animate-section-snapshot', 
+	this.shadowRoot)
+	scrollObserver(
+	'.main-section-post-your-property-btn', 
+	'animate-section-pop-btn', 
+	this.shadowRoot)
+	scrollObserver(
+		'.nph-citynames-list', 
+		'animate-section-citynames', 
+		this.shadowRoot)
+	scrollObserver(
+		'.main-section-browse-projects-project-names', 
+		'animate-section-cityprojects', 
+		this.shadowRoot)
+	scrollObserver(
+		'.main-section-recommended-catergories', 
+		'animate-section-rc-names', 
+		this.shadowRoot)
+	scrollObserver(
+		'.main-section-recommended-catergories-details', 
+		'animate-section-rc-details', 
+		this.shadowRoot)
+		scrollObserver('.side-icon-text-card-0', 'animation-side-icon-text-card-0', this.shadowRoot)
+		scrollObserver('.side-icon-text-card-1', 'animation-side-icon-text-card-1', this.shadowRoot)
+		scrollObserver('.side-icon-text-card-2', 'animation-side-icon-text-card-2', this.shadowRoot)
+		scrollObserver('.side-icon-text-card-3', 'animation-side-icon-text-card-3', this.shadowRoot)
+		scrollObserver('.side-icon-text-card-4', 'animation-side-icon-text-card-4', this.shadowRoot)
+}
+
+	
 
 	back() {
 		this.dispatchEvent(this.#goHomeEvent)

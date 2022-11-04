@@ -250,6 +250,205 @@
 		transform: scale(1);
 	}
 }
+@keyframes listed-cards-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes listed-cards-right {
+	0% {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+section-heading {
+	animation: 2s sec-heading 1 linear;
+}
+
+@keyframes sec-heading {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes scroll-view-1 {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* dynamically added classes */
+.animate-section-showcase,
+.animate-section-project-gallery {
+	animation: 1s scroll-view-1 1 linear;
+}
+.animate-section-featured-card-0 {
+	animation: 400ms listed-cards-left 1 linear;
+}
+.animate-section-featured-card-1 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+.animate-section-hp-card-0 {
+	animation: 400ms listed-cards-left 1 linear;
+}
+.animate-section-hp-card-1 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+.animate-section-image-overlay-card-0,
+.animate-section-image-overlay-card-1 {
+	animation: 400ms listed-cards-left 1 linear;
+}
+.animate-section-image-overlay-card-2,
+.animate-section-image-overlay-card-3 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+
+.animation-side-icon-text-card-0,
+.animation-side-icon-text-card-1 {
+	animation: 400ms listed-cards-left 1 linear;
+}
+.animation-side-icon-text-card-2,
+.animation-side-icon-text-card-3 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+
+@keyframes listed-cards-bottom-top {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@keyframes listed-cards-scale {
+	0% {
+		opacity: 0;
+		transform: scale(0, 0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+@keyframes listed-cards-skew {
+	0% {
+		opacity: 0;
+		transform: skew(10deg, 20deg);
+	}
+
+	100% {
+		opacity: 1;
+		transform: skew(0deg, 0deg);
+	}
+}
+@keyframes pop-btn {
+	0% {
+		opacity: 0;
+		transform: translateX(-800px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.animate-section-services-card-0 {
+	animation: 400ms listed-cards-bottom-top 1 linear;
+}
+.animate-section-services-card-1 {
+	animation: 400ms listed-cards-bottom-top 1 linear 0.2s;
+}
+.animate-section-services-card-2 {
+	animation: 400ms listed-cards-bottom-top 1 linear 0.4s;
+}
+.animate-section-services-card-3 {
+	animation: 400ms listed-cards-bottom-top 1 linear 0.6s;
+}
+
+.animate-section-gallery-card-0,
+.animate-section-gallery-card-3 {
+	animation: 400ms listed-cards-left 1 linear;
+}
+.animate-section-gallery-card-2,
+.animate-section-gallery-card-5 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+.animate-section-gallery-card-1,
+.animate-section-gallery-card-4 {
+	animation: 400ms listed-cards-bottom-top 1 linear;
+}
+.animate-section-explore-card-0 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+.animate-section-explore-card-1 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+.animate-section-explore-card-2 {
+	animation: 400ms listed-cards-right 1 linear;
+}
+.animate-section-owner-card-0 {
+	animation: 1s listed-cards-scale 1 linear;
+}
+.animate-section-owner-card-1 {
+	animation: 1s listed-cards-scale 1 linear 0.4s;
+}
+.animate-section-owner-card-2 {
+	animation: 1s listed-cards-scale 1 linear 0.6s;
+}
+.animate-section-owner-card-3 {
+	animation: 1s listed-cards-scale 1 linear 0.8s;
+}
+
+.animate-section-guide-card-0 {
+	animation: 400ms listed-cards-skew 1 linear;
+}
+.animate-section-guide-card-1 {
+	animation: 400ms listed-cards-skew 1 linear 0.4s;
+}
+.animate-section-guide-card-2 {
+	animation: 400ms listed-cards-skew 1 linear 0.6s;
+}
+
+.animate-section-snapshot {
+	animation: 400ms listed-cards-scale 1 linear;
+}
+.animate-section-pop-btn {
+	animation: 400ms pop-btn 1 linear;
+}
+.animate-section-citynames {
+	animation: 400ms listed-cards-scale 1 linear;
+}
+.animate-section-cityprojects {
+	animation: 400ms listed-cards-scale 1 linear;
+}
+.animate-section-rc-names {
+	animation: 400ms listed-cards-scale 1 linear;
+}
+.animate-section-rc-details {
+	animation: 400ms listed-cards-scale 1 linear;
+}
 
 /* Section Two */
 .main-section__title {
@@ -260,6 +459,16 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 20px;
+}
+
+.properties-listed-card-0,
+.properties-listed-card-1 {
+	animation: 1s listed-cards-left 1 linear;
+}
+
+.properties-listed-card-2,
+.properties-listed-card-3 {
+	animation: 1s listed-cards-right 1 linear;
 }
 
 /* Section 3 */
@@ -796,10 +1005,6 @@
 }
 
 /* Handpicked New Project Launches */
-
-.hnp-container {
-	min-height: 600px;
-}
 
 .hnp-container-title-block {
 	display: flex;

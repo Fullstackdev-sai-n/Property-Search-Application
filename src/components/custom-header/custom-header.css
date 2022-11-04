@@ -231,6 +231,12 @@ dropdown top absolute section end */
 	border-radius: 0 0 8px 8px;
 	z-index: 10;
 	background-color: var(--white);
+	scrollbar-width: none;
+}
+
+.dropdown-bottom::-webkit-scrollbar,
+.top-nav-dropdown::-webkit-scrollbar {
+	display: none;
 }
 
 @keyframes nav-dropdown {
@@ -351,10 +357,11 @@ dropdown bottom absolute section start */
 	padding: 20px;
 	gap: 60px;
 	width: max-content;
-	overflow: scroll;
+
 	color: var(--text-primary);
 	font: var(--description-font);
 	animation: 200ms nav-dropdown-bottom 1 linear;
+	scrollbar-width: none;
 }
 
 .hd-col-heading {

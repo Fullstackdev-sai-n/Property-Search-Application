@@ -5,15 +5,73 @@
       "heading": "Find a home you'll love",
       "heroImage": "./assets/payrent.jpg",
       "content": [
-        {"name": "Buy"},
-        {"name": "Rent"},
-        {"name": "PG"},
-        {"name": "Plot"},
-        {"name": "Commercial"},
-        {"name": "Post Free Property Ad"}
+        {
+          "name": "Buy"
+        },
+        {
+          "name": "Rent"
+        },
+        {
+          "name": "PG"
+        },
+        {
+          "name": "Plot"
+        },
+        {
+          "name": "Commercial"
+        },
+        {
+          "name": "Post Free Property Ad"
+        }
       ]
     },
-    "heading": "Because you searched Hyderabad",
+    "heading": [
+      {
+        "name": "Because you searched Hyderabad"
+      },
+      {
+        "name": "An Exclusive Showcase - Aspire Spaces - Ameya"
+      },
+      {
+        "name": "Project Gallery"
+      },
+      {
+        "name": "Featured Projects"
+      },
+      {
+        "name": "Handpicked New Project Launches in Hyderabad"
+      },
+      {
+        "name": "We've got properties for everyone"
+      },
+      {
+        "name": "Property Services"
+      },
+      {
+        "name": "New Project Gallery"
+      },
+      {
+        "name": "Popular Localities in Hyderabad"
+      },
+      {
+        "name": "Exclusive Owner Properties in Hyderabad"
+      },
+      {
+        "name": "Advice & Tools"
+      },
+      {
+        "name": "Your Real Estate Guide"
+      },
+      {
+        "name": "Hyderabad Property Snapshot"
+      },
+      {
+        "name": "Browse Residential Projects in Top 8 Cities"
+      },
+      {
+        "name": "Recommended for You"
+      }
+    ],
     "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
     "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
     "name": "Sri Aditya Squares Ornate",
@@ -988,289 +1046,293 @@
       ]
     },
     "tophovernav": [
-      { "name": "hyderabad", 
-         "content": [
-           {
-             "name": "Nearby Cities",
-             "selection": [
-               {
-                 "name": "Visakhapatnam"
-               },
-               {
-                 "name": "Secunderabad"
-               },
-               {
-                 "name": " Vijayawada"
-               },
-               {
-                 "name": "Guntur"
-               }
-             ]
-           },
-           {
-             "name": "Popular Cities",
-             "selection": [
-               {
-                 "name": "Bangalore"
-               },
-               {
-                 "name": "Chennai"
-               },
-               {
-                 "name": "Ahmedabad"
-               },
-               {
-                 "name": "Noida"
-               },
-               {
-                 "name": "Faridabad"
-               },
-               {
-                 "name": "Mumbai"
-               },
-               {
-                 "name": "Hyderabad"
-               },
-               {
-                 "name": "Navi Mumbai"
-               },
-               {
-                 "name": "Gurgaon"
-               },
-               {
-                 "name": "Greater Noida"
-               },
-               {
-                 "name": "Pune"
-               },
-               {
-                 "name": "Kolkata"
-               },
-               {
-                 "name": "Thane"
-               },
-               {
-                 "name": "Ghaziabad"
-               },
-               {
-                 "name": "New Delhi"
-               }
-             ]
-           },
-           {
-             "name": "Other Cities",
-             "selection": [
-               {
-                 "name": "Agra"
-               },
-               {
-                 "name": "Durgapur"
-               },
-               {
-                 "name": "Kochi"
-               },
-               {
-                 "name": "Palghar"
-               },
-               {
-                 "name": "Trichy"
-               },
-               {
-                 "name": "Allahabad"
-               },
-               {
-                 "name": "Goa"
-               },
-               {
-                 "name": "Kottayam"
-               },
-               {
-                 "name": "Patna"
-               },
-               {
-                 "name": "Udaipur"
-               },
-               {
-                 "name": "Aurangabad"
-               },
-               {
-                 "name": "Gorakhpur"
-               },
-               {
-                 "name": "Kozhikode"
-               },
-               {
-                 "name": "Rajahmundry"
-               },
-               {
-                 "name": "Udupi"
-               },
-               {
-                 "name": "Bhiwadi"
-               },
-               {
-                 "name": "Guntur"
-               },
-               {
-                 "name": "Lucknow"
-               },
-               {
-                 "name": "Ranchi"
-               },
-               {
-                 "name": "Vadodara"
-               },
-               {
-                 "name": "Bhopal"
-               },
-               {
-                 "name": "Guwahati"
-               },
-               {
-                 "name": "Madurai"
-               },
-               {
-                 "name": "Raipur"
-               },
-               {
-                 "name": "Vapi"
-               },
-               {
-                 "name": "Bhubaneswar"
-               },
-               {
-                 "name": "Haridwar"
-               },
-               {
-                 "name": "Mangalore"
-               },
-               {
-                 "name": "Salem"
-               },
-               {
-                 "name": "Varanasi"
-               },
-               {
-                 "name": "Bokaro Steel City"
-               },
-               {
-                 "name": "Indore"
-               },
-               {
-                 "name": "Gwalior"
-               },
-               {
-                 "name": "Sonipat"
-               },
-               {
-                 "name": "Vijayawada"
-               },
-               {
-                 "name": "Chandigarh"
-               },
-               {
-                 "name": "Jaipur"
-               },
-               {
-                 "name": "Mysore"
-               },
-               {
-                 "name": "Surat"
-               },
-               {
-                 "name": "Visakhapatnam"
-               },
-               {
-                 "name": "Coimbatore"
-               },
-               {
-                 "name": "Jamshedpur"
-               },
-               {
-                 "name": "Nagpur"
-               },
-               {
-                 "name": "Thrissur"
-               },
-               {
-                 "name": "Ahmadnagar"
-               },
-               {
-                 "name": "Dehradun"
-               },
-               {
-                 "name": "Jodhpur"
-               },
-               {
-                 "name": "Nashik"
-               },
-               {
-                 "name": "Tirupati"
-               },
-               {
-                 "name": "Kanpur"
-               },
-               {
-                 "name": "Navsari"
-               },
-               {
-                 "name": "Trivandrum"
-               }
-             ]
-           }
-         ]
-       },
-      {"name": "M B prime",
-       "content": [ 
-        {
-          "name": "My Activity",
-             "selection": [
-             {
-              "name":"Contacted Properties"
-             },
-             {
-              "name":"Viewed Properties"
-             },
-             {
-              "name":"Searches"
-             },
-             {
-              "name":"Recommendations"
-             },
-             {
-              "name":"My Profile"
-             }
-             ]
-        }
-       ]
-    },
-      {"name": "login",
-      "content": [ 
-        {
-          "name": "My Activity",
-             "selection": [
-             {
-              "name":"Contacted Properties"
-             },
-             {
-              "name":"Viewed Properties"
-             },
-             {
-              "name":"Searches"
-             },
-             {
-              "name":"Recommendations"
-             },
-             {
-              "name":"My Profile"
-             }
-             ]
-        }
-       ]
-    }
-      ],
+      {
+        "name": "hyderabad",
+        "content": [
+          {
+            "name": "Nearby Cities",
+            "selection": [
+              {
+                "name": "Visakhapatnam"
+              },
+              {
+                "name": "Secunderabad"
+              },
+              {
+                "name": " Vijayawada"
+              },
+              {
+                "name": "Guntur"
+              }
+            ]
+          },
+          {
+            "name": "Popular Cities",
+            "selection": [
+              {
+                "name": "Bangalore"
+              },
+              {
+                "name": "Chennai"
+              },
+              {
+                "name": "Ahmedabad"
+              },
+              {
+                "name": "Noida"
+              },
+              {
+                "name": "Faridabad"
+              },
+              {
+                "name": "Mumbai"
+              },
+              {
+                "name": "Hyderabad"
+              },
+              {
+                "name": "Navi Mumbai"
+              },
+              {
+                "name": "Gurgaon"
+              },
+              {
+                "name": "Greater Noida"
+              },
+              {
+                "name": "Pune"
+              },
+              {
+                "name": "Kolkata"
+              },
+              {
+                "name": "Thane"
+              },
+              {
+                "name": "Ghaziabad"
+              },
+              {
+                "name": "New Delhi"
+              }
+            ]
+          },
+          {
+            "name": "Other Cities",
+            "selection": [
+              {
+                "name": "Agra"
+              },
+              {
+                "name": "Durgapur"
+              },
+              {
+                "name": "Kochi"
+              },
+              {
+                "name": "Palghar"
+              },
+              {
+                "name": "Trichy"
+              },
+              {
+                "name": "Allahabad"
+              },
+              {
+                "name": "Goa"
+              },
+              {
+                "name": "Kottayam"
+              },
+              {
+                "name": "Patna"
+              },
+              {
+                "name": "Udaipur"
+              },
+              {
+                "name": "Aurangabad"
+              },
+              {
+                "name": "Gorakhpur"
+              },
+              {
+                "name": "Kozhikode"
+              },
+              {
+                "name": "Rajahmundry"
+              },
+              {
+                "name": "Udupi"
+              },
+              {
+                "name": "Bhiwadi"
+              },
+              {
+                "name": "Guntur"
+              },
+              {
+                "name": "Lucknow"
+              },
+              {
+                "name": "Ranchi"
+              },
+              {
+                "name": "Vadodara"
+              },
+              {
+                "name": "Bhopal"
+              },
+              {
+                "name": "Guwahati"
+              },
+              {
+                "name": "Madurai"
+              },
+              {
+                "name": "Raipur"
+              },
+              {
+                "name": "Vapi"
+              },
+              {
+                "name": "Bhubaneswar"
+              },
+              {
+                "name": "Haridwar"
+              },
+              {
+                "name": "Mangalore"
+              },
+              {
+                "name": "Salem"
+              },
+              {
+                "name": "Varanasi"
+              },
+              {
+                "name": "Bokaro Steel City"
+              },
+              {
+                "name": "Indore"
+              },
+              {
+                "name": "Gwalior"
+              },
+              {
+                "name": "Sonipat"
+              },
+              {
+                "name": "Vijayawada"
+              },
+              {
+                "name": "Chandigarh"
+              },
+              {
+                "name": "Jaipur"
+              },
+              {
+                "name": "Mysore"
+              },
+              {
+                "name": "Surat"
+              },
+              {
+                "name": "Visakhapatnam"
+              },
+              {
+                "name": "Coimbatore"
+              },
+              {
+                "name": "Jamshedpur"
+              },
+              {
+                "name": "Nagpur"
+              },
+              {
+                "name": "Thrissur"
+              },
+              {
+                "name": "Ahmadnagar"
+              },
+              {
+                "name": "Dehradun"
+              },
+              {
+                "name": "Jodhpur"
+              },
+              {
+                "name": "Nashik"
+              },
+              {
+                "name": "Tirupati"
+              },
+              {
+                "name": "Kanpur"
+              },
+              {
+                "name": "Navsari"
+              },
+              {
+                "name": "Trivandrum"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M B prime",
+        "content": [
+          {
+            "name": "My Activity",
+            "selection": [
+              {
+                "name": "Contacted Properties"
+              },
+              {
+                "name": "Viewed Properties"
+              },
+              {
+                "name": "Searches"
+              },
+              {
+                "name": "Recommendations"
+              },
+              {
+                "name": "My Profile"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "login",
+        "content": [
+          {
+            "name": "My Activity",
+            "selection": [
+              {
+                "name": "Contacted Properties"
+              },
+              {
+                "name": "Viewed Properties"
+              },
+              {
+                "name": "Searches"
+              },
+              {
+                "name": "Recommendations"
+              },
+              {
+                "name": "My Profile"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "hovernav": [
-      {"name": "buy",
+      {
+        "name": "buy",
         "content": [
           {
             "name": "Popular Choices",
@@ -1371,7 +1433,8 @@
           }
         ]
       },
-      {"name" : "Rent",
+      {
+        "name": "Rent",
         "content": [
           {
             "name": "Popular Choices",
@@ -1470,7 +1533,8 @@
           }
         ]
       },
-      {"name":"sell",
+      {
+        "name": "sell",
         "content": [
           {
             "name": "For Owner",
@@ -1522,7 +1586,8 @@
           }
         ]
       },
-     { "name": "home loans",
+      {
+        "name": "home loans",
         "content": [
           {
             "name": "Apply Now",
@@ -1635,7 +1700,8 @@
           }
         ]
       },
-     { "name": "property services",
+      {
+        "name": "property services",
         "content": [
           {
             "name": "Rent Services",
@@ -1657,7 +1723,7 @@
               }
             ]
           },
-              {
+          {
             "name": "Buy / Sell Services",
             "selection": [
               {
@@ -1702,8 +1768,9 @@
           }
         ]
       },
-     { "name": "mb advice",
-             "content": [
+      {
+        "name": "mb advice",
+        "content": [
           {
             "name": "MB Research",
             "selection": [
@@ -1789,25 +1856,44 @@
           }
         ]
       },
-     { "name": "help",
-
-     "content": [{
-
-     "selection": [
       {
-        "name": "Help Center"
-      },
-      {
-        "name": "Sales Enquiry"
-
+        "name": "help",
+        "content": [
+          {
+            "selection": [
+              {
+                "name": "Help Center"
+              },
+              {
+                "name": "Sales Enquiry"
+              }
+            ]
+          }
+        ]
       }
-    ]}]
-      }
-    ]
+    ],
+    "footer": {
+      "descriptionLeft": "About Magicbricks<br /><div>Magicbricks is a full stack service provider for all real estateneeds, with 15+ services including home loans, pay rent, packers andmovers, legal assistance, property valuation, and expert advice. Asthe largest platform for buyers and sellers of property to connect ina transparent manner, Magicbricks has an active base of over 15 lakhproperty listings.</div>",
+      "descriptionRight": "<div class='footer-section-1-right-text'>Properties in India<br /><div>  Property in New Delhi | &nbsp; Property in Mumbai | &nbsp; Property in  Chennai | &nbsp; Property in Pune | &nbsp; Property in Noida | &nbsp;  Property in Gurgaon | &nbsp; Property in Bangalore | &nbsp; Property  in Ahmedabad</div></div><div class='footer-section-1-right-text'>  Properties in India<br />  <div>New Projects in New Delhi | &nbsp; New Projects in Mumbai | &nbsp; NewProjects in Chennai | &nbsp; New Projects in Pune | &nbsp; NewProjects in Noida | &nbsp; New Projects in Gurgaon | &nbsp; New Projects in Bangalore | &nbsp; New Projects in Ahmedabad</div></div>",
+      "secondSectionList": [
+        "Sitemap",
+        "Terms & Conditions",
+        "Privacy Policy",
+        "Blog",
+        "Careers",
+        "Testimonials",
+        "Feedback",
+        "Unsubscribe",
+        "Help Center",
+        "Sales Enquiry",
+        "Buy Our Services"
+      ],
+      "disclaimerText": "Disclaimer: Property Search is only an intermediary offering its platform to advertise properties of Seller for a Customer/Buyer/User coming on its Website and is not and cannot be a party to or privy to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by Read more ",
+      "copyrightText": "All trademarks, logos and names are properties of their respective owners. All Rights Reserved. © Copyright 2022 Property Search."
+    }
   },
-
   {
-    "userId": 1,
+    "userId": 2,
     "heading": "An Exclusive Showcase - Aspire Spaces - Ameya",
     "title": "qui est esse",
     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
