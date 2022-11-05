@@ -22,7 +22,7 @@ export const setupShadow = (element, html, css) => {
 
   export function scrollObserver(elementClass, animationClass, shadow){
     const observer = new IntersectionObserver(entries => {
-      console.log('sai', entries)
+
       entries.forEach(entry => {
         if(entry.isIntersecting){
           entry.target.classList.add(animationClass) 

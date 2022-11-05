@@ -14,6 +14,7 @@
 	border-left: none;
 	border-right: none;
 	cursor: pointer;
+	border-radius: 6px;
 }
 
 .hnp-image-content-block-image {
@@ -155,7 +156,7 @@
 	border-top: none;
 	border-radius: 0 0 8px 8px;
 	margin-top: -10px;
-	height: 68px;
+	height: 98px;
 }
 
 .hnp-image-content-block-info-bottom-heading-col {

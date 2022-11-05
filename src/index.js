@@ -17,6 +17,7 @@ import { ArrowRight } from "./elements/arrow-right/arrowRight";
 import { SectionHeading } from "./elements/section-heading/customHeading";
 import { SideIconText } from "./elements/sideicon-with-text/iconText";
 import { ImageOverlayButton } from "./elements/image-overlay-play-button/imageOverlayButton";
+import { CustomButton } from "./elements/custom-button/customButton";
 
 
 

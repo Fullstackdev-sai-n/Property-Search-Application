@@ -11,8 +11,6 @@ class ImageOverlayButton extends HTMLElement {
     async connectedCallback() {
 
             this.shadowRoot.querySelector('.iob-image').attributes[1].value = this.getAttribute('iob-image');
-
-            console.log(this.shadowRoot.querySelector('.iob-image').attributes[1])
         
         }
    

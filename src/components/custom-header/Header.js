@@ -22,7 +22,7 @@ class Header extends HTMLElement {
 			const slicedData = data.slice(0, 1).map((res) => res);
 			
 			Array.from(shadow.querySelectorAll(".nav-items-dropdown-link")).map((forEach, index) => forEach.innerHTML = 
-				`<a class="nav-dropdown" href="#"> ${slicedData[0]?.tophovernav[index].name} </a>
+				`<a class="nav-dropdown" href=""> ${slicedData[0]?.tophovernav[index].name} </a>
 							<div class="top-nav-dropdown"></div>`
 				)
 
@@ -72,7 +72,7 @@ class Header extends HTMLElement {
 			"afterbegin",
 			slicedData[0]?.hovernav?.map((item, index) => {
 					return `<li class="nav-items-bottom"> 
-				<a class="nav-dropdown-bottom"> ${item.name} </a><div class="dropdown-bottom"></div></li>`;
+				<a href='' class="nav-dropdown-bottom"> ${item.name} </a><div class="dropdown-bottom"></div></li>`;
 				})
 				.join("")
 		);
@@ -128,49 +128,24 @@ class Header extends HTMLElement {
 		}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		this.shadowRoot
+			this.shadowRoot
 			.querySelector(".toggle-arrow-nav")
 			.addEventListener("mouseenter", () => {
-				Array.from(
-					this.shadowRoot.querySelectorAll(".nav-items-bottom")
-				).forEach((navs) => {
-					navs.style.display = "flex";
-				});
-				this.shadowRoot.querySelector(".toggle-arrow-nav").style.display =
-					"none";
+				this.shadowRoot
+			.querySelector(".nav-links-bottom").classList.add('media-nav-link-bottom')
+			Array.from(this.shadowRoot
+			.querySelectorAll(".toggle-arrow-nav, .toggle-arrow-nav-top")).map(arrows => arrows.style.display ='none')
 			});
-		this.shadowRoot
-			.querySelector(".toggle-arrow-nav")
+			this.shadowRoot
+			.querySelector(".nav-links-bottom")
 			.addEventListener("mouseleave", () => {
-				Array.from(
-					this.shadowRoot.querySelectorAll(".nav-items-bottom")
-				).forEach((navs) => {
-					if (window.screen.width >= 960 || window.screen.width <= 600) {
-						navs.style.display = "none";
-					}
-				});
+				this.shadowRoot
+			.querySelector(".nav-links-bottom").classList.remove('media-nav-link-bottom')
+
+			Array.from(this.shadowRoot
+				.querySelectorAll(".toggle-arrow-nav, .toggle-arrow-nav-top")).map(arrows => arrows.style.display ='block')
+			
 			});
-
-
 		const toggleMenu = this.shadowRoot.querySelector(".hamburger");
 		const navItemsTop = this.shadowRoot.querySelector(".nav-links");
 		const menuAnimateOne = this.shadowRoot.querySelector(".hamburger__line-1");
