@@ -72,7 +72,15 @@
         "name": "Recommended for You"
       }
     ],
-    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "projectGallery":{
+      "title": "Sukhii Ubuntu",
+      "flatesPlace":"2, 3, 4 BHK Flats at Puppalaguda, Hyderabad",
+      "startingPrice": "Starting from 95.9 Lac",
+      "marketedBy": "Marketed by Sukhii Group"
+    },
+    "projectsInfo": [
+      {
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
     "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
     "name": "Sri Aditya Squares Ornate",
     "by": "by Sri Aditya Squares",
@@ -82,32 +90,135 @@
     "price": "₹ 1.80 Cr",
     "range": "₹4,984 - ₹7,289 per sqft",
     "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
     "rating": "4.6",
     "imageUrl": "./assets/showcase1.jpg",
-    "count": "22348",
-    "topCities": [
-      "Bangalore",
-      "Mumbai",
-      "Pune",
-      "Noida",
-      "Gurgaon",
-      "Kolkata",
-      "Chennai",
-      "Thane",
-      "Ahmedabad"
-    ],
-    "status": "Ready to Move",
-    "launchText": "Unbaised Project reviews",
-    "launchCaption": "by experts",
-    "postProperty": "Post your property for <bold>Free</bold><br /> <span>List it in Magicbricks and get genuine leads</span>",
-    "propertysnapshot": {
+    "totalReviews": "60",
+    "forSaleCount": "120",
+       "status": "Ready to Move",
+    "launchText": "Project comparison basis",
+    "launchCaption": "100+ parameters"
+    },
+    {
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "name": "Sri Aditya Squares Ornate",
+    "by": "by Sri Aditya Squares",
+    "loc": "Kollur, Hyderabad",
+    "marketedby": "Marketed by Sri Aditya Squares",
+    "size": "2, 3 BHK Flats",
+    "price": "₹ 1.80 Cr",
+    "range": "₹4,984 - ₹7,289 per sqft",
+    "city": "Patancheruvu",
+    "rating": "4.6",
+    "imageUrl": "./assets/showcase1.jpg",
+    "totalReviews": "60",
+    "forSaleCount": "120",
+       "status": "Ready to Move",
+    "launchText": "Project comparison basis",
+    "launchCaption": "100+ parameters"
+    
+    },
+    {
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "name": "Sri Aditya Squares Ornate",
+    "by": "by Sri Aditya Squares",
+    "loc": "Kollur, Hyderabad",
+    "marketedby": "Marketed by Sri Aditya Squares",
+    "size": "2, 3 BHK Flats",
+    "price": "₹ 1.80 Cr",
+    "range": "₹4,984 - ₹7,289 per sqft",
+    "city": "Patancheruvu",
+    "rating": "4.6",
+    "imageUrl": "./assets/showcase1.jpg",
+    "totalReviews": "60",
+    "forSaleCount": "120",
+       "status": "Ready to Move",
+    "launchText": "Project comparison basis",
+    "launchCaption": "100+ parameters"
+    },
+    {
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "name": "Sri Aditya Squares Ornate",
+    "by": "by Sri Aditya Squares",
+    "loc": "Kollur, Hyderabad",
+    "marketedby": "Marketed by Sri Aditya Squares",
+    "size": "2, 3 BHK Flats",
+    "price": "₹ 1.80 Cr",
+    "range": "₹4,984 - ₹7,289 per sqft",
+    "city": "Patancheruvu",
+    "rating": "4.6",
+    "imageUrl": "./assets/showcase1.jpg",
+    "totalReviews": "60",
+    "forSaleCount": "120",
+       "status": "Ready to Move",
+    "launchText": "Project comparison basis",
+    "launchCaption": "100+ parameters"
+    },
+    {
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "name": "Sri Aditya Squares Ornate",
+    "by": "by Sri Aditya Squares",
+    "loc": "Kollur, Hyderabad",
+    "marketedby": "Marketed by Sri Aditya Squares",
+    "size": "2, 3 BHK Flats",
+    "price": "₹ 1.80 Cr",
+    "range": "₹4,984 - ₹7,289 per sqft",
+    "city": "Patancheruvu",
+    "rating": "4.6",
+    "imageUrl": "./assets/showcase1.jpg",
+    "totalReviews": "60",
+    "forSaleCount": "120",
+       "status": "Ready to Move",
+    "launchText": "Project comparison basis",
+    "launchCaption": "100+ parameters"
+    },
+    {
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "name": "Sri Aditya Squares Ornate",
+    "by": "by Sri Aditya Squares",
+    "loc": "Kollur, Hyderabad",
+    "marketedby": "Marketed by Sri Aditya Squares",
+    "size": "2, 3 BHK Flats",
+    "price": "₹ 1.80 Cr",
+    "range": "₹4,984 - ₹7,289 per sqft",
+    "city": "Patancheruvu",
+    "rating": "4.6",
+    "imageUrl": "./assets/showcase1.jpg",
+    "totalReviews": "60",
+    "forSaleCount": "120",
+       "status": "Ready to Move",
+    "launchText": "Project comparison basis",
+    "launchCaption": "100+ parameters"
+    }
+  ],
+    "postProperty": "Post your property for <bold>Free</bold><br /> <span>List it in PropertySeacrh and get genuine leads</span>",
+    "propertysnapshot": [
+      {
+      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
+      "totalCount": "1878+",
+      "budgetInfo": "Low Budget Flats",
+      "city": "in Hyderabad"
+    },{
       "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
       "totalCount": "1878+",
       "budgetInfo": "Low Budget Flats",
       "city": "in Hyderabad"
     },
+    {
+      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
+      "totalCount": "1878+",
+      "budgetInfo": "Low Budget Flats",
+      "city": "in Hyderabad"
+    },{
+      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
+      "totalCount": "1878+",
+      "budgetInfo": "Low Budget Flats",
+      "city": "in Hyderabad"
+    }],
     "showcase": {
       "categories": [
         {
@@ -246,12 +357,32 @@
         }
       ]
     },
-    "propertiesListed": {
+    "propertiesListed": [
+      {
       "totalCount": "22k",
       "text": "properties listed for",
       "arrowText": "Continue last search",
       "image": "plc-1"
     },
+    {
+      "totalCount": "22k",
+      "text": "properties listed for",
+      "arrowText": "Continue last search",
+      "image": "plc-1"
+    },
+    {
+      "totalCount": "22k",
+      "text": "properties listed for",
+      "arrowText": "Continue last search",
+      "image": "plc-1"
+    },
+    {
+      "totalCount": "22k",
+      "text": "properties listed for",
+      "arrowText": "Continue last search",
+      "image": "plc-1"
+    }
+  ],
     "recommended": {
       "content": [
         {
@@ -1045,835 +1176,837 @@
         }
       ]
     },
-    "tophovernav": [
-      {
-        "name": "hyderabad",
-        "content": [
-          {
-            "name": "Nearby Cities",
-            "selection": [
-              {
-                "name": "Visakhapatnam"
-              },
-              {
-                "name": "Secunderabad"
-              },
-              {
-                "name": " Vijayawada"
-              },
-              {
-                "name": "Guntur"
-              }
-            ]
-          },
-          {
-            "name": "Popular Cities",
-            "selection": [
-              {
-                "name": "Bangalore"
-              },
-              {
-                "name": "Chennai"
-              },
-              {
-                "name": "Ahmedabad"
-              },
-              {
-                "name": "Noida"
-              },
-              {
-                "name": "Faridabad"
-              },
-              {
-                "name": "Mumbai"
-              },
-              {
-                "name": "Hyderabad"
-              },
-              {
-                "name": "Navi Mumbai"
-              },
-              {
-                "name": "Gurgaon"
-              },
-              {
-                "name": "Greater Noida"
-              },
-              {
-                "name": "Pune"
-              },
-              {
-                "name": "Kolkata"
-              },
-              {
-                "name": "Thane"
-              },
-              {
-                "name": "Ghaziabad"
-              },
-              {
-                "name": "New Delhi"
-              }
-            ]
-          },
-          {
-            "name": "Other Cities",
-            "selection": [
-              {
-                "name": "Agra"
-              },
-              {
-                "name": "Durgapur"
-              },
-              {
-                "name": "Kochi"
-              },
-              {
-                "name": "Palghar"
-              },
-              {
-                "name": "Trichy"
-              },
-              {
-                "name": "Allahabad"
-              },
-              {
-                "name": "Goa"
-              },
-              {
-                "name": "Kottayam"
-              },
-              {
-                "name": "Patna"
-              },
-              {
-                "name": "Udaipur"
-              },
-              {
-                "name": "Aurangabad"
-              },
-              {
-                "name": "Gorakhpur"
-              },
-              {
-                "name": "Kozhikode"
-              },
-              {
-                "name": "Rajahmundry"
-              },
-              {
-                "name": "Udupi"
-              },
-              {
-                "name": "Bhiwadi"
-              },
-              {
-                "name": "Guntur"
-              },
-              {
-                "name": "Lucknow"
-              },
-              {
-                "name": "Ranchi"
-              },
-              {
-                "name": "Vadodara"
-              },
-              {
-                "name": "Bhopal"
-              },
-              {
-                "name": "Guwahati"
-              },
-              {
-                "name": "Madurai"
-              },
-              {
-                "name": "Raipur"
-              },
-              {
-                "name": "Vapi"
-              },
-              {
-                "name": "Bhubaneswar"
-              },
-              {
-                "name": "Haridwar"
-              },
-              {
-                "name": "Mangalore"
-              },
-              {
-                "name": "Salem"
-              },
-              {
-                "name": "Varanasi"
-              },
-              {
-                "name": "Bokaro Steel City"
-              },
-              {
-                "name": "Indore"
-              },
-              {
-                "name": "Gwalior"
-              },
-              {
-                "name": "Sonipat"
-              },
-              {
-                "name": "Vijayawada"
-              },
-              {
-                "name": "Chandigarh"
-              },
-              {
-                "name": "Jaipur"
-              },
-              {
-                "name": "Mysore"
-              },
-              {
-                "name": "Surat"
-              },
-              {
-                "name": "Visakhapatnam"
-              },
-              {
-                "name": "Coimbatore"
-              },
-              {
-                "name": "Jamshedpur"
-              },
-              {
-                "name": "Nagpur"
-              },
-              {
-                "name": "Thrissur"
-              },
-              {
-                "name": "Ahmadnagar"
-              },
-              {
-                "name": "Dehradun"
-              },
-              {
-                "name": "Jodhpur"
-              },
-              {
-                "name": "Nashik"
-              },
-              {
-                "name": "Tirupati"
-              },
-              {
-                "name": "Kanpur"
-              },
-              {
-                "name": "Navsari"
-              },
-              {
-                "name": "Trivandrum"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "M B prime",
-        "content": [
-          {
-            "name": "My Activity",
-            "selection": [
-              {
-                "name": "Contacted Properties"
-              },
-              {
-                "name": "Viewed Properties"
-              },
-              {
-                "name": "Searches"
-              },
-              {
-                "name": "Recommendations"
-              },
-              {
-                "name": "My Profile"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "login",
-        "content": [
-          {
-            "name": "My Activity",
-            "selection": [
-              {
-                "name": "Contacted Properties"
-              },
-              {
-                "name": "Viewed Properties"
-              },
-              {
-                "name": "Searches"
-              },
-              {
-                "name": "Recommendations"
-              },
-              {
-                "name": "My Profile"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "hovernav": [
-      {
-        "name": "buy",
-        "content": [
-          {
-            "name": "Popular Choices",
-            "selection": [
-              {
-                "name": "Ready to Move"
-              },
-              {
-                "name": "Owner Properties"
-              },
-              {
-                "name": "Budget Homes"
-              },
-              {
-                "name": "Premium Homes"
-              },
-              {
-                "name": "Newly LaunchedNEW"
-              }
-            ]
-          },
-          {
-            "name": "Property Types",
-            "selection": [
-              {
-                "name": "Flats in Hyderabad"
-              },
-              {
-                "name": "House for sale in Hyderabad"
-              },
-              {
-                "name": "Villa in Hyderabad"
-              },
-              {
-                "name": "Plot in Hyderabad"
-              },
-              {
-                "name": "Office Space in Hyderabad"
-              },
-              {
-                "name": "Commercial Space in Hyderabad"
-              }
-            ]
-          },
-          {
-            "name": "Budget",
-            "selection": [
-              {
-                "name": "Under ₹ 50 Lac"
-              },
-              {
-                "name": "₹ 50 Lac - ₹ 1 Cr"
-              },
-              {
-                "name": "₹ 1 Cr - ₹ 1.5 Cr"
-              },
-              {
-                "name": "Above ₹ 1.5 Cr"
-              }
-            ]
-          },
-          {
-            "name": "Explore",
-            "selection": [
-              {
-                "name": "Builders in Hyderabad"
-              },
-              {
-                "name": "Localities in Hyderabad"
-              },
-              {
-                "name": "Projects in Hyderabad"
-              },
-              {
-                "name": "Investment Hotspot"
-              },
-              {
-                "name": "Find an Agent"
-              }
-            ]
-          },
-          {
-            "name": "Buying Tools",
-            "selection": [
-              {
-                "name": "Propworth"
-              },
-              {
-                "name": "Rates & Trends"
-              },
-              {
-                "name": "Buy vs Rent"
-              },
-              {
-                "name": "Tips and Guides"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Rent",
-        "content": [
-          {
-            "name": "Popular Choices",
-            "selection": [
-              {
-                "name": "Owner Properties"
-              },
-              {
-                "name": "Verified Properties"
-              },
-              {
-                "name": "Furnished Homes"
-              },
-              {
-                "name": "Bachelor Friendly Homes"
-              },
-              {
-                "name": "Immediately Available"
-              }
-            ]
-          },
-          {
-            "name": "Property Type",
-            "selection": [
-              {
-                "name": "Flat for rent in Hyderabad"
-              },
-              {
-                "name": "House for rent in Hyderabad"
-              },
-              {
-                "name": "Villa for rent in Hyderabad"
-              },
-              {
-                "name": "PG in Hyderabad"
-              },
-              {
-                "name": "Office Space in Hyderabad"
-              },
-              {
-                "name": "Commercial Space in Hyderabad"
-              },
-              {
-                "name": "Coworking Space in Hyderabad"
-              },
-              {
-                "name": "Coliving Space in Hyderabad"
-              },
-              {
-                "name": "Student Hostels in Hyderabad"
-              }
-            ]
-          },
-          {
-            "name": "Budget",
-            "selection": [
-              {
-                "name": "Under ₹ 10,000"
-              },
-              {
-                "name": "₹ 10,000 - ₹ 15,000"
-              },
-              {
-                "name": "₹ 15,000 - ₹ 25,000"
-              },
-              {
-                "name": "Above ₹ 25,000"
-              }
-            ]
-          },
-          {
-            "name": "Explore",
-            "selection": [
-              {
-                "name": "Localities"
-              },
-              {
-                "name": "Buy Vs Rent"
-              },
-              {
-                "name": "Find an Agent"
-              },
-              {
-                "name": "Share Requirement"
-              },
-              {
-                "name": "Property Services"
-              },
-              {
-                "name": "Rent Agreement"
-              },
-              {
-                "name": "Pay Rent"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "sell",
-        "content": [
-          {
-            "name": "For Owner",
-            "selection": [
-              {
-                "name": "Post PropertyFree"
-              },
-              {
-                "name": "My Dashboard"
-              },
-              {
-                "name": "Sell / Rent Ad Packages"
-              }
-            ]
-          },
-          {
-            "name": "For Agent & Builder",
-            "selection": [
-              {
-                "name": "My Dashboard"
-              },
-              {
-                "name": "Ad Packages"
-              },
-              {
-                "name": "iAdvantage"
-              },
-              {
-                "name": "Developer Lounge"
-              },
-              {
-                "name": "Sales Enquiry"
-              }
-            ]
-          },
-          {
-            "name": " Selling Tools",
-            "selection": [
-              {
-                "name": "Property Valuation"
-              },
-              {
-                "name": "Find an Agent"
-              },
-              {
-                "name": "Rates and Trends"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "home loans",
-        "content": [
-          {
-            "name": "Apply Now",
-            "selection": [
-              {
-                "name": "Home Loans"
-              },
-              {
-                "name": "Balance Transfer"
-              },
-              {
-                "name": "Loan Against Property"
-              },
-              {
-                "name": "Pre-approved Home Loan Pack Upto ₹ 90K Cashback"
-              }
-            ]
-          },
-          {
-            "name": "Partners",
-            "selection": [
-              {
-                "name": "SBI Home Loan"
-              },
-              {
-                "name": "HDFC Ltd Home Loan"
-              },
-              {
-                "name": "Axis Home Loan"
-              },
-              {
-                "name": "BOB Home Loan"
-              },
-              {
-                "name": "LIC HF Home Loan"
-              },
-              {
-                "name": "IIFL Home Loan"
-              }
-            ]
-          },
-          {
-            "name": "Explore",
-            "selection": [
-              {
-                "name": "Home Loan EMI Calculator"
-              },
-              {
-                "name": "Home Loan Eligibility"
-              },
-              {
-                "name": "Home Loan Prepayment"
-              },
-              {
-                "name": "Home Loan Interest Rate"
-              },
-              {
-                "name": "Home Loan Balance Transfer"
-              },
-              {
-                "name": "Home Loan Documentation"
-              }
-            ]
-          },
-          {
-            "name": "EMI Calculators",
-            "selection": [
-              {
-                "name": "SBI Home Loan EMI Calculator"
-              },
-              {
-                "name": "HDFC Home Loan EMI Calculator"
-              },
-              {
-                "name": "Axis Bank Home Loan EMI Calculator"
-              },
-              {
-                "name": "Bajaj Home Loan EMI Calculator"
-              },
-              {
-                "name": "BOB Home Loan EMI Calculator"
-              },
-              {
-                "name": "L&T Home Loan EMI Calculator"
-              }
-            ]
-          },
-          {
-            "name": "Interest Rates",
-            "selection": [
-              {
-                "name": "SBI Home Loan Interest Rate"
-              },
-              {
-                "name": "HDFC Home Loan Interest Rate"
-              },
-              {
-                "name": "Axis Bank Home Loan Interest Rate"
-              },
-              {
-                "name": "Bajaj Home Loan Interest Rate"
-              },
-              {
-                "name": "BOB Home Loan Interest Rate"
-              },
-              {
-                "name": "L&T Home Loan Interest Rate"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "property services",
-        "content": [
-          {
-            "name": "Rent Services",
-            "selection": [
-              {
-                "name": "Pay Rent with Credit Card"
-              },
-              {
-                "name": "Rent AgreementFREE"
-              },
-              {
-                "name": "Generate Rent Receipt"
-              },
-              {
-                "name": "Tenant Verification"
-              },
-              {
-                "name": "Office leasing assistance"
-              }
-            ]
-          },
-          {
-            "name": "Buy / Sell Services",
-            "selection": [
-              {
-                "name": "Property ValuationNEW"
-              },
-              {
-                "name": "Legal Title CheckNEW"
-              },
-              {
-                "name": " Property Lawyers"
-              },
-              {
-                "name": "Home Inspection"
-              },
-              {
-                "name": "Vastu"
-              },
-              {
-                "name": "Design & Decor]"
-              }
-            ]
-          },
-          {
-            "name": "Home Services",
-            "selection": [
-              {
-                "name": "Packers & Movers"
-              },
-              {
-                "name": "Home Cleaning"
-              },
-              {
-                "name": "Pest Control"
-              },
-              {
-                "name": "Sanitization"
-              },
-              {
-                "name": "View All Services"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "mb advice",
-        "content": [
-          {
-            "name": "MB Research",
-            "selection": [
-              {
-                "name": "Research"
-              },
-              {
-                "name": "Prop Index"
-              },
-              {
-                "name": "Find Pincode"
-              },
-              {
-                "name": "Insights"
-              }
-            ]
-          },
-          {
-            "name": "Services & Tools",
-            "selection": [
-              {
-                "name": " Property ValuationNEW"
-              },
-              {
-                "name": " Legal Title CheckNEW"
-              },
-              {
-                "name": " Rates & Trends"
-              },
-              {
-                "name": " Area Converter"
-              },
-              {
-                "name": "Prop Worth"
-              },
-              {
-                "name": "Buy v/s Rent"
-              }
-            ]
-          },
-          {
-            "name": "Localities & Projects",
-            "selection": [
-              {
-                "name": "Localities in Hyderabad"
-              },
-              {
-                "name": "Locality Review Videos"
-              },
-              {
-                "name": "Compare Localities"
-              },
-              {
-                "name": "New Projects in Hyderabad"
-              },
-              {
-                "name": "Project Review Videos"
-              },
-              {
-                "name": " MBTV Videos"
-              }
-            ]
-          },
-          {
-            "name": "News & Blogs",
-            "selection": [
-              {
-                "name": " Blog Collection"
-              },
-              {
-                "name": "Lifestyle"
-              },
-              {
-                "name": "Policies"
-              },
-              {
-                "name": "Finance & Legal"
-              },
-              {
-                "name": "City News"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "help",
-        "content": [
-          {
-            "selection": [
-              {
-                "name": "Help Center"
-              },
-              {
-                "name": "Sales Enquiry"
-              }
-            ]
-          }
-        ]
-      }
+    "header": [
+      { "navigationTop": [
+        {
+          "name": "hyderabad",
+          "content": [
+            {
+              "name": "Nearby Cities",
+              "selection": [
+                {
+                  "name": "Visakhapatnam"
+                },
+                {
+                  "name": "Secunderabad"
+                },
+                {
+                  "name": " Vijayawada"
+                },
+                {
+                  "name": "Guntur"
+                }
+              ]
+            },
+            {
+              "name": "Popular Cities",
+              "selection": [
+                {
+                  "name": "Bangalore"
+                },
+                {
+                  "name": "Chennai"
+                },
+                {
+                  "name": "Ahmedabad"
+                },
+                {
+                  "name": "Noida"
+                },
+                {
+                  "name": "Faridabad"
+                },
+                {
+                  "name": "Mumbai"
+                },
+                {
+                  "name": "Hyderabad"
+                },
+                {
+                  "name": "Navi Mumbai"
+                },
+                {
+                  "name": "Gurgaon"
+                },
+                {
+                  "name": "Greater Noida"
+                },
+                {
+                  "name": "Pune"
+                },
+                {
+                  "name": "Kolkata"
+                },
+                {
+                  "name": "Thane"
+                },
+                {
+                  "name": "Ghaziabad"
+                },
+                {
+                  "name": "New Delhi"
+                }
+              ]
+            },
+            {
+              "name": "Other Cities",
+              "selection": [
+                {
+                  "name": "Agra"
+                },
+                {
+                  "name": "Durgapur"
+                },
+                {
+                  "name": "Kochi"
+                },
+                {
+                  "name": "Palghar"
+                },
+                {
+                  "name": "Trichy"
+                },
+                {
+                  "name": "Allahabad"
+                },
+                {
+                  "name": "Goa"
+                },
+                {
+                  "name": "Kottayam"
+                },
+                {
+                  "name": "Patna"
+                },
+                {
+                  "name": "Udaipur"
+                },
+                {
+                  "name": "Aurangabad"
+                },
+                {
+                  "name": "Gorakhpur"
+                },
+                {
+                  "name": "Kozhikode"
+                },
+                {
+                  "name": "Rajahmundry"
+                },
+                {
+                  "name": "Udupi"
+                },
+                {
+                  "name": "Bhiwadi"
+                },
+                {
+                  "name": "Guntur"
+                },
+                {
+                  "name": "Lucknow"
+                },
+                {
+                  "name": "Ranchi"
+                },
+                {
+                  "name": "Vadodara"
+                },
+                {
+                  "name": "Bhopal"
+                },
+                {
+                  "name": "Guwahati"
+                },
+                {
+                  "name": "Madurai"
+                },
+                {
+                  "name": "Raipur"
+                },
+                {
+                  "name": "Vapi"
+                },
+                {
+                  "name": "Bhubaneswar"
+                },
+                {
+                  "name": "Haridwar"
+                },
+                {
+                  "name": "Mangalore"
+                },
+                {
+                  "name": "Salem"
+                },
+                {
+                  "name": "Varanasi"
+                },
+                {
+                  "name": "Bokaro Steel City"
+                },
+                {
+                  "name": "Indore"
+                },
+                {
+                  "name": "Gwalior"
+                },
+                {
+                  "name": "Sonipat"
+                },
+                {
+                  "name": "Vijayawada"
+                },
+                {
+                  "name": "Chandigarh"
+                },
+                {
+                  "name": "Jaipur"
+                },
+                {
+                  "name": "Mysore"
+                },
+                {
+                  "name": "Surat"
+                },
+                {
+                  "name": "Visakhapatnam"
+                },
+                {
+                  "name": "Coimbatore"
+                },
+                {
+                  "name": "Jamshedpur"
+                },
+                {
+                  "name": "Nagpur"
+                },
+                {
+                  "name": "Thrissur"
+                },
+                {
+                  "name": "Ahmadnagar"
+                },
+                {
+                  "name": "Dehradun"
+                },
+                {
+                  "name": "Jodhpur"
+                },
+                {
+                  "name": "Nashik"
+                },
+                {
+                  "name": "Tirupati"
+                },
+                {
+                  "name": "Kanpur"
+                },
+                {
+                  "name": "Navsari"
+                },
+                {
+                  "name": "Trivandrum"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "M B prime",
+          "content": [
+            {
+              "name": "My Activity",
+              "selection": [
+                {
+                  "name": "Contacted Properties"
+                },
+                {
+                  "name": "Viewed Properties"
+                },
+                {
+                  "name": "Searches"
+                },
+                {
+                  "name": "Recommendations"
+                },
+                {
+                  "name": "My Profile"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "content": [
+            {
+              "name": "My Activity",
+              "selection": [
+                {
+                  "name": "Contacted Properties"
+                },
+                {
+                  "name": "Viewed Properties"
+                },
+                {
+                  "name": "Searches"
+                },
+                {
+                  "name": "Recommendations"
+                },
+                {
+                  "name": "My Profile"
+                }
+              ]
+            }
+          ]
+        }
+      ]},
+      {"navigationBottom": [
+        {
+          "name": "buy",
+          "content": [
+            {
+              "name": "Popular Choices",
+              "selection": [
+                {
+                  "name": "Ready to Move"
+                },
+                {
+                  "name": "Owner Properties"
+                },
+                {
+                  "name": "Budget Homes"
+                },
+                {
+                  "name": "Premium Homes"
+                },
+                {
+                  "name": "Newly LaunchedNEW"
+                }
+              ]
+            },
+            {
+              "name": "Property Types",
+              "selection": [
+                {
+                  "name": "Flats in Hyderabad"
+                },
+                {
+                  "name": "House for sale in Hyderabad"
+                },
+                {
+                  "name": "Villa in Hyderabad"
+                },
+                {
+                  "name": "Plot in Hyderabad"
+                },
+                {
+                  "name": "Office Space in Hyderabad"
+                },
+                {
+                  "name": "Commercial Space in Hyderabad"
+                }
+              ]
+            },
+            {
+              "name": "Budget",
+              "selection": [
+                {
+                  "name": "Under ₹ 50 Lac"
+                },
+                {
+                  "name": "₹ 50 Lac - ₹ 1 Cr"
+                },
+                {
+                  "name": "₹ 1 Cr - ₹ 1.5 Cr"
+                },
+                {
+                  "name": "Above ₹ 1.5 Cr"
+                }
+              ]
+            },
+            {
+              "name": "Explore",
+              "selection": [
+                {
+                  "name": "Builders in Hyderabad"
+                },
+                {
+                  "name": "Localities in Hyderabad"
+                },
+                {
+                  "name": "Projects in Hyderabad"
+                },
+                {
+                  "name": "Investment Hotspot"
+                },
+                {
+                  "name": "Find an Agent"
+                }
+              ]
+            },
+            {
+              "name": "Buying Tools",
+              "selection": [
+                {
+                  "name": "Propworth"
+                },
+                {
+                  "name": "Rates & Trends"
+                },
+                {
+                  "name": "Buy vs Rent"
+                },
+                {
+                  "name": "Tips and Guides"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rent",
+          "content": [
+            {
+              "name": "Popular Choices",
+              "selection": [
+                {
+                  "name": "Owner Properties"
+                },
+                {
+                  "name": "Verified Properties"
+                },
+                {
+                  "name": "Furnished Homes"
+                },
+                {
+                  "name": "Bachelor Friendly Homes"
+                },
+                {
+                  "name": "Immediately Available"
+                }
+              ]
+            },
+            {
+              "name": "Property Type",
+              "selection": [
+                {
+                  "name": "Flat for rent in Hyderabad"
+                },
+                {
+                  "name": "House for rent in Hyderabad"
+                },
+                {
+                  "name": "Villa for rent in Hyderabad"
+                },
+                {
+                  "name": "PG in Hyderabad"
+                },
+                {
+                  "name": "Office Space in Hyderabad"
+                },
+                {
+                  "name": "Commercial Space in Hyderabad"
+                },
+                {
+                  "name": "Coworking Space in Hyderabad"
+                },
+                {
+                  "name": "Coliving Space in Hyderabad"
+                },
+                {
+                  "name": "Student Hostels in Hyderabad"
+                }
+              ]
+            },
+            {
+              "name": "Budget",
+              "selection": [
+                {
+                  "name": "Under ₹ 10,000"
+                },
+                {
+                  "name": "₹ 10,000 - ₹ 15,000"
+                },
+                {
+                  "name": "₹ 15,000 - ₹ 25,000"
+                },
+                {
+                  "name": "Above ₹ 25,000"
+                }
+              ]
+            },
+            {
+              "name": "Explore",
+              "selection": [
+                {
+                  "name": "Localities"
+                },
+                {
+                  "name": "Buy Vs Rent"
+                },
+                {
+                  "name": "Find an Agent"
+                },
+                {
+                  "name": "Share Requirement"
+                },
+                {
+                  "name": "Property Services"
+                },
+                {
+                  "name": "Rent Agreement"
+                },
+                {
+                  "name": "Pay Rent"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sell",
+          "content": [
+            {
+              "name": "For Owner",
+              "selection": [
+                {
+                  "name": "Post PropertyFree"
+                },
+                {
+                  "name": "My Dashboard"
+                },
+                {
+                  "name": "Sell / Rent Ad Packages"
+                }
+              ]
+            },
+            {
+              "name": "For Agent & Builder",
+              "selection": [
+                {
+                  "name": "My Dashboard"
+                },
+                {
+                  "name": "Ad Packages"
+                },
+                {
+                  "name": "iAdvantage"
+                },
+                {
+                  "name": "Developer Lounge"
+                },
+                {
+                  "name": "Sales Enquiry"
+                }
+              ]
+            },
+            {
+              "name": " Selling Tools",
+              "selection": [
+                {
+                  "name": "Property Valuation"
+                },
+                {
+                  "name": "Find an Agent"
+                },
+                {
+                  "name": "Rates and Trends"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "home loans",
+          "content": [
+            {
+              "name": "Apply Now",
+              "selection": [
+                {
+                  "name": "Home Loans"
+                },
+                {
+                  "name": "Balance Transfer"
+                },
+                {
+                  "name": "Loan Against Property"
+                },
+                {
+                  "name": "Pre-approved Home Loan Pack Upto ₹ 90K Cashback"
+                }
+              ]
+            },
+            {
+              "name": "Partners",
+              "selection": [
+                {
+                  "name": "SBI Home Loan"
+                },
+                {
+                  "name": "HDFC Ltd Home Loan"
+                },
+                {
+                  "name": "Axis Home Loan"
+                },
+                {
+                  "name": "BOB Home Loan"
+                },
+                {
+                  "name": "LIC HF Home Loan"
+                },
+                {
+                  "name": "IIFL Home Loan"
+                }
+              ]
+            },
+            {
+              "name": "Explore",
+              "selection": [
+                {
+                  "name": "Home Loan EMI Calculator"
+                },
+                {
+                  "name": "Home Loan Eligibility"
+                },
+                {
+                  "name": "Home Loan Prepayment"
+                },
+                {
+                  "name": "Home Loan Interest Rate"
+                },
+                {
+                  "name": "Home Loan Balance Transfer"
+                },
+                {
+                  "name": "Home Loan Documentation"
+                }
+              ]
+            },
+            {
+              "name": "EMI Calculators",
+              "selection": [
+                {
+                  "name": "SBI Home Loan EMI Calculator"
+                },
+                {
+                  "name": "HDFC Home Loan EMI Calculator"
+                },
+                {
+                  "name": "Axis Bank Home Loan EMI Calculator"
+                },
+                {
+                  "name": "Bajaj Home Loan EMI Calculator"
+                },
+                {
+                  "name": "BOB Home Loan EMI Calculator"
+                },
+                {
+                  "name": "L&T Home Loan EMI Calculator"
+                }
+              ]
+            },
+            {
+              "name": "Interest Rates",
+              "selection": [
+                {
+                  "name": "SBI Home Loan Interest Rate"
+                },
+                {
+                  "name": "HDFC Home Loan Interest Rate"
+                },
+                {
+                  "name": "Axis Bank Home Loan Interest Rate"
+                },
+                {
+                  "name": "Bajaj Home Loan Interest Rate"
+                },
+                {
+                  "name": "BOB Home Loan Interest Rate"
+                },
+                {
+                  "name": "L&T Home Loan Interest Rate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "property services",
+          "content": [
+            {
+              "name": "Rent Services",
+              "selection": [
+                {
+                  "name": "Pay Rent with Credit Card"
+                },
+                {
+                  "name": "Rent AgreementFREE"
+                },
+                {
+                  "name": "Generate Rent Receipt"
+                },
+                {
+                  "name": "Tenant Verification"
+                },
+                {
+                  "name": "Office leasing assistance"
+                }
+              ]
+            },
+            {
+              "name": "Buy / Sell Services",
+              "selection": [
+                {
+                  "name": "Property ValuationNEW"
+                },
+                {
+                  "name": "Legal Title CheckNEW"
+                },
+                {
+                  "name": " Property Lawyers"
+                },
+                {
+                  "name": "Home Inspection"
+                },
+                {
+                  "name": "Vastu"
+                },
+                {
+                  "name": "Design & Decor]"
+                }
+              ]
+            },
+            {
+              "name": "Home Services",
+              "selection": [
+                {
+                  "name": "Packers & Movers"
+                },
+                {
+                  "name": "Home Cleaning"
+                },
+                {
+                  "name": "Pest Control"
+                },
+                {
+                  "name": "Sanitization"
+                },
+                {
+                  "name": "View All Services"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mb advice",
+          "content": [
+            {
+              "name": "MB Research",
+              "selection": [
+                {
+                  "name": "Research"
+                },
+                {
+                  "name": "Prop Index"
+                },
+                {
+                  "name": "Find Pincode"
+                },
+                {
+                  "name": "Insights"
+                }
+              ]
+            },
+            {
+              "name": "Services & Tools",
+              "selection": [
+                {
+                  "name": " Property ValuationNEW"
+                },
+                {
+                  "name": " Legal Title CheckNEW"
+                },
+                {
+                  "name": " Rates & Trends"
+                },
+                {
+                  "name": " Area Converter"
+                },
+                {
+                  "name": "Prop Worth"
+                },
+                {
+                  "name": "Buy v/s Rent"
+                }
+              ]
+            },
+            {
+              "name": "Localities & Projects",
+              "selection": [
+                {
+                  "name": "Localities in Hyderabad"
+                },
+                {
+                  "name": "Locality Review Videos"
+                },
+                {
+                  "name": "Compare Localities"
+                },
+                {
+                  "name": "New Projects in Hyderabad"
+                },
+                {
+                  "name": "Project Review Videos"
+                },
+                {
+                  "name": " MBTV Videos"
+                }
+              ]
+            },
+            {
+              "name": "News & Blogs",
+              "selection": [
+                {
+                  "name": " Blog Collection"
+                },
+                {
+                  "name": "Lifestyle"
+                },
+                {
+                  "name": "Policies"
+                },
+                {
+                  "name": "Finance & Legal"
+                },
+                {
+                  "name": "City News"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "help",
+          "content": [
+            {
+              "selection": [
+                {
+                  "name": "Help Center"
+                },
+                {
+                  "name": "Sales Enquiry"
+                }
+              ]
+            }
+          ]
+        }
+      ]}
     ],
     "footer": {
-      "descriptionLeft": "About Magicbricks<br /><div>Magicbricks is a full stack service provider for all real estateneeds, with 15+ services including home loans, pay rent, packers andmovers, legal assistance, property valuation, and expert advice. Asthe largest platform for buyers and sellers of property to connect ina transparent manner, Magicbricks has an active base of over 15 lakhproperty listings.</div>",
+      "descriptionLeft": "About Property Search<br /><div>PropertySearch is a full stack service provider for all real estateneeds, with 15+ services including home loans, pay rent, packers andmovers, legal assistance, property valuation, and expert advice. Asthe largest platform for buyers and sellers of property to connect ina transparent manner, PropertySeacrh has an active base of over 15 lakhproperty listings.</div>",
       "descriptionRight": "<div class='footer-section-1-right-text'>Properties in India<br /><div>  Property in New Delhi | &nbsp; Property in Mumbai | &nbsp; Property in  Chennai | &nbsp; Property in Pune | &nbsp; Property in Noida | &nbsp;  Property in Gurgaon | &nbsp; Property in Bangalore | &nbsp; Property  in Ahmedabad</div></div><div class='footer-section-1-right-text'>  Properties in India<br />  <div>New Projects in New Delhi | &nbsp; New Projects in Mumbai | &nbsp; NewProjects in Chennai | &nbsp; New Projects in Pune | &nbsp; NewProjects in Noida | &nbsp; New Projects in Gurgaon | &nbsp; New Projects in Bangalore | &nbsp; New Projects in Ahmedabad</div></div>",
       "secondSectionList": [
         "Sitemap",
@@ -1890,575 +2023,13 @@
       ],
       "disclaimerText": "Disclaimer: Property Search is only an intermediary offering its platform to advertise properties of Seller for a Customer/Buyer/User coming on its Website and is not and cannot be a party to or privy to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by Read more ",
       "copyrightText": "All trademarks, logos and names are properties of their respective owners. All Rights Reserved. © Copyright 2022 Property Search."
+    },
+    "extras": {
+      "seeAllProjectsArrow": "<arrow-right><span slot='arrow-text'>See All Projects</span></arrow-right>",
+      "heroSearchIconsText": ["Flat +2", "Budget"],
+      "btnText": ["Contact", "Search"],
+      "sectionHeads": ["Explore", "Top Blogs"],
+      "postProperty": "Post property <small>free</small>"
     }
-  },
-  {
-    "userId": 2,
-    "heading": "An Exclusive Showcase - Aspire Spaces - Ameya",
-    "title": "qui est esse",
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6",
-    "imageUrl": "./assets/showcase1.jpg",
-    "count": "22348",
-    "status": "Ready to Move",
-    "launchText": "Project comparison basis",
-    "launchCaption": "100+ parameters",
-    "propertysnapshot": {
-      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
-      "totalCount": "1878+",
-      "budgetInfo": "Low Budget Flats",
-      "city": "in Hyderabad"
-    },
-    "propertiesListed": {
-      "totalCount": "22k",
-      "text": "Get personalised property",
-      "arrowText": "See all",
-      "image": "plc-2"
-    },
-    "recommended": {
-      "topBlogs": {
-        "heads": {
-          "heading": "Celebrity Homes",
-          "details": [
-            {
-              "value": [
-                "Mukesh Ambani House Antilia",
-                "Alia Bhatt House",
-                "Hrithik Roshan House"
-              ]
-            },
-            {
-              "value": [
-                "Mannat - Shahrukh Khan House",
-                "Virat Kohli House",
-                "Amitabh Bachchan House"
-              ]
-            },
-            {
-              "value": [
-                "Pataudi Palace",
-                "MS Dhoni Farm House",
-                "Gautam Adani House"
-              ]
-            },
-            {
-              "value": [
-                "Salman Khan House",
-                "Ajay Devgan House"
-              ]
-            }
-          ]
-        }
-      }
-    }
-  },
-  {
-    "userId": 1,
-    "heading": "Project Gallery",
-    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6",
-    "imageUrl": "./assets/showcase1.jpg",
-    "count": "22348",
-    "status": "Ready to Move",
-    "launchText": "Investment corridors with",
-    "launchCaption": "new launches",
-    "propertysnapshot": {
-      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
-      "totalCount": "1878+",
-      "budgetInfo": "Low Budget Flats",
-      "city": "in Hyderabad"
-    },
-    "propertiesListed": {
-      "totalCount": "22k",
-      "text": "Get personalised property",
-      "arrowText": "See all",
-      "image": "plc-3"
-    },
-    "recommended": {
-      "topBlogs": {
-        "heads": {
-          "heading": "Home Decor",
-          "details": [
-            {
-              "value": [
-                "Two Colour Combination for Bedroo",
-                "Pop Design",
-                "Bathroom Designs"
-              ]
-            },
-            {
-              "value": [
-                "Two Colour Combination for Living",
-                "Plus Minus Pop Design",
-                "Griha Pravesh Muhurat 2022"
-              ]
-            },
-            {
-              "value": [
-                "Pink Two Colour Combination for",
-                "Pop Design for Hall",
-                "Gautam Adani House"
-              ]
-            },
-            {
-              "value": [
-                "Salman Khan House",
-                "Kitchen Designs"
-              ]
-            }
-          ]
-        }
-      }
-    }
-  },
-  {
-    "userId": 1,
-    "heading": "Featured Projects",
-    "title": "eum et est occaecati",
-    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6",
-    "imageUrl": "./assets/showcase1.jpg",
-    "count": "22348",
-    "status": "Ready to Move",
-    "launchText": "Virtual video call as per",
-    "launchCaption": "your convenience",
-    "propertysnapshot": {
-      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
-      "totalCount": "1878+",
-      "budgetInfo": "Low Budget Flats",
-      "city": "in Hyderabad"
-    },
-    "propertiesListed": {
-      "totalCount": "22k",
-      "text": "Get personalised property",
-      "arrowText": "See all",
-      "image": "plc-4"
-    },
-    "recommended": {
-      "topBlogs": {
-        "heads": {
-          "heading": "Land Records",
-          "details": [
-            {
-              "value": [
-                "7 12 Mahabhulekh",
-                "Patta Chitta",
-                "Jamabandi Haryana"
-              ]
-            },
-            {
-              "value": [
-                "Bhoomi Online: Karnataka Land Re",
-                "Meebhoomi",
-                "Banglarbhumi"
-              ]
-            },
-            {
-              "value": [
-                "UP Bhulekh",
-                "Jharbhoomi",
-                "AnyROR Gujarat"
-              ]
-            },
-            {
-              "value": [
-                "Bihar Bhulekh",
-                "Jamabandi Punjab",
-                "Apna Khata Rajasthan"
-              ]
-            }
-          ]
-        }
-      }
-    }
-  },
-  {
-    "userId": 1,
-    "heading": "Handpicked New Project Launches in Hyderabad",
-    "title": "nesciunt quas odio",
-    "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6",
-    "imageUrl": "./assets/showcase1.jpg",
-    "count": "22348",
-    "status": "Ready to Move",
-    "launchText": "Unbaised Project reviews",
-    "launchCaption": "by experts",
-    "propertysnapshot": {
-      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
-      "totalCount": "1878+",
-      "budgetInfo": "Low Budget Flats",
-      "city": "in Hyderabad"
-    },
-    "recommended": {
-      "topBlogs": {
-        "heads": {
-          "heading": "Housing Schem",
-          "details": [
-            {
-              "value": [
-                "MHADA Lottery Pune",
-                "RGRHCL",
-                "Jamabandi Haryana"
-              ]
-            },
-            {
-              "value": [
-                "MHADA Lottery 2022",
-                "APSHCL"
-              ]
-            },
-            {
-              "value": [
-                "DDA Housing Scheme"
-              ]
-            },
-            {
-              "value": [
-                "CIDCO Lottery"
-              ]
-            }
-          ]
-        }
-      }
-    }
-  },
-  {
-    "userId": 1,
-    "heading": "We've got properties for everyone",
-    "title": "dolorem eum magni eos aperiam quia",
-    "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6",
-    "imageUrl": "./assets/showcase1.jpg",
-    "count": "22348",
-    "status": "Ready to Move",
-    "launchText": "Unbaised Project reviews",
-    "launchCaption": "by experts",
-    "propertysnapshot": {
-      "description": "Being situated in a south-west region of Telangana, Hyderabad is also known as Cyberabad as it has established itself as the hub of IT, Biotech Industry and Pharmaceuticals. Including the amalgamation of ancient and modern lifestyle, Hyderabad is more likely a cosmopolitan city that features everything from 5-star hotels trendy shopping malls to monuments like Charminar, Hitex Gate Chowmahalla, Gulzar Houz, Qutb Shahi Tombs, Kaman Sher Dil.",
-      "totalCount": "1878+",
-      "budgetInfo": "Low Budget Flats",
-      "city": "in Hyderabad"
-    },
-    "recommended": {
-      "topBlogs": {
-        "heads": {
-          "heading": "RERA",
-          "details": [
-            {
-              "value": [
-                "UP RERA",
-                "RGRHCL",
-                "RERA Karnataka",
-                "RERA Telangana"
-              ]
-            },
-            {
-              "value": [
-                "RERA Goa",
-                "RERA MP",
-                "RERA AndhraPradesh"
-              ]
-            },
-            {
-              "value": [
-                "RERA TamilNadu",
-                "RERA Kerala",
-                "RERA Gujarat"
-              ]
-            },
-            {
-              "value": [
-                "RERA TamilNadu",
-                "RERA Registration Process"
-              ]
-            }
-          ]
-        }
-      }
-    }
-  },
-  {
-    "userId": 1,
-    "heading": "Property Services",
-    "title": "magnam facilis autem",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 1,
-    "heading": "New Project Gallery",
-    "title": "dolorem dolore est ipsam",
-    "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 1,
-    "heading": "Popular Localities in Hyderabad",
-    "title": "nesciunt iure omnis dolorem tempora et accusantium",
-    "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 1,
-    "heading": "Exclusive Owner Properties in Hyderabad",
-    "title": "optio molestias id quia eum",
-    "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "heading": "Advice & Tools",
-    "title": "et ea vero quia laudantium autem",
-    "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "heading": "Your Real Estate Guide",
-    "title": "in quibusdam tempore odit est dolorem",
-    "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "heading": "Hyderabad Property Snapshot",
-    "title": "dolorum ut in voluptas mollitia et saepe quo animi",
-    "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "heading": "Browse Residential Projects in Top 8 Cities",
-    "title": "voluptatem eligendi optio",
-    "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "heading": "Recommended for You",
-    "title": "eveniet quod temporibus",
-    "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
-    "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "title": "fugit voluptas sed molestias voluptatem provident",
-    "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "title": "voluptate et itaque vero tempora molestiae",
-    "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "title": "adipisci placeat illum aut reiciendis qui",
-    "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
-  },
-  {
-    "userId": 2,
-    "title": "doloribus ad provident suscipit at",
-    "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo",
-    "name": "Sri Aditya Squares Ornate",
-    "by": "by Sri Aditya Squares",
-    "loc": "Kollur, Hyderabad",
-    "marketedby": "Marketed by Sri Aditya Squares",
-    "size": "2, 3 BHK Flats",
-    "price": "₹ 1.80 Cr",
-    "range": "₹4,984 - ₹7,289 per sqft",
-    "city": "Patancheruvu",
-    "navbottom": "Buy",
-    "navTop": "Hyderabad",
-    "rating": "4.6"
   }
 ]

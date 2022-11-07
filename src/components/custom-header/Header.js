@@ -19,10 +19,12 @@ class Header extends HTMLElement {
 
 		dataResponse(json, this.shadowRoot)
 		function dataResponse(data, shadow) {	
-			const slicedData = data.slice(0, 1).map((res) => res);
+			const slicedData = data?.map((res) => res);
+
+			console.log(data.header)
 			
-			Array.from(shadow.querySelectorAll(".nav-items-dropdown-link")).map((forEach, index) => forEach.innerHTML = 
-				`<a class="nav-dropdown" href=""> ${slicedData[0]?.tophovernav[index].name} </a>
+			Array.from(shadow.querySelectorAll(".nav-items-dropdown-link")).map((forEach, i) => forEach.innerHTML = 
+				`<a class="nav-dropdown" href=""> ${data.map(entry => entry.header[0].navigationTop.map(el => el[0].name))} </a>
 							<div class="top-nav-dropdown"></div>`
 				)
 
@@ -37,7 +39,7 @@ class Header extends HTMLElement {
 						 ${
 							
 							slicedData?.map((res) =>
-								res?.tophovernav[index]?.content.map(
+								res?.navigationTop[index]?.content.map(
 									(response) => {  
 										const colHeadingName = response?.name !== undefined ? response?.name : ''								
 										return 	`<div class="hd-topnav-list-block hd-topnav-list-block-${index}">
@@ -70,7 +72,7 @@ class Header extends HTMLElement {
 				
 			shadow.querySelector(".nav-links-bottom").insertAdjacentHTML(
 			"afterbegin",
-			slicedData[0]?.hovernav?.map((item, index) => {
+			slicedData[0]?.navigationBottom?.map((item, index) => {
 					return `<li class="nav-items-bottom"> 
 				<a href='' class="nav-dropdown-bottom"> ${item.name} </a><div class="dropdown-bottom"></div></li>`;
 				})
@@ -92,7 +94,7 @@ class Header extends HTMLElement {
 				 	${
 						
 						slicedData?.map((res) =>
-							res?.hovernav[index]?.content.map(
+							res?.navigationBottom[index]?.content.map(
 								(response) => {  
 									const colHeadingName = response?.name !== undefined ? response?.name : ''								
 									return '<div class="hd-list-block">'+

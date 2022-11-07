@@ -155,7 +155,7 @@ li {
 	animation: 400ms footer-bottom-top 1 linear;
 }
 .animate-footer-sec-4 {
-	animation: 400ms footer-bottom-top 1 linear;
+	animation: 400ms footer-top-copyright 1 linear;
 }
 
 @keyframes footer-left {
@@ -185,6 +185,17 @@ li {
 	0% {
 		opacity: 0;
 		transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@keyframes footer-top-copyright {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
 	}
 
 	100% {

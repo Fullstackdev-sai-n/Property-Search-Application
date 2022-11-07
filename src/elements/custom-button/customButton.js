@@ -9,6 +9,11 @@ class CustomButton extends HTMLElement {
         super();
         setupShadow(this, html, css);  
       }
+
+      connectedCallback(){
+        this.shadowRoot.querySelector('.custom-btn-container').attributes.part.value = this.getAttribute('btnclass')
+        
+      }
   
  }
  

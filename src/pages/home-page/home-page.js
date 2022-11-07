@@ -13,6 +13,7 @@ export class HomePage extends HTMLElement {
 
 	async connectedCallback() {
 		fetchResponse(jsonData, this.shadowRoot);
+		// console.log(jsonData.map(el => el.header.map(entry => entry.navigationTop.map(el => el.))))
 		function fetchResponse(data, shadow) {
 			if (!data) return;
 			function elementSelector(elIndex, elementData, insertAdjacent = 0) {
@@ -23,9 +24,9 @@ export class HomePage extends HTMLElement {
 				const elementResult =
 					insertAdjacent !== 0 || null || undefined
 						? docSelector[elIndex].insertAdjacentHTML(
-								"beforeend",
-								insertAdjacent
-						  )
+							"beforeend",
+							insertAdjacent
+						)
 						: (docSelector[elIndex].innerHTML = elementData);
 				return elementResult;
 			}
@@ -35,16 +36,148 @@ export class HomePage extends HTMLElement {
 				return response;
 			}
 
-			function showLineBottom(shadow) {}
+			function showLineBottom(shadow) { }
 
 			showLineBottom(shadow);
 
 			Array.from(shadow.querySelectorAll("section-heading")).map(
 				(heading, index) =>
-					(heading.shadowRoot.querySelector(".heading").innerHTML = dataSlice(
-						1
-					).map((el) => `${el?.heading[index]?.name}`))
+				(heading.shadowRoot.querySelector(".heading").innerHTML = dataSlice(
+					1
+				).map((el) => `${el?.heading[index]?.name}`))
 			);
+
+			shadow.querySelector(".main-section-showcase__images").insertAdjacentHTML(
+				"afterbegin",
+				`
+		<ul class="main-section-showcase__category__item-list"> ${dataSlice(1)
+					.map((apiData) =>
+						apiData.showcase.categories
+							.map(
+								(category, i) => `
+		<li  class="main-section-showcase__category__item main-section-showcase__category__item--${i}">
+		${category.title}
+		</li>`
+							)
+							.join("")
+					)
+					.join("")}
+		
+		</ul>`
+			);
+
+			Array.from(
+				shadow.querySelectorAll(".main-section-showcase__category__item")
+			).map((entry, index) => {
+				entry.addEventListener("mouseenter", () => {
+					shadow
+						.querySelector(".main-section-showcase__images")
+						.insertAdjacentHTML(
+							"afterbegin",
+							dataSlice(1).map((apiData) => {
+								const overview = apiData.showcase.categories[0];
+								const gallery = apiData.showcase.categories[1];
+								const location = apiData.showcase.categories[2];
+								const projectDetails = apiData.showcase.categories[3];
+								const projecAminities = apiData.showcase.categories[4];
+								const aboutBuilder = apiData.showcase.categories[5];
+
+								const index0 = `<div class="sc-category-details-one sc-category-details-block">
+												<div class="sc-category-details-one__wrapper">
+												<div class="sc-category-details-one__propertyid">${overview.content[1].propertyid}</div>
+												<div class="sc-category-details-one__title">${overview.content[2].title}</div>
+												<div class="sc-category-details-one__location">${overview.content[3].location}</div>
+												<div cla ss="sc-category-details-one__size">${overview.content[4].size}</div>
+												<div class="sc-category-details-one__date">${overview.content[5].date}</div>
+												<div class="sc-category-details-one__marketed">${overview.content[6].marketed}</div>
+											</div>
+												</div>`;
+
+								const index1 = `<div class="sc-category-details-two sc-category-details-block">
+		<div class="sc-category-details-two__wrapper">
+		<div class="sc-category-details-two__propertyid">${gallery.content[0].propertyid}</div>
+		<div class="sc-category-details-two__title">${gallery.content[1].title}</div>
+		<div class="sc-category-details-two__location">${gallery.content[2].location}</div>
+		<div class="sc-category-details-two__size">${gallery.content[3].size}</div>
+		<div class="sc-category-details-two__marketed">${gallery.content[4].marketed}</div>
+	</div>
+		</div>`;
+
+								const index2 = `<div class="sc-category-details-three sc-category-details-block">
+		<div class="sc-category-details-three__wrapper">
+			<div class="sc-category-details-three__title">${location.content[0].title}</div>
+			<div class="sc-category-details-three__subtitle">${location.content[1].subtitle
+									}</div>
+			<ul class="sc-category-details-three__advantages-list">${location.content[2].advantages
+										.map(
+											(el) =>
+												`<li class="sc-category-details-three__advantages"> ${el} </li>`
+										)
+										.join("")}</ul>
+		</div>
+		</div>`;
+
+								const index3 = `<div class="sc-category-details-four sc-category-details-block">
+		<div class="sc-category-details-four__wrapper">
+		<div class="sc-category-details-four__title">${projectDetails.content[0].title}</div>
+		<div class="sc-category-details-four__subtitle">${projectDetails.content[1].subtitle}</div>
+		<img class="sc-category-details-four__logo" src="${projectDetails.content[2].logo}"/>
+		<div class="sc-category-details-four__desc">${projectDetails.content[3].desc}</div>
+		<div class="sc-category-details-four__date">${projectDetails.content[4].date}</div>
+		<div class="sc-category-details-four__space">${projectDetails.content[5].space}</div>
+		</div>
+		</div>`;
+
+								const index4 = `<div class="sc-category-details-five sc-category-details-block">
+		<div class="sc-category-details-five__wrapper">
+			<div class="sc-category-details-five__title">${projecAminities.content[0].title
+									}</div>
+			<ul class="sc-category-details-five__ameninties-list">${projecAminities.content[1].amenities
+										.map(
+											(el) =>
+												`<li class="sc-category-details-five__ameninties"> ${el} </li>`
+										)
+										.join("")}</ul>
+		</div>
+		</div>`;
+
+								const index5 = `<div class="sc-category-details-six sc-category-details-block">
+		<div class="sc-category-details-six__wrapper">
+			<img class="sc-category-details-six__image" src="${aboutBuilder.content[0].logo}"/>
+			<div class="sc-category-details-six__desc"><div>${aboutBuilder.content[1].desc}</div></div>
+		</div>
+		</div>`;
+								return index === 0
+									? index0
+									: index === 1
+										? index1
+										: index === 2
+											? index2
+											: index === 3
+												? index3
+												: index === 4
+													? index4
+													: index === 5
+														? index5
+														: "";
+							})
+						);
+				});
+			});
+
+			Array.from(
+				shadow.querySelectorAll(".main-section-showcase__category__item")
+			).map((entry, index) => {
+				entry.addEventListener("mouseleave", () => {
+					Array.from(shadow.querySelectorAll(".sc-category-details-block")).map(
+						(entry) => {
+							entry.style.display = "none";
+
+							console.log("first");
+						}
+					);
+				});
+			});
 
 			elementSelector(
 				0,
@@ -54,6 +187,12 @@ export class HomePage extends HTMLElement {
 	`
 				)
 			);
+
+			shadow.querySelector('.main-section-project-gallery__content__heading-btn').innerHTML = dataSlice(1).map(data => `${data.projectGallery.title}`)
+			shadow.querySelector('.main-section-project-gallery__content__desc-btn__desc--flats').innerHTML = dataSlice(1).map(data => `${data.projectGallery.flatesPlace}`)
+			shadow.querySelector('.main-section-project-gallery__content__desc-btn__desc--starting-price').innerHTML = dataSlice(1).map(data => `${data.projectGallery.startingPrice}`)
+			shadow.querySelector('.main-section-project-gallery__content__desc-btn__desc--marketed-by').innerHTML = dataSlice(1).map(data => `${data.projectGallery.marketedBy}`)
+
 
 			elementSelector(
 				1,
@@ -73,77 +212,77 @@ export class HomePage extends HTMLElement {
 
 			elementSelector(
 				2,
-				dataSlice(4)
+				dataSlice(1)
 					.map(
-						(apiData, index) => `<properties-listed-card
-						hydimg-part="${apiData?.propertiesListed?.image}"
-						info="${apiData?.propertiesListed?.text}"
-						frwdtxt="${apiData?.propertiesListed?.arrowText}"
+						(apiData, i) => apiData.propertiesListed?.map((entry, index)=> `<properties-listed-card
+						hydimg-part="${entry?.image}"
+						info="${entry?.text}"
+						frwdtxt="${entry?.arrowText}"
 						class="properties-listed-card-${index}"
 						>
-					</properties-listed-card>`
+					</properties-listed-card>`).join("")
 					)
 					.join("")
 			);
 
 			elementSelector(
 				4,
-				dataSlice(2)
-					.map((apiData, index) => {
-						return `<featured-card title="${apiData.name}"
-					by="${apiData.by}"
-					loc="${apiData.loc}"
-					marketed="${apiData.marketedby}"
-					flats="${apiData.size}"
-					price="${apiData.price}"
+				dataSlice(1)
+					.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 2)?.map((entry, index)=>`<featured-card title="${entry?.name}"
+					by="${entry?.by}"
+					loc="${entry?.loc}"
+					marketed="${entry?.marketedby}"
+					flats="${entry?.size}"
+					price="${entry?.price}"
 					class="featured-card-${index}"
-					> </featured-card>`;
+					> </featured-card>`).join("")
 					})
 					.join("")
 			);
 
 			elementSelector(
 				5,
-				dataSlice(4)
-					?.map((apiData, index) => {
-						return `<sideicon-with-text
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 4)?.map((entry, index)=> `<sideicon-with-text
 						side-icon="before-icon-${index}"
-						it-text="${apiData.launchText}"
-						it-caption="${apiData.launchCaption}"
+						it-text="${entry?.launchText}"
+						it-caption="${entry?.launchCaption}"
 						class="side-icon-text-card-${index}"				
-						> </sideicon-with-text>`;
+						> </sideicon-with-text>`).join("")
 					})
 					.join("")
 			);
 
 			elementSelector(
 				6,
-				dataSlice(2)
-					?.map((apiData, index) => {
-						return `<handpicked-project-card
-							imagemain="${apiData.imageUrl}"
-							projecttitle="${apiData.name}"
-							marketedby="${apiData.marketedby}"
-							price="${apiData.price}"
-							thumbnail="${apiData.imageUrl}"
-							thunmbnailtext="${apiData.status}"
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 2)?.map((entry, index)=> `<handpicked-project-card
+							imagemain="${entry?.imageUrl}"
+							projecttitle="${entry?.name}"
+							marketedby="${entry?.marketedby}"
+							price="${entry?.price}"
+							thumbnail="${entry?.imageUrl}"
+							thunmbnailtext="${entry?.status}"
 							showcount="15 More"
 							class="hnp-card-${index}"			
-						> </handpicked-project-card>`;
+						> </handpicked-project-card>`).join("")
 					})
 					.join("")
 			);
 
 			elementSelector(
 				7,
-				dataSlice(4)
-					?.map((apiData, index) => {
-						return `<image-overlay-text-card 
-									number="${apiData.count}"
-									title="${apiData.name}"
-									imageurl="url(${apiData.imageUrl})"
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 4)?.map((entry, index)=>`<image-overlay-text-card 
+									number="${entry?.forSaleCount}"
+									title="${entry?.name}"
+									imageurl="url(${entry?.imageUrl})"
 									class="image-overlay-text-card-${index}"
-									> </image-overlay-text-card>`;
+									> </image-overlay-text-card>`).join("")
 					})
 					.join("")
 			);
@@ -151,31 +290,31 @@ export class HomePage extends HTMLElement {
 			elementSelector(
 				8,
 				dataSlice(4)
-					?.map((apiData, index) => {
-						return `<services-card
-									text="${apiData.body}"
-									title="${apiData.name}"
-									src="${apiData.imageUrl}"
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 4)?.map((entry, index)=> `<services-card
+									text="${entry?.body}"
+									title="${entry?.name}"
+									src="${entry?.imageUrl}"
 									class="services-card-${index}"
-									> </services-card>`;
+									> </services-card>`).join("")
 					})
 					.join("")
 			);
 
 			elementSelector(
 				9,
-				dataSlice(6)
-					?.map((apiData, index) => {
-						return `<gallery-card
-						pgcimage="${apiData.imageUrl}"
-						title="${apiData.name}"
-						area="${apiData.loc}"
-						flats="${apiData.size}"
-						price="${apiData.price}"
-						projectname="${apiData.marketedby}"
-						prname="${apiData.name}"
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.map((entry, index)=> `<gallery-card
+						pgcimage="${entry?.imageUrl}"
+						title="${entry?.name}"
+						area="${entry?.loc}"
+						flats="${entry?.size}"
+						price="${entry?.price}"
+						projectname="${entry?.marketedby}"
+						prname="${entry?.name}"
 						class="gallery-card-${index}"
-									> </gallery-card>`;
+									> </gallery-card>`).join("")
 					})
 					.join("")
 			);
@@ -183,66 +322,66 @@ export class HomePage extends HTMLElement {
 			elementSelector(
 				10,
 				null,
-				dataSlice(3)
-					?.map((apiData, index) => {
-						return `<explore-card
-						city="${apiData.city}"
-						price="${apiData.price}"
-						rating="${apiData.rating}"
-						reviews="${apiData.count}"
-						count="${apiData.count}"
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 3)?.map((entry, index)=> `<explore-card
+						city="${entry.city}"
+						price="${entry.price}"
+						rating="${entry.rating}"
+						reviews="${entry.totalReviews}"
+						count="${entry.forSaleCount}"
 						class="explore-card-${index}"
-									> </explore-card>`;
+									> </explore-card>`).join("")
 					})
 					.join("")
 			);
 
 			elementSelector(
 				11,
-				dataSlice(4)
-					?.map((apiData, index) => {
-						return `<owner-property-card
-						opcimg="${apiData.imageUrl}"
-						status="${apiData.status}"
-						location="${apiData.loc}"
-						flats="${apiData.size}"
-						price="${apiData.price}"
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 4)?.map((entry, index)=> `<owner-property-card
+						opcimg="${entry.imageUrl}"
+						status="${entry.status}"
+						location="${entry.loc}"
+						flats="${entry.size}"
+						price="${entry.price}"
 						class="owner-card-${index}"
 					
-									> </owner-property-card>`;
+									> </owner-property-card>`).join("");
 					})
 					.join("")
 			);
 
 			elementSelector(
 				12,
-				dataSlice(4)
-					?.map((apiData, index) => {
-						return `<advice-card
-						title="${apiData.name}"
-						description="${apiData.body}"
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 4)?.map((entry, index)=> `<advice-card
+						title="${entry.name}"
+						description="${entry.body}"
 						ac-image-part="logo-image-${index}"
 						content="dynamic-content-${index}"
 						class="advice-card-${index}"
-									> </advice-card>`;
+									> </advice-card>`).join("")
 					})
 					.join("")
 			);
 
 			elementSelector(
 				13,
-				dataSlice(3)
-					?.map((apiData, index) => {
-						return `<guide-card
-						title="${apiData.name}"
-						srconetext="${apiData.body}"
-						srctwotext="${apiData.body}"
+				dataSlice(1)
+					?.map((apiData, i) => {
+						return apiData.projectsInfo?.slice(0, 3)?.map((entry, index)=> `<guide-card
+						title="${entry.name}"
+						srconetext="${entry.body}"
+						srctwotext="${entry.body}"
 						gc-show-videoblock="${index === 0 && "grid"}"
 						gc-show-insightsblock="${index === 1 && "grid"}"
 						gc-show-updatesblock="${index === 2 && "block"}"
 						gcbtn="${index === 2 ? "block" : ""}"
 						class="guide-card-${index}"
-									> </guide-card>`;
+									> </guide-card>`).join("")
 					})
 					.join("")
 			);
@@ -251,20 +390,21 @@ export class HomePage extends HTMLElement {
 				14,
 				dataSlice(1)
 					?.map((apiData, index) => {
-						return `${apiData?.propertysnapshot?.description}`;
+						return `${apiData?.propertysnapshot[0].description}`;
 					})
 					.join("")
 			);
 
 			elementSelector(
 				15,
-				dataSlice(4)
+				dataSlice(1)
 					?.map((apiData, index) => {
-						return `<div
+						
+						return apiData.propertysnapshot.map(entry => `<div
 						class="main-section-hyd-prop-snapshot-content_total-projects-1">
-						<span>${apiData?.propertysnapshot?.totalCount}</span><br/> 
-						<span>${apiData?.propertysnapshot?.budgetInfo}</span><br/> 
-						<span>${apiData?.propertysnapshot?.city}</span></div>`;
+						<span>${entry.totalCount}</span><br/> 
+						<span>${entry.budgetInfo}</span><br/> 
+						<span>${entry.city}</span></div>`).join("")
 					})
 					.join("")
 			);
@@ -362,6 +502,26 @@ export class HomePage extends HTMLElement {
 					catergoryDetailsEl.innerHTML = categoryNamesInnerText(index);
 				});
 			});
+
+			shadow.querySelector('.main-section-showcase__images__contact-btn-slot').insertAdjacentHTML('afterbegin', 
+			dataSlice(1).map(data => `${data.extras.contactBtnText}`))
+
+			shadow.querySelector('.main-section-featured__title').insertAdjacentHTML('beforeend', 
+			dataSlice(1).map(data => `${(JSON.parse(JSON.stringify(data.extras.seeAllProjectsArrow)))}`))			
+			shadow.querySelector('.hnp-container-title-block').insertAdjacentHTML('beforeend', 
+			dataSlice(1).map(data => `${(JSON.parse(JSON.stringify(data.extras.seeAllProjectsArrow)))}`))
+			shadow.querySelector('.popular-cities-first-block-title').innerHTML =  
+			dataSlice(1).map(data => `${data.extras.sectionHeads[0]}`)
+			shadow.querySelector('.main-section-post-your-property-btn').innerHTML = 
+			dataSlice(1).map(data => `${(JSON.parse(JSON.stringify(data.extras.postProperty)))}`)
+			shadow.querySelector('.nph-cities-title').innerHTML = 
+			dataSlice(1).map(data => `${data.extras.sectionHeads[1]}`)
+			shadow.querySelector('.home-icon-text').innerHTML = 
+			dataSlice(1).map(data => `${data.extras.heroSearchIconsText[0]}`)
+			shadow.querySelector('.budget-icon-text').innerHTML = 
+			dataSlice(1).map(data => `${data.extras.heroSearchIconsText[1]}`)
+			shadow.querySelector('.section-holder-search-btn-text').innerHTML = 
+			dataSlice(1).map(data => `${data.extras.btnText[1]}`)
 		}
 
 		function changeBg(shadow) {
@@ -386,7 +546,7 @@ export class HomePage extends HTMLElement {
 		// 	];
 
 		// 	scrollObserver(elementClasses, animatedClasses, shadow)
-		
+
 		// }
 
 		// scrollObserverAnimations(this.shadowRoot)
