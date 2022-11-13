@@ -59,7 +59,7 @@
 .advice-text > .advice-text-icon::after {
 	content: "";
 	display: block;
-	background: url('./assets/mb-home-sprite-web.svg"') no-repeat;
+	background: var(--home-sprite) no-repeat;
 	background-position-x: 0%;
 	background-position-y: 0%;
 	background-position-x: 0%;

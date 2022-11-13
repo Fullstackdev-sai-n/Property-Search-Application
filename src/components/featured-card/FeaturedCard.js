@@ -17,6 +17,7 @@ class FeaturedCard extends HTMLElement {
 		this.shadowRoot.querySelector('.main-section-featured__content__card__text__desc_marketed').innerHTML = this.getAttribute('marketed');
 		this.shadowRoot.querySelector('.flats-length').innerHTML = this.getAttribute('flats');
 		this.shadowRoot.querySelector('.price-details-el').innerHTML = this.getAttribute('price');
+		this.shadowRoot.querySelector('.featured-img').attributes.src.value = this.getAttribute('imageUrl');
 		this.shadowRoot.querySelector('.main-section-featured__content__card').addEventListener('mouseenter', () => {
 			this.shadowRoot.querySelector('.fc-hover-btn').style.display = 'block';
 			this.shadowRoot.querySelector('.featured-img').style.transform = 'scale(1.1)';

@@ -35,7 +35,7 @@
 	position: absolute;
 	width: 12px;
 	height: 11px;
-	background: url(./assets/mb-home-sprite-web.svg) no-repeat;
+	background: var(--home-sprite) no-repeat;
 	background-position-x: 0%;
 	background-position-y: 0%;
 	background-position: -46px -711px;

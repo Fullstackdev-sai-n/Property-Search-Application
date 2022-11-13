@@ -22,7 +22,7 @@
 .explore-head > span:first-child::before {
 	position: absolute;
 	content: "";
-	background: url("./assets/mb-home-sprite-web.svg");
+	background: var(--home-sprite);
 	width: 14px;
 	height: 14px;
 	display: inline-block;
@@ -56,7 +56,7 @@
 .explore-reviews > div > .rating::after {
 	content: "";
 	position: absolute;
-	background: url("./assets/mb-home-sprite-web.svg");
+	background: var(--home-sprite);
 	width: 16px;
 	height: 16px;
 	left: 25px;
@@ -77,7 +77,7 @@
 .explore-sales::before {
 	content: "";
 	position: absolute;
-	background: url("./assets/showcase3.jpg");
+	background: url("https://properties-search.s3.ap-south-1.amazonaws.com/assets/showcase1.jpg");
 	width: 56px;
 	height: 56px;
 	border-radius: 50%;

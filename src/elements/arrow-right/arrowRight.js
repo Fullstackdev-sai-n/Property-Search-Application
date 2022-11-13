@@ -12,6 +12,11 @@ class ArrowRight extends HTMLElement {
    async connectedCallback(){
    
 this.shadowRoot.querySelector('.mg-arrow-right').attributes.part.value = this.getAttribute('arrow-right-part')
+this.shadowRoot.querySelector('.mg-arrow-right-wrapper').addEventListener('click', () => {
+   console.log('i am clicked', navigate)
+
+   
+})
   
    }
 }

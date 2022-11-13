@@ -102,18 +102,18 @@
 }
 
 .main-section-search-holder__content__input__fields:nth-child(1)::before {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -46px -753px;
+	background: var(--home-sprite) no-repeat -46px -753px;
 	left: -20px;
 }
 
 .main-section-search-holder__content__input__fields:nth-child(2)::before {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -46px -800px;
+	background: var(--home-sprite) no-repeat -46px -800px;
 	left: -20px;
 	top: 2px;
 }
 
 .main-section-search-holder__content__input__fields:nth-child(2)::after {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -47px -983px;
+	background: var(--home-sprite) no-repeat -47px -983px;
 	right: -40px;
 	top: 5px;
 }
@@ -134,7 +134,7 @@
 }
 
 .main-section-search-holder__content__input__fields:nth-child(3)::after {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -46px -980px;
+	background: var(--home-sprite) no-repeat -46px -980px;
 	right: -40px;
 	top: 3px;
 }
@@ -608,8 +608,6 @@ custom-button::part(btn-contact)::after {
 
 .main-section-project-gallery__content {
 	display: grid;
-	background-image: url("../assets/showcase1.jpg"),
-		url("../assets/showcase1.jpg");
 	background-color: var(--border-color);
 	border-radius: 8px;
 	grid-template-rows: 2fr 1fr;
@@ -697,7 +695,7 @@ custom-button::part(btn-contact)::after {
 	height: 11px;
 	right: 0;
 	top: 10px;
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat;
+	background: var(--home-sprite) no-repeat;
 	background-position-x: 0%;
 	background-position-y: 0%;
 	background-position: -46px -668px;
@@ -1078,16 +1076,16 @@ custom-button::part(btn-contact)::after {
 }
 
 properties-listed-card::part(plc-1)::after {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -14px -30px;
+	background: var(--home-sprite) no-repeat -14px -30px;
 }
 properties-listed-card::part(plc-2)::after {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -17px -289px;
+	background: var(--home-sprite) no-repeat -17px -289px;
 }
 properties-listed-card::part(plc-3)::after {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -18px -198px;
+	background: var(--home-sprite) no-repeat -18px -198px;
 }
 properties-listed-card::part(plc-4)::after {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat -12px -371px;
+	background: var(--home-sprite) no-repeat -12px -371px;
 }
 
 arrow-right::part(rc-part-arrow)::after {
@@ -1098,16 +1096,16 @@ arrow-right::part(rc-part-arrow) {
 }
 
 sideicon-with-text::part(before-icon-0)::before {
-	background: url(../assets/hp-new-project-topSec-sprite.svg) 0 -3px;
+	background: var(--project-sprite) 0 -3px;
 }
 sideicon-with-text::part(before-icon-1)::before {
-	background: url(../assets/hp-new-project-topSec-sprite.svg) 0 -55px;
+	background: var(--project-sprite) 0 -55px;
 }
 sideicon-with-text::part(before-icon-2)::before {
-	background: url(../assets/hp-new-project-topSec-sprite.svg) 0 -106px;
+	background: var(--project-sprite) 0 -106px;
 }
 sideicon-with-text::part(before-icon-3)::before {
-	background: url(../assets/hp-new-project-topSec-sprite.svg) 0 -164px;
+	background: var(--project-sprite) 0 -164px;
 	height: 25px;
 }
 
@@ -1124,19 +1122,19 @@ section-heading::part(line-color-gallery)::before {
 }
 
 advice-card::part(logo-image-0) {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat;
+	background: var(--home-sprite) no-repeat;
 	background-position: -32px -2067px;
 }
 advice-card::part(logo-image-1) {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat;
+	background: var(--home-sprite) no-repeat;
 	background-position: -32px -2115px;
 }
 advice-card::part(logo-image-2) {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat;
+	background: var(--home-sprite) no-repeat;
 	background-position: -28px -1420px;
 }
 advice-card::part(logo-image-3) {
-	background: url("../assets/mb-home-sprite-web.svg") no-repeat;
+	background: var(--home-sprite) no-repeat;
 	background-position: -28px -1661px;
 }
 advice-card::part(dynamic-content-0)::after {

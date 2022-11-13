@@ -1,13 +1,11 @@
 export const setupShadow = (element, html, css) => {
     const shadow = element.attachShadow({ mode: "open" });
     const template = document.createElement("template");
-    // applies global styles, local styles and html
     template.innerHTML = '<style>@import "index.css";' + css +  "</style>" + attachCallbacks(html, element);
     const templateContent = template.content;
     shadow.appendChild(templateContent.cloneNode(true));
   };
   
-  /** Saving global component reference to window and replacing this. in html with reference */
   const attachCallbacks = (html, element) => {
     const lastId = Window.lastComponentId ? Window.lastComponentId : 0;
     const componentId = lastId + 1;
@@ -18,6 +16,8 @@ export const setupShadow = (element, html, css) => {
     return html.replaceAll("this.", "Window." + componentName + ".");
   };
 
+
+
   //function on adding scroll animations to the pages
 
   export function scrollObserver(elementClass, animationClass, shadow){
@@ -26,6 +26,7 @@ export const setupShadow = (element, html, css) => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
           entry.target.classList.add(animationClass) 
+          console.log(entry)
         return ;
       }
 

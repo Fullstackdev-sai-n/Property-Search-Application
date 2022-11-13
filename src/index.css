@@ -36,4 +36,8 @@ a {
 	--bg-orange: #f06b4d;
 	--footer-primary: #f5f5f5;
 	--footer-secondary: #e8e8e8;
+	--home-sprite: url("https://properties-search.s3.ap-south-1.amazonaws.com/assets/mb-home-sprite-web.svg");
+	--project-sprite: url("https://properties-search.s3.ap-south-1.amazonaws.com/assets/hp-new-project-topSec-sprite.svg");
+	--footer-icon: url("https://properties-search.s3.ap-south-1.amazonaws.com/assets/web-header-footer.svg");
+	--header-icon: url("https://properties-search.s3.ap-south-1.amazonaws.com/assets/icons.svg");
 }

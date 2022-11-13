@@ -52,7 +52,7 @@ li {
 
 .footer-section-1-left-social-icons > .icon-top-wrap > div,
 .footer-section-1-left-social-icons > .icon-bottom-wrap > div {
-	background-image: url("./assets/web-header-footer.svg");
+	background-image: var(--footer-icon);
 	background-repeat: no-repeat;
 	display: inline-block;
 }

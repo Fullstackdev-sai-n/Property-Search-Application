@@ -87,7 +87,7 @@
 	top: 8px;
 	left: 0px;
 	content: "";
-	background: url("./assets/locality__detail__sprite_v2.svg");
+	background: url("https://properties-search.s3.ap-south-1.amazonaws.com/assets/locality__detail__sprite_v2.svg");
 	width: 30px;
 	height: 20px;
 	background-position: -1px -1149px;
@@ -110,6 +110,7 @@
 .gc-updates-block-image {
 	width: 100%;
 	height: 88px;
+	border-radius: 4px;
 }
 
 .guide-card-see-all {

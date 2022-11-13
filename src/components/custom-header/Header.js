@@ -1,7 +1,6 @@
 import html from "./custom-header.html";
 import css from "./custom-header.css";
 import { setupShadow } from "../../utils/helper";
-import json from "../../utils/data.json";
 
 class Header extends HTMLElement {
 
@@ -12,19 +11,15 @@ class Header extends HTMLElement {
 
 	async connectedCallback() {
 		
-		// fetch(json)
-		// 	.then((res) => res.json())
-		// 	.then((response) => dataResponse(response, this.shadowRoot)); api integration code.
-
-
-		dataResponse(json, this.shadowRoot)
+		fetch('http://localhost:3001/properties')
+			.then((res) => res.json())
+			.then((response) => dataResponse(response, this.shadowRoot));
 		function dataResponse(data, shadow) {	
 			const slicedData = data?.map((res) => res);
 
-			console.log(data.header)
-			
+			Array.from(shadow.querySelectorAll('.logo-nav')).map(entry => entry.attributes.src.value = "https://properties-search.s3.ap-south-1.amazonaws.com/assets/logo.png")
 			Array.from(shadow.querySelectorAll(".nav-items-dropdown-link")).map((forEach, i) => forEach.innerHTML = 
-				`<a class="nav-dropdown" href=""> ${data.map(entry => entry.header[0].navigationTop.map(el => el[0].name))} </a>
+				`<a class="nav-dropdown" href=""> ${slicedData[0].headerNavigationTop[i].name}</a>
 							<div class="top-nav-dropdown"></div>`
 				)
 
@@ -39,7 +34,7 @@ class Header extends HTMLElement {
 						 ${
 							
 							slicedData?.map((res) =>
-								res?.navigationTop[index]?.content.map(
+								res?.headerNavigationTop[index]?.content.map(
 									(response) => {  
 										const colHeadingName = response?.name !== undefined ? response?.name : ''								
 										return 	`<div class="hd-topnav-list-block hd-topnav-list-block-${index}">
@@ -72,7 +67,7 @@ class Header extends HTMLElement {
 				
 			shadow.querySelector(".nav-links-bottom").insertAdjacentHTML(
 			"afterbegin",
-			slicedData[0]?.navigationBottom?.map((item, index) => {
+			slicedData[0]?.headerNavigationBottom?.map((item, index) => {
 					return `<li class="nav-items-bottom"> 
 				<a href='' class="nav-dropdown-bottom"> ${item.name} </a><div class="dropdown-bottom"></div></li>`;
 				})
@@ -94,7 +89,7 @@ class Header extends HTMLElement {
 				 	${
 						
 						slicedData?.map((res) =>
-							res?.navigationBottom[index]?.content.map(
+							res?.headerNavigationBottom[index]?.content.map(
 								(response) => {  
 									const colHeadingName = response?.name !== undefined ? response?.name : ''								
 									return '<div class="hd-list-block">'+
@@ -148,6 +143,7 @@ class Header extends HTMLElement {
 				.querySelectorAll(".toggle-arrow-nav, .toggle-arrow-nav-top")).map(arrows => arrows.style.display ='block')
 			
 			});
+		
 		const toggleMenu = this.shadowRoot.querySelector(".hamburger");
 		const navItemsTop = this.shadowRoot.querySelector(".nav-links");
 		const menuAnimateOne = this.shadowRoot.querySelector(".hamburger__line-1");
@@ -181,6 +177,27 @@ class Header extends HTMLElement {
 		window.innerWidth >= 600 && styles.display === "none"
 			? navItemsTop.style.display === "grid"
 			: "";
+
+			
+
+			// post property
+
+		
+
+			this.shadowRoot
+			.querySelector(".header-post-property-button")
+			.addEventListener("click", () => {
+				this.shadowRoot
+				.querySelector(".header-post-property-element").style.display='block'				
+			}, {capture: true});
+
+			this.shadowRoot.querySelector('.post-property-close-icon').addEventListener('click', () => {
+
+				console.log('i am child')
+				this.shadowRoot.querySelector('.header-post-property-element').style.display = 'none'
+			})
+
+			
 	}
 }
 

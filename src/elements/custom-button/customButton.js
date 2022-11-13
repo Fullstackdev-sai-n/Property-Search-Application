@@ -12,6 +12,7 @@ class CustomButton extends HTMLElement {
 
       connectedCallback(){
         this.shadowRoot.querySelector('.custom-btn-container').attributes.part.value = this.getAttribute('btnclass')
+        this.shadowRoot.querySelector('.custom-btn-container').attributes.type.value = this.getAttribute('type')
         
       }
   

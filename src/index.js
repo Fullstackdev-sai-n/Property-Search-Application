@@ -18,6 +18,8 @@ import { SectionHeading } from "./elements/section-heading/customHeading";
 import { SideIconText } from "./elements/sideicon-with-text/iconText";
 import { ImageOverlayButton } from "./elements/image-overlay-play-button/imageOverlayButton";
 import { CustomButton } from "./elements/custom-button/customButton";
+import { PostProperty } from "./components/post-property/post-property";
+import { CustomInput } from "./elements/custom-input/custom-Input";
 
 
 
